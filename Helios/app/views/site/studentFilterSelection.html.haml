@@ -1,0 +1,96 @@
+!!!
+%html
+  %head
+    %title Taulbee Survey Data
+    :css
+      .heading{
+      	color:white;
+      	background-color:#500000;
+      	height:50px;
+      	margin:0;
+      	padding:0;
+      }
+      
+      .centered{
+      	text-align:center;
+      }
+  %body
+    .heading
+      %h1.centered Taulbee Survey
+    %p
+      %a{:href => "606page0.html"}
+        %img{:height => "30", :src => "homepageicon.jpg", :width => "30"}/
+      %a{:href => "606page1.html"}
+        %img{:height => "30", :src => "previous-icon.png", :width => "30"}/
+    %hr/
+    %h2 Students
+    %form
+      %h3 Who are you looking for?
+      %p
+        Field of Study
+        %select
+          %option Computer Science
+          %option Computer Engineering
+      %p
+        Title of Degree
+        %select
+          %option Doctor of Philosophy in Computer Science
+          %option Doctor of Philosophy in Computer Engineering
+          %option Master of Science
+          %option Master of Computer Science
+          %option Master of Engineering
+          %option Bachelor of Science with empasis on Computer Application Design and Development
+      %p
+        Gender
+        %select
+          %option Male
+          %option Female
+          %option Not Available
+      %p
+        Ethnicity
+        %select
+          %option American Indian or Alaka Native
+          %option Asian, not Hispanic
+          %option Black or African-American
+          %option Native Hawaiian or other Pacific
+          %option White, Non-Hispanic
+          %option More than one race, not Hispanic
+          %option Hispanic or Latino, any race
+          %option Race/Ethnicity Unkhown
+          %option Nonresident Alien
+          %option Not Availabe
+      %p
+        Employment Type
+        %select
+          %option Government
+          %option Industry Non-Research
+          %option Industry Research
+      %p
+        Employment Location
+        %select
+          %option United Staes
+      %p
+        Primary Speciality
+        %select
+          %option Information Assurance/Security
+          %option Graphics/Visualization
+          %option Robotics/Vision
+          %option Hardware/Architecture
+      %input{:type => "submit", :value => "Select"}/
+    %hr/
+    %form
+      %h3 What information do you want?
+      %p
+        %input{:type => "checkbox"}>/
+        Count
+      %p
+        %input{:type => "checkbox"}>/
+        Name
+      %p
+        %input{:type => "checkbox"}>/
+        Address
+      %p
+        %input{:type => "checkbox"}>/
+        Ethnicity
+    %form{:action => site_studentOutput_path}
+      %input{:type => "submit", :value => "Apply selected filters"}/
