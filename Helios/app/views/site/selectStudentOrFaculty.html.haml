@@ -1,0 +1,43 @@
+!!!
+%html
+  %head
+    %title Taulbee Survey Data
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "text/html; charset=US-ASCII", "http-equiv" => "Content-type"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    :css
+      .heading{
+      	color:white;
+      	background-color:#500000;
+      	height:200%;
+      	margin:0;
+      	padding:0;
+      }
+      
+      .centered{
+      	text-align:center;
+      }
+	
+      .symbol{
+      	position:absolute;
+      	left:550px;
+      	opacity:0.5;
+      }
+  %body
+    .heading
+      %h1.centered Taulbee Survey
+    %p
+      %a{:href => site_index_path}
+        %img{:height => "30", :src => "homepageicon.jpg", :width => "30"}/
+      %a{:href => site_selectStudentOrFaculty_path}
+        %img{:height => "30", :src => "previous-icon.png", :width => "30"}/
+    %hr/
+    %h2 Do you want to query Students or Faculty?
+    %p
+    %form{:action => site_studentFilterSelection_path}
+      %input{:type => "submit", :value => "Students"}/
+    %p
+    %form{:action => site_facultyFilterSelection_path}
+      %input{:type => "submit", :value => "Faculty"}/
+    .symbol
+      %img{:src => "anm_symbol.png"}/

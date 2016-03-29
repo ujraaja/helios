@@ -1,0 +1,33 @@
+!!!
+%html
+  %head
+    %title Taulbee Survey Data
+    :css
+      .heading{
+      	color:white;
+      	background-color:#500000;
+      	height:50px;
+      	margin:0;
+      	padding:0;
+      }
+      
+      .centered{
+      	text-align:center;
+      }
+  %body
+    .heading
+      %h1.centered Taulbee Survey
+    %p
+      %a{:href => "606page0.html"}
+        %img{:height => "30", :src => "homepageicon.jpg", :width => "30"}/
+      %a{:href => "606page2_faculty.html"}
+        %img{:height => "30", :src => "previous-icon.png", :width => "30"}/
+    %hr/
+    %h2 Result
+    %img{:align => "center", :height => "250", :src => "table.png", :width => "600"}/
+    %hr/
+    %form
+      %input{:type => "submit", :value => "Save"}/
+      %input{:type => "submit", :value => "Download"}/
+      %input{:type => "submit", :value => "Go to previous page"}/
+      %input{:type => "submit", :value => "New File"}/
