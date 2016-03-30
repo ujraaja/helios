@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'spreadsheets/index'
+
+  get 'spreadsheets/new'
+
+  get 'spreadsheets/create'
+
+  get 'spreadsheets/destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -10,7 +18,7 @@ Rails.application.routes.draw do
   get 'site/studentFilterSelection'
   get 'site/facultyOutput'
   get 'site/studentOutput'
-
+  resources :spreadsheets, only: [:index, :new, :create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

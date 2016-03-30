@@ -23,6 +23,9 @@
   %body
     .heading
       %h1.centered Taulbee Survey
+    - if !flash[:notice].blank?
+      .alert.alert-info
+        = flash[:notice]
     %form
       %h3 Choose among existing data files
       %select
@@ -43,4 +46,12 @@
       %br/
       %input{:type => "submit", :value => "Upload"}/
       .symbol
-        %img{:src => "/images/anm_symbol.png"}/
+        %img{:src => "/images/anm_symbol.png"}
+        
+    .well
+    = form_for @spreadsheet, html: { multipart: true } do |f|
+      = f.label :name
+      = f.text_field :name
+      = f.label :attachment
+      = f.file_field :attachment
+      = f.submit "Save", class: "btn btn-primary"

@@ -3803,3 +3803,616 @@ Cannot render console from 10.240.0.189! Allowed networks: 127.0.0.1, ::1, 127.0
 Processing by SiteController#index as HTML
   Rendered site/index.html.haml within layouts/application (0.2ms)
 Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSpreadsheets (20160330173234)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "spreadsheets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "attachment" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160330173234"]]
+  [1m[36m (28.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 10.240.0.121 at 2016-03-30 17:48:41 +0000
+Cannot render console from 10.240.0.121! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (12.7ms)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+    46:         %img{:src => "/images/anm_symbol.png"}
+    47:         
+    48: = form_for @spreadshet, html: { multipart: true } do |f|
+    49:     = f.label :name
+    50:     = f.text_field :name
+    51:     = f.label :attachment
+    52:     = f.file_field :attachment
+  app/views/site/index.html.haml:49
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (132.0ms)
+
+
+Started GET "/" for 10.240.0.157 at 2016-03-30 17:48:59 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (46.4ms)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    45:       .symbol
+    46:         %img{:src => "/images/anm_symbol.png"}
+    47:         
+    48: = form_for @spreadshet, html: { multipart: true } do |f|
+    49:   = f.label :name
+    50:   = f.text_field :name
+    51:   = f.label :attachment
+  app/views/site/index.html.haml:48:in `_app_views_site_index_html_haml___2514805718660460772_18031920'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (131.2ms)
+
+
+Started GET "/" for 10.240.0.75 at 2016-03-30 17:49:56 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (25.7ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    45:       .symbol
+    46:         %img{:src => "/images/anm_symbol.png"}
+    47:         
+    48:     =form_for @spreadshet, html: { multipart: true } do |f|
+    49:       = f.label :name
+    50:       = f.text_field :name
+    51:       = f.label :attachment
+  app/views/site/index.html.haml:48:in `_app_views_site_index_html_haml___2514805718660460772_32868480'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (171.0ms)
+
+
+Started GET "/" for 10.240.0.187 at 2016-03-30 17:50:35 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (28.9ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `spreadsheets_path' for #<#<Class:0x00000003beb0d8>:0x000000038dcb30>):
+    45:       .symbol
+    46:         %img{:src => "/images/anm_symbol.png"}
+    47:         
+    48:     =form_for @spreadsheet, html: { multipart: true } do |f|
+    49:       = f.label :name
+    50:       = f.text_field :name
+    51:       = f.label :attachment
+  app/views/site/index.html.haml:48:in `_app_views_site_index_html_haml___2514805718660460772_29807720'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (27.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (121.5ms)
+
+
+Started GET "/" for 10.240.0.203 at 2016-03-30 17:51:50 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (35.8ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `spreadsheets_path' for #<#<Class:0x00000003beb0d8>:0x0000000418fc28>):
+    51:           - @spreadsheet.errors.full_messages.each do |msg|
+    52:             %li= msg
+    53:     .well
+    54:       = form_for @spreadsheet, html: { multipart: true } do |f|
+    55:         = f.label :name
+    56:         = f.text_field :name
+    57:         = f.label :attachment
+  app/views/site/index.html.haml:54:in `_app_views_site_index_html_haml___2514805718660460772_34369620'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (24.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (107.7ms)
+
+
+Started GET "/" for 10.240.0.192 at 2016-03-30 17:54:48 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Inconsistent indentation: 3 spaces used for indentation, but the rest of the document was indented using 2 spaces.):
+    46:         %img{:src => "/images/anm_symbol.png"}
+    47:         
+    48:     <%= form_tag( { :action => 'upload' }, :multipart => true ) %>
+    49:    Upload file: <%= file_field( "form", "file" ) %>
+    50:        <br />
+    51:        
+    52:        <%= submit_tag( "Upload file" ) %>
+  app/views/site/index.html.haml:49
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (36.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (126.1ms)
+
+
+Started GET "/" for 10.240.0.75 at 2016-03-30 17:55:12 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Illegal nesting: nesting within plain text is illegal.):
+    46:         %img{:src => "/images/anm_symbol.png"}
+    47:         
+    48:     <%= form_tag( { :action => 'upload' }, :multipart => true ) %>
+    49:       Upload file: <%= file_field( "form", "file" ) %>
+    50:       <br />
+    51:        
+    52:       <%= submit_tag( "Upload file" ) %>
+  app/views/site/index.html.haml:49
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (36.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (170.7ms)
+
+
+Started GET "/" for 10.240.0.207 at 2016-03-30 17:56:32 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Inconsistent indentation: 7 spaces used for indentation, but the rest of the document was indented using 2 spaces.):
+    46:         %img{:src => "/images/anm_symbol.png"}
+    47:         
+    48:     <div class = "well">
+    49:        <%= form_for @spreadsheet, html: { multipart: true } do |f| %>
+    50:           <%= f.label :name %>
+    51:           <%= f.text_field :name %>
+    52:           <%= f.label :attachment %>
+  app/views/site/index.html.haml:49
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (28.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (160.5ms)
+
+
+Started GET "/" for 10.240.0.197 at 2016-03-30 17:56:46 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Illegal nesting: nesting within plain text is illegal.):
+    46:         %img{:src => "/images/anm_symbol.png"}
+    47:         
+    48:     <div class = "well">
+    49:       <%= form_for @spreadsheet, html: { multipart: true } do |f| %>
+    50:         <%= f.label :name %>
+    51:         <%= f.text_field :name %>
+    52:         <%= f.label :attachment %>
+  app/views/site/index.html.haml:49
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (148.2ms)
+
+
+Started GET "/" for 10.240.0.179 at 2016-03-30 17:58:45 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (37.7ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `spreadsheets_path' for #<#<Class:0x00000003beb0d8>:0x000000016e79d0>):
+    46:         %img{:src => "/images/anm_symbol.png"}
+    47:         
+    48:     .well
+    49:     = form_for @spreadsheet, html: { multipart: true } do |f|
+    50:       = f.label :name
+    51:       = f.text_field :name
+    52:       = f.label :attachment
+  app/views/site/index.html.haml:49:in `_app_views_site_index_html_haml___2514805718660460772_11905060'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (116.7ms)
+
+
+Started GET "/" for 10.240.0.203 at 2016-03-30 18:00:40 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (53.2ms)
+Completed 200 OK in 667ms (Views: 630.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 10.240.0.189 at 2016-03-30 18:00:41 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/default.self-d9107d60c54583129f407a40280ec4c0004b3bdc4808c953764290452f6e5cef.css?body=1" for 10.240.0.208 at 2016-03-30 18:00:41 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 10.240.0.204 at 2016-03-30 18:00:41 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap" for 10.240.0.207 at 2016-03-30 18:00:41 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/spreadsheets" for 10.240.0.138 at 2016-03-30 18:01:42 +0000
+Cannot render console from 10.240.0.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (uninitialized constant SpreadsheetsController):
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.1) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  activerecord (4.2.1) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:31:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (168.5ms)
+
+
+Started POST "/resumes" for 10.240.0.165 at 2016-03-30 18:05:17 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [POST] "/resumes"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:31:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (181.1ms)
+
+
+Started POST "/resumes" for 10.240.0.179 at 2016-03-30 18:05:26 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [POST] "/resumes"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:31:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (152.8ms)
+
+
+Started GET "/" for 10.240.0.138 at 2016-03-30 18:08:49 +0000
+Cannot render console from 10.240.0.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (12.6ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 0.6ms)
+
+SyntaxError (/home/ubuntu/workspace/HeliosProject/helios/app/views/site/index.html.haml:58: syntax error, unexpected keyword_ensure, expecting keyword_end
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/home/ubuntu/workspace/HeliosProject/helios/app/views/site/index.html.haml:61: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/site/index.html.haml:58: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/site/index.html.haml:61: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (117.7ms)
+
+
+Started GET "/" for 10.240.0.200 at 2016-03-30 18:09:07 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (47.0ms)
+Completed 200 OK in 955ms (Views: 953.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.200 at 2016-03-30 18:09:08 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.200 at 2016-03-30 18:09:08 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 10.240.0.200 at 2016-03-30 18:09:14 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (37.3ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/ubuntu/workspace/HeliosProject/helios/app/views/site/index.html.haml:58: syntax error, unexpected keyword_ensure, expecting keyword_end
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/home/ubuntu/workspace/HeliosProject/helios/app/views/site/index.html.haml:61: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/site/index.html.haml:58: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/site/index.html.haml:61: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (105.8ms)
+
+
+Started GET "/" for 10.240.0.165 at 2016-03-30 18:09:29 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 116ms (Views: 115.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.240.0.192 at 2016-03-30 18:10:52 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 134ms (Views: 114.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.192 at 2016-03-30 18:10:54 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qOGqU0NHKPkEaeTPMLsrbmx6L13czBTvre1dE/OVCQoAewldqE0Zz25HZymG4acnquyggztpk7pZRkkjSoHCVg==", "spreadsheet"=>{"name"=>""}, "commit"=>"Save"}
+Completed 500 Internal Server Error in 172ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `spreadsheet_params' for #<SpreadsheetsController:0x007f5e85332fd0>):
+  app/controllers/spreadsheets_controller.rb:11:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (134.7ms)
+
+
+Started GET "/" for 10.240.0.166 at 2016-03-30 18:10:57 +0000
+Cannot render console from 10.240.0.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 176ms (Views: 175.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.203 at 2016-03-30 18:11:05 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f+zdG32Eu2UOXYzIfV7RZWZUvjwJiT6pbf2uX8NNWjHXdn4Vlo6KU2RzDy7LBF0soMIx4u4sufyZVrpvelmRbQ==", "spreadsheet"=>{"name"=>"dvdv", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f5e851a7080 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160330-3086-x4kbj4.txt>, @original_filename="seats.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"seats.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `spreadsheet_params' for #<SpreadsheetsController:0x007f5e851b4c80>):
+  app/controllers/spreadsheets_controller.rb:11:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (111.5ms)
+
+
+Started GET "/" for 10.240.0.203 at 2016-03-30 18:13:27 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 104ms (Views: 102.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.145 at 2016-03-30 18:14:51 +0000
+Cannot render console from 10.240.0.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q0Ca2ponXtjl3/ohLkTdSHwaLUSWwbl18wwVxLZMM4oD2jnUcS1v7o/xeceYHlEBuoyimnFkPiAHpwH0D1j41g==", "spreadsheet"=>{"name"=>"yo", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f5e8684ddc0 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160330-3086-r71oty.txt>, @original_filename="to do.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"to do.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `spreadsheet_params' for #<SpreadsheetsController:0x007f5e8684e8b0>):
+  app/controllers/spreadsheets_controller.rb:11:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (16.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (173.9ms)
+
+
+Started GET "/" for 10.240.0.145 at 2016-03-30 18:16:15 +0000
+Cannot render console from 10.240.0.145! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 124ms (Views: 105.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.165 at 2016-03-30 18:16:24 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FdhVwGwQBY1ZgcQZfw4BjgsYzjxf3dQf8SpfbH/70oK9QvbOhxo0uzOvR//JVI3HzY5B4rh4U0oFgUtcxu8Z3g==", "spreadsheet"=>{"name"=>"yyy", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f5e85c7ca00 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160330-3086-1pvtczo.txt>, @original_filename="sunil notes.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"sunil notes.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+  [1m[35m (1.8ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "yyy"], ["attachment", "sunil_notes.txt"], ["created_at", "2016-03-30 18:16:24.099738"], ["updated_at", "2016-03-30 18:16:24.099738"]]
+  [1m[35m (22.9ms)[0m  commit transaction
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 25.5ms)
+
+NameError (undefined local variable or method `site_path' for #<SpreadsheetsController:0x007f5e85c7ed50>):
+  app/controllers/spreadsheets_controller.rb:14:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (129.3ms)
+
+
+Started GET "/" for 10.240.0.187 at 2016-03-30 18:17:13 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 97ms (Views: 83.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.203 at 2016-03-30 18:17:20 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ha7wVffsQpyxQbVT8jmw/+O7nxzpLFWC3LCmSUgnVT61NFNbHOZzqttvNrVEYzy2JS0Qwg6J0tcoG7J58TOeYg==", "spreadsheet"=>{"name"=>"hhh", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f5e85d0f0a8 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160330-3086-1kkaodc.txt>, @original_filename="ch3.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"ch3.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "hhh"], ["attachment", "ch3.txt"], ["created_at", "2016-03-30 18:17:20.131819"], ["updated_at", "2016-03-30 18:17:20.131819"]]
+  [1m[36m (12.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 29ms (ActiveRecord: 13.5ms)
+
+
+Started GET "/site/index" for 10.240.0.203 at 2016-03-30 18:17:20 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 103ms (Views: 101.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap" for 10.240.0.165 at 2016-03-30 18:17:20 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/spreadsheets" for 10.240.0.110 at 2016-03-30 18:19:27 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"STdcGthIFSDIjXnWHOdi5UoUvPHiFDzyMZwA4c1JI4Lhrf8UM0IkFqKj+jCqve6sjIIzLwWxu6fFNxTRdF3o3g==", "spreadsheet"=>{"name"=>"SpreadSheet", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f5e864df530 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160330-3086-1k03fz0.xlsx>, @original_filename="DTRA Clock timing RC.xlsx", @content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"DTRA Clock timing RC.xlsx\"\r\nContent-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\r\n">}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "SpreadSheet"], ["attachment", "DTRA_Clock_timing_RC.xlsx"], ["created_at", "2016-03-30 18:19:27.337654"], ["updated_at", "2016-03-30 18:19:27.337654"]]
+  [1m[35m (20.6ms)[0m  commit transaction
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 49ms (ActiveRecord: 22.0ms)
+
+
+Started GET "/site/index" for 10.240.0.138 at 2016-03-30 18:19:27 +0000
+Cannot render console from 10.240.0.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 112ms (Views: 110.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap" for 10.240.0.110 at 2016-03-30 18:19:27 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
