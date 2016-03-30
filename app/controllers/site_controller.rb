@@ -1,5 +1,6 @@
 class SiteController < ApplicationController
   def index
+    @spreadsheet = Spreadsheet.new
   end
   
   def selectStudentOrFaculty
