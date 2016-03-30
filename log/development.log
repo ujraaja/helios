@@ -4446,3 +4446,29 @@ Cannot render console from 10.240.0.75! Allowed networks: 127.0.0.1, ::1, 127.0.
 Processing by SiteController#index as HTML
   Rendered site/index.html.haml within layouts/application (3.1ms)
 Completed 200 OK in 44ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.240.0.206 at 2016-03-30 18:47:54 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (52.2ms)
+Completed 200 OK in 591ms (Views: 552.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.121 at 2016-03-30 18:48:47 +0000
+Cannot render console from 10.240.0.121! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HlEoIFc0aWbbajB4upRvoxdlNMv5Kiq1pAXRj70Qe3i2y4suvD5YULFEs54MzuPq0fO7FR6PreBQrsW/BASwJA==", "spreadsheet"=>{"name"=>"gump", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f4ace0838b8 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160330-4924-1nzgfvg.pptx>, @original_filename="Layne’s Challenge Informational.pptx", @content_type="application/vnd.openxmlformats-officedocument.presentationml.presentation", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"Layne\xE2\x80\x99s Challenge Informational.pptx\"\r\nContent-Type: application/vnd.openxmlformats-officedocument.presentationml.presentation\r\n">}, "commit"=>"Save"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "gump"], ["attachment", "Layne_s_Challenge_Informational.pptx"], ["created_at", "2016-03-30 18:48:47.441037"], ["updated_at", "2016-03-30 18:48:47.441037"]]
+  [1m[35m (14.8ms)[0m  commit transaction
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 40ms (ActiveRecord: 15.6ms)
+
+
+Started GET "/site/index" for 10.240.0.204 at 2016-03-30 18:48:47 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
