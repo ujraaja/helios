@@ -4416,3 +4416,33 @@ Completed 200 OK in 112ms (Views: 110.4ms | ActiveRecord: 0.0ms)
 
 Started GET "/assets/bootstrap" for 10.240.0.110 at 2016-03-30 18:19:27 +0000
 Cannot render console from 10.240.0.110! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 10.240.0.157 at 2016-03-30 18:35:51 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (54.8ms)
+Completed 200 OK in 1821ms (Views: 1780.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 10.240.0.167 at 2016-03-30 18:35:54 +0000
+Cannot render console from 10.240.0.167! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/spreadsheets" for 10.240.0.192 at 2016-03-30 18:36:04 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wi7fFe6m2cLTa4TBbGpBpIkhtBhLkMQlk5Lin5Ax64dqtHwbBazo9LlFByfaMM3tT7c7xqw1Q3BnOfavKSUg2w==", "spreadsheet"=>{"name"=>"z", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f64ceeb6ec0 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160330-4204-1rp5d42.log>, @original_filename="TombRaider.log", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"TombRaider.log\"\r\nContent-Type: application/octet-stream\r\n">}, "commit"=>"Save"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "z"], ["attachment", "TombRaider.log"], ["created_at", "2016-03-30 18:36:04.922454"], ["updated_at", "2016-03-30 18:36:04.922454"]]
+  [1m[35m (43.6ms)[0m  commit transaction
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 87ms (ActiveRecord: 44.4ms)
+
+
+Started GET "/site/index" for 10.240.0.75 at 2016-03-30 18:36:05 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 44ms (Views: 43.3ms | ActiveRecord: 0.0ms)
