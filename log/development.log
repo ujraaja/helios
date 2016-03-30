@@ -3719,3 +3719,87 @@ Cannot render console from 10.240.0.206! Allowed networks: 127.0.0.1, ::1, 127.0
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.179 at 2016-03-30 06:46:06 +0000
 Cannot render console from 10.240.0.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 10.240.0.147 at 2016-03-30 06:48:30 +0000
+Cannot render console from 10.240.0.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (21.0ms)
+Completed 200 OK in 60ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.240.0.192 at 2016-03-30 06:48:37 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.240.0.165 at 2016-03-30 06:50:36 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+     8: 
+     9:   %body
+    10: 
+    11:       = yield
+  app/views/layouts/application.html.haml:11
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.0ms)
+
+
+Started GET "/" for 10.240.0.167 at 2016-03-30 06:51:41 +0000
+Cannot render console from 10.240.0.167! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (11.5ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+     9:   %body
+    10: 
+    11: 
+    12:       = yield
+  app/views/layouts/application.html.haml:12
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.5ms)
+
+
+Started GET "/" for 10.240.0.165 at 2016-03-30 06:52:06 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 143ms (Views: 142.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.240.0.165 at 2016-03-30 06:52:13 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.240.0.165 at 2016-03-30 06:52:15 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.240.0.189 at 2016-03-30 06:52:21 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.0ms)
