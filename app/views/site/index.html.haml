@@ -1,0 +1,59 @@
+!!!
+%html
+  %head
+    %title Taulbee Survey Data
+    :css
+      .heading{
+      	color:white;
+      	background-color:#500000;
+      	height:200%;
+      	margin:0;
+      	padding:0;
+      }
+      
+      .centered{
+      	text-align:center;
+      }
+	
+      .symbol{
+      	position:absolute;
+      	left:550px;
+      	opacity:0.5;
+      }
+  %body
+    .heading
+      %h1.centered Taulbee Survey
+    - if !flash[:notice].blank?
+      .alert.alert-info
+        = flash[:notice]
+    %form
+      %h3 Choose among existing data files
+      %select
+        %option First data file
+        %option Second data file
+        %option Third data file
+    %form{:action => site_selectStudentOrFaculty_path}
+      %br/
+      %input{:type => "submit", :value => "Select"}/
+    %hr/
+    -#%form
+      -#%h3 Upload new data file
+      -#%select
+        -#%option First data file
+        -#%option Second data file
+        -#%option Third data file
+      -#%input{:type => "file", :value => "Browse"}/
+      -#%br/
+      -#%input{:type => "submit", :value => "Upload"}/
+      -#.symbol
+        
+    .well
+    = form_for @spreadsheet, html: { multipart: true } do |f|
+      = f.label :name
+      = f.text_field :name
+      = f.label :attachment
+      = f.file_field :attachment
+      = f.submit "Save", class: "btn btn-primary"
+      
+    
+    %img{:src => "/images/anm_symbol.png"}
