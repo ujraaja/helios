@@ -22,5 +22,12 @@ module Rottenpotatoes
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    config.generators do |g|
+        g.controller_specs false
+        g.view_specs false
+        g.helper_specs false
+        g.routing_specs false
+        g.request_specs false
+    end
   end
 end
