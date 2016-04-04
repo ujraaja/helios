@@ -4472,3 +4472,16 @@ Cannot render console from 10.240.0.204! Allowed networks: 127.0.0.1, ::1, 127.0
 Processing by SiteController#index as HTML
   Rendered site/index.html.haml within layouts/application (2.9ms)
 Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-03 22:20:21 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (24.5ms)
+Completed 200 OK in 644ms (Views: 621.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-04-03 22:20:21 -0500
+Processing by SiteController#index as HTML
+  Rendered site/index.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)
