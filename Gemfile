@@ -52,6 +52,11 @@ group :development, :test do
   gem 'capybara', '~> 2.6', '>= 2.6.2'
   gem 'factory_girl_rails', '~> 4.6'
   gem 'autotest'
+  
+  # Cucumber
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels'
+  gem 'database_cleaner'
 end
 
 group :production do
