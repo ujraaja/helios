@@ -1,4 +1,4 @@
-Feature: back button
+Feature: Back Button
   
   As a User
   So that I can return to the previous page

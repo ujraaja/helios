@@ -1,4 +1,4 @@
-Feature: save button
+Feature: Save Button
   
   As a User
   So that I can save the filters used to generate results

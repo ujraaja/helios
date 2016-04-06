@@ -16,9 +16,9 @@ module NavigationHelpers
     when /home/i
       '/'
     when /filter/i
-      '/site/studentFilterSelection?'
+      '/site/studentFilterSelection'
     when /result/i
-      '/site/studentOutput?'
+      '/site/studentOutput'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

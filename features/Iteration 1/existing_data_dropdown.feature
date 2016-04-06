@@ -1,4 +1,4 @@
-Feature: Dropdown display for existing data
+Feature: Dropdown Display for Existing Data
 
   As a User
   So that I can have all the existing data files to choose from on one page

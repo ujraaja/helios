@@ -1,4 +1,4 @@
-Feature: new file button
+Feature: New File Button
   
   As a User
   So that I can upload or select a new file

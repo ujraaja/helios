@@ -1,4 +1,4 @@
-Feature: browse button
+Feature: Browse Button
   
   As a User
   So that I can select my file to be uploaded

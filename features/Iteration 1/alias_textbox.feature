@@ -1,4 +1,4 @@
-Feature: alias textbox
+Feature: Alias Textbox
   
   As a User
   So that I can give an alias to the file I have uploaded

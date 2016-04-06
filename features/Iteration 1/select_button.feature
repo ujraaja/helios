@@ -1,4 +1,4 @@
-Feature: select button
+Feature: Select Button
   
   As a User
   So that I can use the existing data file picked with the dropdown

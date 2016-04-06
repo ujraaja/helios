@@ -1,4 +1,4 @@
-Feature: dropdown menu for attributes
+Feature: Dropdown Menu for Attributes
   
   As a User
   So that I can see all the possible attributes of a given filter

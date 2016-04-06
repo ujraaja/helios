@@ -1,4 +1,4 @@
-Feature: download button
+Feature: Download Button
 
   As a User
   So that I can download the results

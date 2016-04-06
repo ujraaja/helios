@@ -1,4 +1,4 @@
-Feature: apply filters button
+Feature: Apply Filters Button
 
   As a User
   So that I can select my data based on the filters

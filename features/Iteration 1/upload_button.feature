@@ -1,4 +1,4 @@
-Feature: upload button
+Feature: Upload Button
 
   As a User
   So that I can upload the file that has been selected

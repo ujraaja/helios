@@ -1,4 +1,4 @@
-Feature: home button
+Feature: Home Button
   
   As a User
   So that I can go directly back to the homepage
@@ -6,4 +6,8 @@ Feature: home button
   
 Scenario: I should be able to see the home button
   Given I am on the results page
+  Then I should see a link with href "/site/index"
+  
+Scenario: I should be able to see the home button
+  Given I am on the filters page
   Then I should see a link with href "/site/index"
