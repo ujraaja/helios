@@ -26,12 +26,17 @@
     - if !flash[:notice].blank?
       .alert.alert-info
         = flash[:notice]
+        
     %form
       %h3 Choose among existing data files
       %select
+        - @spreadsheets.each do |spreadsheet|
+          %option= spreadsheet.name 
+        end
         %option First data file
         %option Second data file
         %option Third data file
+        
     %form{:action => site_selectStudentOrFaculty_path}
       %br/
       %input{:type => "submit", :value => "Select"}/
