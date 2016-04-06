@@ -10,7 +10,7 @@ class SpreadsheetsController < ApplicationController
   def create
       @spreadsheet = Spreadsheet.new(spreadsheet_params)
       
-      if @spreadsheet.save
+      if @spreadsheet.saveAndMove
          redirect_to site_index_path, notice: "The Spreadsheet #{@spreadsheet.name} has been uploaded."
       else
          redirect_to site_index_path, notice: "The Spreadsheet #{@spreadsheet.name} has not been uploaded."
