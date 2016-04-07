@@ -1,24 +1,12 @@
 %html
   %head
     %title Taulbee Survey Data
-    :css
-			.heading{
-			color:white;
-			background-color:#500000;
-			height:50px;
-			margin:0;
-			padding:0;
-		}
-		
-		.centered{
-			text-align:center;
-		}
 	
-	  %body
-    .heading
-      %h1.centered Taulbee Survey
+  %body
+    
+    %h1 Taulbee Survey
     %p
-     %a{:href => site_index_path}
+      %a{:href => site_index_path}
         %img{:height => "30", :src => "/images/homepageicon.jpg", :width => "30"}/
       %a{:href => site_selectStudentOrFaculty_path}
         %img{:height => "30", :src => "/images/previous-icon.png", :width => "30"}/
@@ -28,20 +16,21 @@
         %button#confirmNoOfFilters Confirm
         %p
           #List
-            #filtersList
-              <select =id="filtersListInner" onchange="getSelected(value)">
-              %option{:value => "degree"} degree
-              %option{:value => "ethnicity"} ethnicity
-              %option{:value => "gender"} gender
-            #comparatorList
-              %select#comparatorListInner{:onchange => "getSelected(value)"}
-                %option{:value => "="} =
-                %option{:value => "="} >
-                %option{:value => "="} <
-                %option{:value => "="} >=
-                %option{:value => "="} <=
-            #filterValue
-              %input#filterValueInner{:type => "text"}/
+            %p
+              #filtersList
+                %select#filtersListInner{:onchange => "getSelected(value)"}
+                  %option{:value => "degree"} degree
+                  %option{:value => "ethnicity"} ethnicity
+                  %option{:value => "gender"} gender
+              #comparatorList
+                %select#comparatorListInner{:onchange => "getSelected(value)"}
+                  %option{:value => "="} =
+                  %option{:value => "="} >
+                  %option{:value => "="} <
+                  %option{:value => "="} >=
+                  %option{:value => "="} <=
+              #filterValue
+                %input#filterValueInner{:type => "text"}/
         %hr
           %p How many attributes do you want?
           %input#noOfInfo{:type => "text"}
@@ -74,12 +63,12 @@
                 	}
                 	document.getElementById("List").innerHTML = dropdown1;
                 	
-                	//we need something here to access the values of "filtersList","comparatorList","filterValue" if every iteration 
+                	// we need something here to access the values of filtersList,comparatorList,filterValue if every iteration 
                 	//and then have to store the values selected in the drop down lists
-                	/*	filterChosen[i]= document.getElementById("filtersListInner").value;
-                		comparatorChosen[i]= document.getElementById("comparatorListInner").value;
-                		filterValueChosen[i]= document.getElementById("comparatorListInner").value;
-                	*/
+                	//	filterChosen[i]= document.getElementById("filtersListInner").value;
+                	//	comparatorChosen[i]= document.getElementById("comparatorListInner").value;
+                	//	filterValueChosen[i]= document.getElementById("comparatorListInner").value;
+                	
                 	
                 }
                 
