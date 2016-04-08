@@ -1,0 +1,28 @@
+<h1>Cats#index</h1>
+<p>Find me in app/views/cats/index.html.erb</p>
+
+-#  This file is app/views/movies/index.html.haml
+%h1 All Cats
+
+%table#cats
+  %thead
+    %tr
+      %th Cat Name
+      %th Color
+      %th Age
+      %th Eye Color
+  %tbody
+    - @cats.each do |cat|
+      %tr
+        %td= cat.name 
+        %td= cat.color
+        %td= cat.age
+        %td= cat.eye_color
+        
+
+%form
+  %h3 Choose column name
+  %select
+    - @column_names.each do |column_name|
+      %option= column_name 
+    end

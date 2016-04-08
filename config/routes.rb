@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'cats/index'
+
+  get 'cats/new'
+
+  get 'cats/create'
+
+  get 'cats/destroy'
+
   get 'spreadsheets/index'
 
   get 'spreadsheets/new'

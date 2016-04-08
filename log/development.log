@@ -4485,3 +4485,90 @@ Started GET "/" for ::1 at 2016-04-03 22:20:21 -0500
 Processing by SiteController#index as HTML
   Rendered site/index.html.haml within layouts/application (1.3ms)
 Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCats (20160406021822)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "cats" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "color" varchar, "age" integer, "eyeColor" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160406021822"]]
+  [1m[36m (17.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (9.7ms)[0m  [1mCREATE TABLE "cats" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "color" varchar, "age" integer, "eyeColor" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (7.6ms)[0m  CREATE TABLE "spreadsheets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "attachment" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (10.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (9.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (12.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160406021822')[0m
+  [1m[35m (7.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160330173234')
+  [1m[36m (8.9ms)[0m  [1mCREATE TABLE "cats" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "color" varchar, "age" integer, "eyeColor" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (7.6ms)[0m  CREATE TABLE "spreadsheets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "attachment" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (7.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (18.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (7.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160406021822')[0m
+  [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160330173234')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (11.3ms)[0m  [1mCREATE TABLE "cats" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "color" varchar, "age" integer, "eyeColor" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (23.4ms)[0m  CREATE TABLE "spreadsheets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "attachment" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (9.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (10.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (7.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160406021822')[0m
+  [1m[35m (26.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160330173234')
+  [1m[36m (7.6ms)[0m  [1mCREATE TABLE "cats" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "color" varchar, "age" integer, "eyeColor" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (23.3ms)[0m  CREATE TABLE "spreadsheets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "attachment" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (10.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (13.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (8.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160406021822')[0m
+  [1m[35m (7.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160330173234')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (9.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (10.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateSpreadsheets (20160330173234)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "spreadsheets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "attachment" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160330173234"]]
+  [1m[35m (9.4ms)[0m  commit transaction
+Migrating to CreateCats (20160406021822)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "cats" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "color" varchar, "age" integer, "eye_color" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160406021822"]]
+  [1m[35m (9.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cats" ("name", "color", "age", "eye_color", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tim"], ["color", "Brown"], ["age", 7], ["eye_color", "Brown"], ["created_at", "2016-04-06 02:45:49.771325"], ["updated_at", "2016-04-06 02:45:49.771325"]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "color", "age", "eye_color", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Brandon"], ["color", "Grey"], ["age", 1], ["eye_color", "Green"], ["created_at", "2016-04-06 02:45:49.788676"], ["updated_at", "2016-04-06 02:45:49.788676"]]
+  [1m[36m (9.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cats" ("name", "color", "age", "eye_color", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Zeek"], ["color", "Orange"], ["age", 2], ["eye_color", "Blue"], ["created_at", "2016-04-06 02:45:49.799221"], ["updated_at", "2016-04-06 02:45:49.799221"]]
+  [1m[35m (6.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "color", "age", "eye_color", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Greg"], ["color", "Black"], ["age", 5], ["eye_color", "Brown"], ["created_at", "2016-04-06 02:45:49.807371"], ["updated_at", "2016-04-06 02:45:49.807371"]]
+  [1m[36m (6.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cats" ("name", "color", "age", "eye_color", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Shay"], ["color", "Orange"], ["age", 3], ["eye_color", "Brown"], ["created_at", "2016-04-06 02:45:49.815603"], ["updated_at", "2016-04-06 02:45:49.815603"]]
+  [1m[35m (7.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cats" ("name", "color", "age", "eye_color", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Sandra"], ["color", "Black"], ["age", 7], ["eye_color", "Blue"], ["created_at", "2016-04-06 02:45:49.824689"], ["updated_at", "2016-04-06 02:45:49.824689"]]
+  [1m[36m (8.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cats" ("name", "color", "age", "eye_color", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Bobo"], ["color", "Brown"], ["age", 8], ["eye_color", "Green"], ["created_at", "2016-04-06 02:45:49.834441"], ["updated_at", "2016-04-06 02:45:49.834441"]]
+  [1m[35m (13.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "cats" ("name", "color", "age", "eye_color", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Johnny"], ["color", "Grey"], ["age", 10], ["eye_color", "Green"], ["created_at", "2016-04-06 02:45:49.849967"], ["updated_at", "2016-04-06 02:45:49.849967"]]
+  [1m[36m (8.9ms)[0m  [1mcommit transaction[0m
