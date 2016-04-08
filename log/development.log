@@ -13919,3 +13919,27 @@ Cannot render console from 10.240.0.192! Allowed networks: 10.240.0.139, 127.0.0
 Processing by SiteController#studentFilterSelection as HTML
   Rendered site/studentFilterSelection.html.haml within layouts/application (0.8ms)
 Completed 200 OK in 24ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.240.0.156 at 2016-04-08 06:50:28 +0000
+Cannot render console from 10.240.0.156! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (61.7ms)
+Completed 200 OK in 605ms (Views: 568.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/site/studentFilterSelection" for 10.240.0.186 at 2016-04-08 06:50:34 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Rendered site/studentFilterSelection.html.haml within layouts/application (15.9ms)
+Completed 200 OK in 115ms (Views: 108.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/site/studentOutput" for 10.240.0.139 at 2016-04-08 06:50:46 +0000
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bDkYW+aan/cVkyDOUF9qs8KETCTubNz1o5bofptCza8zZlr2IpdaZAGunxUBdSdc9Dn/lwfey+BAJbmSIkKf0A==", "filter0"=>"color", "comparator0"=>"=", "filterValue0"=>"Brown", "attribute0"=>"color", "attribute1"=>"name", "attribute2"=>"age", "commit"=>"Apply Filters"}
+  [1m[36mCat Load (0.4ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE ("color"="Brown")[0m
+  Rendered site/studentOutput.html.haml within layouts/application (39.6ms)
+Completed 200 OK in 97ms (Views: 94.1ms | ActiveRecord: 0.6ms)
