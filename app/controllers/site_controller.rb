@@ -44,7 +44,7 @@ class SiteController < ApplicationController
     if filters.length == 0
       @cats = Cat.all
     else
-      @cats = Cat.where("\"" + filters["filter0"] + "\"" + comparators["comparator0"] + "\"" + filterValues["filterValue0"] + "\"")
+      @cats = Cat.where(filters["filter0"] + comparators["comparator0"] + "\'" + filterValues["filterValue0"] + "\'")
     end
     
   end

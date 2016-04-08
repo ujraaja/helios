@@ -13943,3 +13943,159 @@ Processing by SiteController#studentOutput as HTML
   [1m[36mCat Load (0.4ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE ("color"="Brown")[0m
   Rendered site/studentOutput.html.haml within layouts/application (39.6ms)
 Completed 200 OK in 97ms (Views: 94.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/site/studentFilterSelection" for 10.240.0.166 at 2016-04-08 06:55:12 +0000
+Cannot render console from 10.240.0.166! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Rendered site/studentFilterSelection.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 41ms (Views: 37.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/site/studentOutput" for 10.240.0.147 at 2016-04-08 06:55:25 +0000
+Cannot render console from 10.240.0.147! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FGdcSDzLQI+3WzaB3ADtnOJbdq9hRBfQRcC65H7p9VRLOB7l+MaFHKNmiVqNKqBz1ObFHIj2AMWmc+sIx+mnKw==", "filter0"=>"color", "comparator0"=>"=", "filterValue0"=>"Brown", "attribute0"=>"name", "attribute1"=>"color", "attribute2"=>"count", "commit"=>"Apply Filters"}
+  [1m[35mCat Load (1.3ms)[0m  SELECT "cats".* FROM "cats" WHERE ("color"=Brown)
+SQLite3::SQLException: no such column: Brown: SELECT "cats".* FROM "cats" WHERE ("color"=Brown)
+  Rendered site/studentOutput.html.haml within layouts/application (11.9ms)
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 1.3ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such column: Brown: SELECT "cats".* FROM "cats" WHERE ("color"=Brown)):
+    27:     
+    28:     %h2 Result
+    29:     - if @count
+    30:       %h3 Count = #{@cats.length}
+    31:     %table#cats
+    32:       %thead
+    33:         %tr
+  app/views/site/studentOutput.html.haml:30:in `_app_views_site_student_utput_html_haml___3616793613751993006_70160079127840'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (133.7ms)
+
+
+Started POST "/site/studentOutput" for 10.240.0.187 at 2016-04-08 06:56:59 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FGdcSDzLQI+3WzaB3ADtnOJbdq9hRBfQRcC65H7p9VRLOB7l+MaFHKNmiVqNKqBz1ObFHIj2AMWmc+sIx+mnKw==", "filter0"=>"color", "comparator0"=>"=", "filterValue0"=>"Brown", "attribute0"=>"color", "attribute1"=>"name", "attribute2"=>"age", "commit"=>"Apply Filters"}
+  [1m[36mCat Load (0.5ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE ("color"="Brown")[0m
+  Rendered site/studentOutput.html.haml within layouts/application (19.2ms)
+Completed 200 OK in 79ms (Views: 72.7ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/site/studentOutput" for 10.240.0.147 at 2016-04-08 07:02:17 +0000
+Cannot render console from 10.240.0.147! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FGdcSDzLQI+3WzaB3ADtnOJbdq9hRBfQRcC65H7p9VRLOB7l+MaFHKNmiVqNKqBz1ObFHIj2AMWmc+sIx+mnKw==", "filter0"=>"color", "comparator0"=>"=", "filterValue0"=>"Brown", "attribute0"=>"color", "attribute1"=>"name", "attribute2"=>"age", "commit"=>"Apply Filters"}
+  [1m[35mCat Load (0.5ms)[0m  SELECT "cats".* FROM "cats" WHERE ('color'='Brown')
+  Rendered site/studentOutput.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 76ms (Views: 34.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.206 at 2016-04-08 07:02:17 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 10.240.0.147 at 2016-04-08 07:02:17 +0000
+Cannot render console from 10.240.0.147! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.147 at 2016-04-08 07:02:17 +0000
+Cannot render console from 10.240.0.147! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.147 at 2016-04-08 07:02:17 +0000
+Cannot render console from 10.240.0.147! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.240.0.192 at 2016-04-08 07:02:17 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.240.0.147 at 2016-04-08 07:02:17 +0000
+Cannot render console from 10.240.0.147! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.240.0.147 at 2016-04-08 07:02:17 +0000
+Cannot render console from 10.240.0.147! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.147 at 2016-04-08 07:02:17 +0000
+Cannot render console from 10.240.0.147! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.186 at 2016-04-08 07:02:18 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.208 at 2016-04-08 07:02:18 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/site/studentFilterSelection" for 10.240.0.197 at 2016-04-08 07:02:20 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Rendered site/studentFilterSelection.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/site/studentOutput" for 10.240.0.147 at 2016-04-08 07:02:32 +0000
+Cannot render console from 10.240.0.147! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oy0l0k0/U9kbOSKxFUCrcMw6atbfqoO+2QRfXv8hHln8cmd/iTKWSg8EnWpEauaf+ofZZTYYlKs6tw6yRiFMJg==", "filter0"=>"color", "comparator0"=>"=", "filterValue0"=>"Brown", "attribute0"=>"color", "attribute1"=>"name", "attribute2"=>"age", "commit"=>"Apply Filters"}
+  [1m[36mCat Load (0.3ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE ('color'='Brown')[0m
+  Rendered site/studentOutput.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 166ms (Views: 164.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/site/studentOutput" for 10.240.0.147 at 2016-04-08 07:03:12 +0000
+Cannot render console from 10.240.0.147! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oy0l0k0/U9kbOSKxFUCrcMw6atbfqoO+2QRfXv8hHln8cmd/iTKWSg8EnWpEauaf+ofZZTYYlKs6tw6yRiFMJg==", "filter0"=>"color", "comparator0"=>"=", "filterValue0"=>"Brown", "attribute0"=>"color", "attribute1"=>"name", "attribute2"=>"age", "commit"=>"Apply Filters"}
+  [1m[35mCat Load (0.5ms)[0m  SELECT "cats".* FROM "cats" WHERE (color='Brown')
+  Rendered site/studentOutput.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 164ms (Views: 158.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.147 at 2016-04-08 07:03:12 +0000
+Cannot render console from 10.240.0.147! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 10.240.0.197 at 2016-04-08 07:03:12 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.207 at 2016-04-08 07:03:12 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.203 at 2016-04-08 07:03:12 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.240.0.166 at 2016-04-08 07:03:12 +0000
+Cannot render console from 10.240.0.166! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.240.0.206 at 2016-04-08 07:03:12 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.240.0.156 at 2016-04-08 07:03:12 +0000
+Cannot render console from 10.240.0.156! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.192 at 2016-04-08 07:03:12 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.207 at 2016-04-08 07:03:13 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.203 at 2016-04-08 07:03:13 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
