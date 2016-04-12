@@ -49,7 +49,6 @@ group :development, :test do
   gem 'spring'
 
   gem 'rspec-rails'
-  gem 'capybara', '~> 2.6', '>= 2.6.2'
   gem 'factory_girl_rails', '~> 4.6'
   gem 'autotest'
   
@@ -57,6 +56,13 @@ group :development, :test do
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
   gem 'database_cleaner'
+end
+
+group :test do
+  gem "faker"
+  gem 'capybara', '~> 2.6', '>= 2.6.2'
+  gem "guard-rspec"
+  gem "launchy"
 end
 
 group :production do
