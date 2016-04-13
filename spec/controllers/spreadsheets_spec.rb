@@ -5,15 +5,15 @@ RSpec.describe SpreadsheetsController, type: :controller do
 
 	describe "GET #index" do
 		it "#index" do
-			visit spreadsheets_index_path
-			expect(response).to have_http_status(200)
+			get :index
+			expect(response).to redirect_to site_facultyOutput_path
 		end
 	end
 
 	describe "GET #new" do
 		it "#new" do
-			visit spreadsheets_new_path
-			expect(response).to have_http_status(200) 
+			get :new
+			expect(response).to redirect_to site_facultyOutput_path
 		end 
 	end
 
@@ -44,6 +44,13 @@ RSpec.describe SpreadsheetsController, type: :controller do
 				expect(response).to redirect_to(site_index_path)
 				expect(flash[:notice]).to include('has not been uploaded')  				
 			end
+		end
+	end
+
+	describe "DELETE #destroy" do
+		it "redirects" do
+			delete :destroy #why always redirect...
+			expect(response).to redirect_to site_facultyOutput_path
 		end
 	end
 end
