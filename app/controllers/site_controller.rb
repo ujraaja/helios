@@ -11,12 +11,42 @@ class SiteController < ApplicationController
   end
   
   def studentFilterSelection
+    @cats = Cat.all
   end
   
   def facultyOutput
   end
   
   def studentOutput
+    puts "HOWDY!"
+    
+    filters = params.select { |key, value| key.to_s.match(/filter\d+/) }
+    comparators = params.select { |key, value| key.to_s.match(/comparator\d+/) }
+    filterValues = params.select { |key, value| key.to_s.match(/filterValue\d+/) }
+    @attributes = params.select { |key, value| key.to_s.match(/attribute\d+/) }
+    
+    filters.each do |value|
+      puts value.inspect
+    end
+    comparators.each do |comparator|
+      puts comparator.inspect
+    end
+    filterValues.each do |filterValue|
+      puts filterValue.inspect
+    end
+    @attributes.each do |attribute|
+      puts attribute.inspect
+    end
+    
+    @count = @attributes.any? { |hash| hash[1].include?("count") }
+
+    puts filters.inspect
+    if filters.length == 0
+      @cats = Cat.all
+    else
+      @cats = Cat.where(filters["filter0"] + comparators["comparator0"] + "\'" + filterValues["filterValue0"] + "\'")
+    end
+    
   end
   
   private
