@@ -7,3 +7,8 @@ Feature: Select Button
 Scenario: I expect to be able to see the select button
   Given I am on the home page
   Then I expect to see a "submit" input labeled "Select"
+  
+Scenario: I expect to be taken to the filters page upon clicking select
+  Given I am on the home page
+  And I press "Select"
+  Then I expect to be on the filters page

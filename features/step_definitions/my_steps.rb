@@ -50,3 +50,7 @@ end
 Then(/^I expect to see "([^"]*)" selected from "([^"]*)"$/) do |option, field|
   expect(page).to have_select(field, selected: option)
 end
+
+Then(/^I should see a select with option "([^"]*)"$/) do |value|
+  expect(page).to have_xpath("//select/option[text() = '#{value}']")
+end
