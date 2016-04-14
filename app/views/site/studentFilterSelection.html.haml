@@ -25,8 +25,13 @@
     %p How many filters do you want to apply?
     %input#noOfFilters{:type => "text"}
       %button#confirmNoOfFilters Confirm
+<<<<<<< 65136e61fc1e3ce6f00b9e1b64a29e4a40f9b574
     %select#filtersListInner{:onchange => "getSelected(value)", :name => "filter", :hidden => "true"}
       - @students.column_names.each do |column_name|
+=======
+    %select#filtersListInner{:onchange => "getSelected(value)", :name => "filter", :style => "visibility: hidden;"}
+      - @cats.column_names.each do |column_name|
+>>>>>>> Fixed issues with persistent features; updated tests
         %option{:value => column_name}= column_name
     %select#comparatorListInner{:onchange => "getSelected(value)", :name => "comparator", :style => "visibility: hidden;"}
       %option{:value => "="}= "="
@@ -39,8 +44,8 @@
       %p How many attributes do you want?
       %input#noOfInfo{:type => "text"}
         %button#confirmNoOfInfo Confirm
-    %select#attributeListInner{:onchange => "getSelected(value)", :name => "attribute", :hidden => "true"}
-      - @students.column_names.each do |column_name|
+    %select#attributeListInner{:onchange => "getSelected(value)", :name => "attribute", :style => "visibility: hidden;"}
+      - @cats.column_names.each do |column_name|
         %option{:value => column_name}= column_name
       %option{:value => "count"} count
     %p{:id => "testing"}   
@@ -103,7 +108,10 @@
       	  
           var list = document.getElementById("filtersListInner").cloneNode(true);
           list.style.visibility = "visible";
+<<<<<<< 65136e61fc1e3ce6f00b9e1b64a29e4a40f9b574
           console.log("Hello")
+=======
+>>>>>>> Fixed issues with persistent features; updated tests
           list.id = "filter" + i.toString();
           filterDiv.appendChild(list);
           var comparator = document.getElementById("comparatorListInner").cloneNode(true);
