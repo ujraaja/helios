@@ -4,6 +4,6 @@ Feature: Upload Button
   So that I can upload the file that has been selected
   I want to have a button to initiate this action
 
-Scenario: I should be able to see a the upload button
+Scenario: I expect to be able to see a the upload button
   Given I am on the home page
-  Then I should see a "submit" input labeled "Save"
+  Then I expect to see a "submit" input labeled "Save"

@@ -1,9 +1,7 @@
 %html
   %head
     %title Taulbee Survey Data
-	
   %body
-    
     %h1 Taulbee Survey
     %p
       %a{:href => site_index_path}
@@ -28,17 +26,15 @@
     %input#noOfFilters{:type => "text"}
       %button#confirmNoOfFilters Confirm
     %button#removeFilterButton Remove Last Filter 
-      
     %select#filtersListInner{:onchange => "getSelected(value)", :name => "filter", :hidden => "true"}
       - @students.column_names.each do |column_name|
         %option{:value => column_name}= column_name
-      end
     %select#comparatorListInner{:onchange => "getSelected(value)", :name => "comparator", :hidden => "true"}
-      %option{:value => "="} =
-      %option{:value => ">"} >
-      %option{:value => "<"} <
-      %option{:value => ">="} >=
-      %option{:value => "<="} <=
+      %option{:value => "="}= "="
+      %option{:value => ">"}= ">"
+      %option{:value => "<"}= "<"
+      %option{:value => ">="}= ">="
+      %option{:value => "<="}= "<="
     %input#filterValueInner{:type => "text", :name => "filterValue", :hidden => "true"}
     %hr
       %p How many attributes do you want?
@@ -48,9 +44,7 @@
     %select#attributeListInner{:onchange => "getSelected(value)", :name => "attribute", :hidden => "true"}
       - @students.column_names.each do |column_name|
         %option{:value => column_name}= column_name
-      end
       %option{:value => "count"} count
-        
     %p{:id => "testing"}   
     %hr
       
@@ -110,17 +104,19 @@
       	    document.getElementById("testing").innerHTML = count
       	  
           var list = document.getElementById("filtersListInner").cloneNode(true);
-          list.hidden = false
-          console.log("Hello")
-          list.name = "filter" + i.toString()
+          list.removeAttribute("hidden");
+          list.name = "filter" + i.toString();
+          list.id = "filter_" + i.toString();
           filterDiv.appendChild(list);
           var comparator = document.getElementById("comparatorListInner").cloneNode(true);
-          comparator.hidden = false
-          comparator.name = "comparator" + i.toString()
+          comparator.removeAttribute("hidden");
+          comparator.name = "comparator" + i.toString();
+          comparator.id = "comparator_" + i.toString();
           filterDiv.appendChild(comparator);
           var filterValue = document.getElementById("filterValueInner").cloneNode(true);
-          filterValue.hidden = false
-          filterValue.name = "filterValue" + i.toString()
+          filterValue.removeAttribute("hidden");
+          filterValue.name = "filterValue" + i.toString();
+          filterValue.id = "filterValue_" + i.toString();
           filterDiv.appendChild(filterValue);
           filterDiv.appendChild(document.createElement("br"));
         }
@@ -134,8 +130,9 @@
       	for(var i = count; i< count + parseInt(noOfInfos, 10); i++)
       	{
           var list = document.getElementById("attributeListInner").cloneNode(true);
-          list.hidden = false
+          list.removeAttribute("hidden");
           list.name = "attribute" + i.toString()
+          list.id = "attribute_" + i.toString()
           attributeDiv.appendChild(list);
           attributeDiv.appendChild(document.createElement("br"));
         }
