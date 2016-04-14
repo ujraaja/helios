@@ -6,9 +6,20 @@ Feature: Persistent Filters
 
 Scenario: Check that filters remain after a query
   Given I am on the filters page
-  When I select "Computer Engineering" from "Field of Study"
-  And I press "Select"
-  And I press "Apply selected filters"
-  And I press "Go to previous page"
-  Then I should be on the filters page
-  And I should see "Computer Engineering"
+  And I fill in "1" for "noOfFilters"
+  And I press "confirmNoOfFilters"
+  And I fill in "1" for "noOfInfo"
+  And I press "confirmNoOfInfo"
+  
+  When I select "age" from "filter"
+  And I select "<" from "comparator"
+  And I fill in "20" for "filterValue"
+  And I select "name" from "attribute"
+  And I press "Apply Filters"
+  And I follow "back"
+  
+  Then I expect to be on the filters page
+  And I expect to see "age" selected from "filter"
+  And I expect to see "<" selected from "comparator"
+  And I expect to see "20" selected from "filterValue"
+  And I expect to see "name" selected from "attribute"
