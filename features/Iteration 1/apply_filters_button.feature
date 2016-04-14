@@ -7,3 +7,8 @@ Feature: Apply Filters Button
 Scenario: I expect to be able to see the apply filters button
   Given I am on the filters page
   Then I expect to see a "submit" input labeled "Apply Filters"
+  
+Scenario: I expect to be taken to the results page upon Apply Filters
+  Given I am on the filters page
+  And I press "Apply Filters"
+  Then I expect to be on the results page
