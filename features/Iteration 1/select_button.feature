@@ -4,6 +4,6 @@ Feature: Select Button
   So that I can use the existing data file picked with the dropdown
   I want to have a select button to finalize my choice
   
-Scenario: I should be able to see the select button
+Scenario: I expect to be able to see the select button
   Given I am on the home page
-  Then I should see a "submit" input labeled "Select"
+  Then I expect to see a "submit" input labeled "Select"

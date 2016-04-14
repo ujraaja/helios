@@ -1,9 +1,7 @@
 %html
   %head
     %title Taulbee Survey Data
-	
   %body
-    
     %h1 Taulbee Survey
     %p
       %a{:href => site_index_path}
@@ -14,28 +12,24 @@
     %p How many filters do you want to apply?
     %input#noOfFilters{:type => "text"}
       %button#confirmNoOfFilters Confirm
-    
-    %select#filtersListInner{:onchange => "getSelected(value)", :name => "filter", :hidden => "true"}
+    %select#filtersListInner{:onchange => "getSelected(value)", :name => "filter", :style => "visibility: hidden;"}
       - @cats.column_names.each do |column_name|
         %option{:value => column_name}= column_name
-      end
-    %select#comparatorListInner{:onchange => "getSelected(value)", :name => "comparator", :hidden => "true"}
-      %option{:value => "="} =
-      %option{:value => ">"} >
-      %option{:value => "<"} <
-      %option{:value => ">="} >=
-      %option{:value => "<="} <=
-    %input#filterValueInner{:type => "text", :name => "filterValue", :hidden => "true"}
+    %select#comparatorListInner{:onchange => "getSelected(value)", :name => "comparator", :style => "visibility: hidden;"}
+      %option{:value => "="}= "="
+      %option{:value => ">"}= ">"
+      %option{:value => "<"}= "<"
+      %option{:value => ">="}= ">="
+      %option{:value => "<="}= "<="
+    %input#filterValueInner{:type => "text", :name => "filterValue", :style => "visibility: hidden;"}
     %hr
       %p How many attributes do you want?
       %input#noOfInfo{:type => "text"}
         %button#confirmNoOfInfo Confirm
-    %select#attributeListInner{:onchange => "getSelected(value)", :name => "attribute", :hidden => "true"}
+    %select#attributeListInner{:onchange => "getSelected(value)", :name => "attribute", :style => "visibility: hidden;"}
       - @cats.column_names.each do |column_name|
         %option{:value => column_name}= column_name
-      end
       %option{:value => "count"} count
-        
     %p{:id => "testing"}   
     %hr
         
@@ -66,16 +60,16 @@
       	for(var i =0; i<noOfFilters; i++)
       	{
           var list = document.getElementById("filtersListInner").cloneNode(true);
-          list.hidden = false
-          list.name = "filter" + i.toString()
+          list.style.visibility = "visible";
+          list.id = "filter" + i.toString();
           filterDiv.appendChild(list);
           var comparator = document.getElementById("comparatorListInner").cloneNode(true);
-          comparator.hidden = false
-          comparator.name = "comparator" + i.toString()
+          comparator.style.visibility = "visible";
+          comparator.id = "comparator" + i.toString();
           filterDiv.appendChild(comparator);
           var filterValue = document.getElementById("filterValueInner").cloneNode(true);
-          filterValue.hidden = false
-          filterValue.name = "filterValue" + i.toString()
+          filterValue.style.visibility = "visible";
+          filterValue.id = "filterValue" + i.toString();
           filterDiv.appendChild(filterValue);
           filterDiv.appendChild(document.createElement("br"));
         }
@@ -89,7 +83,7 @@
       	for(var i =0; i<noOfInfos; i++)
       	{
           var list = document.getElementById("attributeListInner").cloneNode(true);
-          list.hidden = false
+          list.style.visibility = "visible";
           list.name = "attribute" + i.toString()
           attributeDiv.appendChild(list);
           attributeDiv.appendChild(document.createElement("br"));
