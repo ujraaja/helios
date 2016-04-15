@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'cats/index'
+
+  get 'cats/new'
+
+  get 'cats/create'
+
+  get 'cats/destroy'
+
   get 'spreadsheets/index'
 
   get 'spreadsheets/new'
@@ -17,6 +25,7 @@ Rails.application.routes.draw do
   get 'site/facultyFilterSelection'
   get 'site/studentFilterSelection'
   get 'site/facultyOutput'
+  post 'site/studentOutput'
   get 'site/studentOutput'
   resources :spreadsheets, only: [:index, :new, :create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.

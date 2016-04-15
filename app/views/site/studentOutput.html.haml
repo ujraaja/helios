@@ -23,8 +23,28 @@
       %a{:href => site_studentFilterSelection_path}
         %img{:height => "30", :src => "/images/previous-icon.png", :width => "30"}/
     %hr/
+    
+    
     %h2 Result
-    %img{:align => "center", :height => "250", :src => "/images/table.png", :width => "600"}/
+    - if @count
+      %h3 Count = #{@cats.length}
+    %table#cats
+      %thead
+        %tr
+        - @attributes.each do |attribute|
+          - if attribute[1] != "count"
+            %th= attribute[1]
+      %tbody
+        - @cats.each do |cat|
+          %tr
+            - @attributes.each do |attribute|
+              - if attribute[1] != "count"
+                %td= cat.send(attribute[1])
+    
+    -#%img{:align => "center", :height => "250", :src => "/images/table.png", :width => "600"}/
+    
+    
+    
     %hr/
     %form
       %input{:type => "submit", :value => "Save"}/
