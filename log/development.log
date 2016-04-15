@@ -14099,3 +14099,115 @@ Cannot render console from 10.240.0.207! Allowed networks: 10.240.0.139, 127.0.0
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.203 at 2016-04-08 07:03:13 +0000
 Cannot render console from 10.240.0.203! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/" for 128.194.131.133 at 2016-04-15 21:25:00 +0000
+Cannot render console from 128.194.131.133! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.4ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (51.1ms)
+Completed 200 OK in 2664ms (Views: 2616.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 128.194.131.133 at 2016-04-15 21:25:04 +0000
+Cannot render console from 128.194.131.133! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 128.194.131.133 at 2016-04-15 21:25:04 +0000
+Cannot render console from 128.194.131.133! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/site/studentFilterSelection" for 128.194.131.133 at 2016-04-15 21:25:07 +0000
+Cannot render console from 128.194.131.133! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Rendered site/studentFilterSelection.html.haml within layouts/application (17.8ms)
+Completed 200 OK in 76ms (Views: 71.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 128.194.131.133 at 2016-04-15 21:34:27 +0000
+Cannot render console from 128.194.131.133! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (79.0ms)
+Completed 200 OK in 701ms (Views: 644.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/site/studentFilterSelection" for 128.194.131.133 at 2016-04-15 21:34:31 +0000
+Cannot render console from 128.194.131.133! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Rendered site/studentFilterSelection.html.haml within layouts/application (64.6ms)
+Completed 200 OK in 147ms (Views: 141.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 128.194.131.133 at 2016-04-15 21:36:46 +0000
+Cannot render console from 128.194.131.133! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (53.4ms)
+Completed 200 OK in 512ms (Views: 472.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/site/studentFilterSelection" for 128.194.131.133 at 2016-04-15 21:36:52 +0000
+Cannot render console from 128.194.131.133! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Rendered site/studentFilterSelection.html.haml within layouts/application (47.2ms)
+Completed 200 OK in 108ms (Views: 104.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 128.194.131.133 at 2016-04-15 21:37:36 +0000
+Cannot render console from 128.194.131.133! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (60.9ms)
+Completed 200 OK in 537ms (Views: 505.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/site/studentFilterSelection" for 128.194.131.133 at 2016-04-15 21:37:39 +0000
+Cannot render console from 128.194.131.133! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Rendered site/studentFilterSelection.html.haml within layouts/application (118.6ms)
+Completed 200 OK in 189ms (Views: 184.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 128.194.131.133 at 2016-04-15 21:41:43 +0000
+Cannot render console from 128.194.131.133! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (64.5ms)
+Completed 200 OK in 597ms (Views: 566.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/site/studentFilterSelection" for 128.194.131.133 at 2016-04-15 21:41:47 +0000
+Cannot render console from 128.194.131.133! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Rendered site/studentFilterSelection.html.haml within layouts/application (63.2ms)
+Completed 200 OK in 147ms (Views: 142.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/site/studentOutput" for 128.194.131.133 at 2016-04-15 21:42:09 +0000
+Cannot render console from 128.194.131.133! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"62OHLUbk5WInwOhrT3tErZxP1pAD2eu28Yb+4pv+Q5Vogtyt2gOljTQwjC3iGHrp81MIlUhDYvjtIMsVAdowCQ==", "filter0"=>"eye_color", "comparator0"=>"=", "filterValue0"=>"brown", "attribute0"=>"id", "commit"=>"Apply Filters"}
+  [1m[36mCat Load (2.8ms)[0m  [1mSELECT "cats".* FROM "cats" WHERE (eye_color='brown')[0m
+  Rendered site/studentOutput.html.haml within layouts/application (27.6ms)
+Completed 200 OK in 80ms (Views: 72.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/site/index" for 128.194.131.133 at 2016-04-15 21:43:04 +0000
+Cannot render console from 128.194.131.133! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.6ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (8.4ms)
+Completed 200 OK in 139ms (Views: 135.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/site/studentFilterSelection" for 128.194.131.133 at 2016-04-15 21:43:05 +0000
+Cannot render console from 128.194.131.133! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Rendered site/studentFilterSelection.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 44ms (Views: 42.5ms | ActiveRecord: 0.0ms)
