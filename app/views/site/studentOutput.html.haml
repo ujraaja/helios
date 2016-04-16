@@ -3,6 +3,13 @@
   %head
     %title Taulbee Survey Data
     :css
+      #cover{
+      	background:url("http://www.aveva.com/Images/ajax-loader.gif") no-repeat scroll center center #FFF;
+      	position:absolute;
+      	height:100%;
+      	width:100%;
+      }
+      
       .heading{
       	color:white;
       	background-color:#500000;
@@ -11,10 +18,13 @@
       	padding:0;
       }
       
+      
       .centered{
       	text-align:center;
       }
   %body
+    #cover
+    
     .heading
       %h1.centered Taulbee Survey
     %p
@@ -51,3 +61,9 @@
       %input{:type => "submit", :value => "Download"}/
       %input{:type => "submit", :value => "Go to previous page"}/
       %input{:type => "submit", :value => "New File"}/
+      
+    :javascript
+      $(window).load(function(){
+      $('#cover').fadeOut(2000);
+
+      });

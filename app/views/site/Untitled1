@@ -22,7 +22,7 @@
     %hr
     %p How many filters do you want to apply?
     %input#noOfFilters{:type => "text"}
-      %button#confirmNoOfFilters Confirm
+      %button#confirmNoOfFilters Confirm 
     
     %select#filtersListInner{:onchange => "getSelected(value)", :name => "filter", :hidden => "true"}
       - @cats.column_names.each do |column_name|
@@ -35,6 +35,9 @@
       %option{:value => ">="} >=
       %option{:value => "<="} <=
     %input#filterValueInner{:type => "text", :name => "filterValue", :hidden => "true"}
+    
+    
+    
     %hr
       %p How many attributes do you want?
       %input#noOfInfo{:type => "text"}
@@ -53,8 +56,15 @@
           <fieldset>
           <label for="Filters">Filters:</label>
           <div id="filterDiv" name="filterDiv"></div>
+          <button> 
+            <img src = "http://icons.iconarchive.com/icons/rafiqul-hassan/blogger/256/Plus-icon.png", width = "20", height = "20">
+          </button id="addMoreFilters">
           <label for="Attributes">Attributes:</label>
           <div id="attributeDiv" name="attributeDiv"></div>
+          <button id="addMoreAttributes"> 
+            <img src = "http://icons.iconarchive.com/icons/rafiqul-hassan/blogger/256/Plus-icon.png", width = "20", height = "20">
+          </button>
+          <br><br>
           <input type="submit" name="commit" value="Apply Filters" />
           </fieldset>
       </form>

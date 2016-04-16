@@ -58,7 +58,12 @@
       = f.text_field :name
       = f.label :attachment
       = f.file_field :attachment
-      = f.submit "Save", class: "btn btn-primary"
+      = f.submit "Save", class: "btn btn-primary", onClick:"refreshPage()"
+      
+    :javascript
+      function refreshPage(){
+      window.location.reload();
+      }
       
     
     %img{:src => "/images/anm_symbol.png"}
