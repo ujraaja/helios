@@ -1,0 +1,126 @@
+%html
+  %head
+    %title Taulbee Survey Data
+    :css
+      #cover{
+      	background:url("http://www.aveva.com/Images/ajax-loader.gif") no-repeat scroll center center #FFF;
+      	position:absolute;
+      	height:100%;
+      	width:100%;
+      }
+	
+  %body
+    #cover
+    
+    
+    %h1 Taulbee Survey
+    %p
+      %a{:href => site_index_path}
+        %img{:height => "30", :src => "/images/homepageicon.jpg", :width => "30"}/
+      %a{:href => site_index_path}
+        %img{:height => "30", :src => "/images/previous-icon.png", :width => "30"}/
+    %hr
+    %p How many filters do you want to apply?
+    %input#noOfFilters{:type => "text"}
+      %button#confirmNoOfFilters Confirm 
+    
+    %select#filtersListInner{:onchange => "getSelected(value)", :name => "filter", :hidden => "true"}
+      - @cats.column_names.each do |column_name|
+        %option{:value => column_name}= column_name
+      end
+    %select#comparatorListInner{:onchange => "getSelected(value)", :name => "comparator", :hidden => "true"}
+      %option{:value => "="} =
+      %option{:value => ">"} >
+      %option{:value => "<"} <
+      %option{:value => ">="} >=
+      %option{:value => "<="} <=
+    %input#filterValueInner{:type => "text", :name => "filterValue", :hidden => "true"}
+    
+    
+    
+    %hr
+      %p How many attributes do you want?
+      %input#noOfInfo{:type => "text"}
+        %button#confirmNoOfInfo Confirm
+    %select#attributeListInner{:onchange => "getSelected(value)", :name => "attribute", :hidden => "true"}
+      - @cats.column_names.each do |column_name|
+        %option{:value => column_name}= column_name
+      end
+      %option{:value => "count"} count
+        
+    %p{:id => "testing"}   
+    %hr
+        
+    :plain
+      <form id="daForm" action="/site/studentOutput" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="R6tWZgNywVkSWBBcFzhGpcvVQOpv9bTWfT/s5oH2OrLgEhEqzl2EhcnfAwHu/V/ETSdEUKUjGO4BNBKRBJbA4w==" />
+          <fieldset>
+          <label for="Filters">Filters:</label>
+          <div id="filterDiv" name="filterDiv"></div>
+          <button> 
+            <img src = "http://icons.iconarchive.com/icons/rafiqul-hassan/blogger/256/Plus-icon.png", width = "20", height = "20">
+          </button id="addMoreFilters">
+          <label for="Attributes">Attributes:</label>
+          <div id="attributeDiv" name="attributeDiv"></div>
+          <button id="addMoreAttributes"> 
+            <img src = "http://icons.iconarchive.com/icons/rafiqul-hassan/blogger/256/Plus-icon.png", width = "20", height = "20">
+          </button>
+          <br><br>
+          <input type="submit" name="commit" value="Apply Filters" />
+          </fieldset>
+      </form>
+    
+                
+        
+      
+    :javascript
+      $(window).load(function(){
+      $('#cover').fadeOut(2000);
+
+      });
+      
+      var filterChosen = "";
+      var comparatorChosen= "";
+      var filterValueChosen="";
+      var dropdown1="";
+      
+      document.getElementById("confirmNoOfFilters").onclick=function(cat)
+      {
+      	var noOfFilters=document.getElementById("noOfFilters").value;
+      	
+      	for(var i =0; i<noOfFilters; i++)
+      	{
+          var list = document.getElementById("filtersListInner").cloneNode(true);
+          list.hidden = false
+          list.name = "filter" + i.toString()
+          filterDiv.appendChild(list);
+          var comparator = document.getElementById("comparatorListInner").cloneNode(true);
+          comparator.hidden = false
+          comparator.name = "comparator" + i.toString()
+          filterDiv.appendChild(comparator);
+          var filterValue = document.getElementById("filterValueInner").cloneNode(true);
+          filterValue.hidden = false
+          filterValue.name = "filterValue" + i.toString()
+          filterDiv.appendChild(filterValue);
+          filterDiv.appendChild(document.createElement("br"));
+        }
+      	
+      }
+      
+      document.getElementById("confirmNoOfInfo").onclick=function(cat)
+      {
+      	var noOfInfos=document.getElementById("noOfInfo").value;
+      	
+      	for(var i =0; i<noOfInfos; i++)
+      	{
+          var list = document.getElementById("attributeListInner").cloneNode(true);
+          list.hidden = false
+          list.name = "attribute" + i.toString()
+          attributeDiv.appendChild(list);
+          attributeDiv.appendChild(document.createElement("br"));
+        }
+      	
+      }
+
+
+
+
