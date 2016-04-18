@@ -11,6 +11,7 @@ class SiteController < ApplicationController
   end
   
   def studentFilterSelection
+    
     @cats = Cat.all
   end
   

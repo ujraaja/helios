@@ -1,0 +1,161 @@
+
+Homework 1
+
+ 
+
+Based on materials from Prof. Kristen Justice, Univ. Colorado – Colorado Springs
+
+ 
+
+Submission: Submit the answer for each question as a separate *.rb file using turnin on CSNET (http://csnet.cse.tamu.edu). Name each file as: Lastname_FirstName_QuestionNumber.rb. So my answer for the first question would be Walker_Hank_1.rb.
+
+ 
+
+This homework is to be done as individuals.
+
+ 
+
+Q1. Write a method that determines whether a given word or phrase is a palindrome, that is, it reads the same backwards as forwards, ignoring case, punctuation, and nonword characters. (characters that Ruby regexps would treat as nonword characters, that is, as boundaries between words). Your solution should not use any iteration. The rubular.com may be helpful in developing appropriate Ruby regular expressions. Methods you might find useful include: String#downcase, String#gsub and String#reverse. Suggestion: Use method chaining to make your code look more beautiful. Examples:
+
+ 
+
+palindrome?("A man, a plan, a canal -- Panama")  #=> true
+palindrome?("Madam, I'm Adam!")  # => true
+palindrome?("Abracadabra")  # => false (nil is also ok)
+
+
+
+def palindrome?(string)
+ # your code here
+end
+
+
+
+Q2. Given a string of input, return a hash whose keys are words in the string and whose values are the number of times each word appears. Do not use for-loops. Iterators such as each are permitted. Nonwords should be ignored. Case should not matter. A word is defined as a string of characters between word boundaries. (“\b” in a Ruby regexp means matches word boundaries). Example:
+
+ 
+
+count_words("A man, a plan, a canal -- Panama")
+# => {'a' => 3, 'man' => 1, 'canal' => 1, 'panama' => 1, 'plan' => 1}
+count_words "Doo bee doo bee doo"  # => {'doo' => 3, 'bee' => 2}
+
+def count_words(string)
+ # your code here
+end
+
+ 
+
+Q3. In a game of rock-paper-scissors, each player chooses to play Rock (R), Paper (P), or Scissors (S). The rules are: Rock beats Scissors (R>S), Scissors beats Paper (S>P), but Paper beats Rock (P>R). A rock-paper-scissors game is encoded as a list, where each list element is a two-element list that encodes a player’s name and a player’s strategy.
+
+ 
+
+[ [ "Kristen", "P" ], [ "Pam", "S" ] ]
+# => returns the list ["Pam", "S"] wins since S>P
+
+
+
+Write a method rps_game_winner that takes a two-element list and behaves as follows:
+
+●      If the number of players is not equal to 2, raise WrongNumberOfPlayersError.
+
+●      If either player's strategy is something other than “R”, “P” or “S” (case-insensitive), raise NoSuchStrategyError.
+
+●      Otherwise, return the name and strategy of the winning player. If both players use the same strategy, the first player is the winner.
+
+
+
+Here is some code scaffolding:
+
+
+
+class WrongNumberOfPlayersError < StandardError ; end
+class NoSuchStrategyError < StandardError ; end
+
+
+
+def rps_game_winner(game)
+ raise WrongNumberOfPlayersError unless game.length == 2
+ # your code here
+end
+
+
+
+Q4. A rock, paper, scissors tournament is encoded as a bracketed array of games - that is, each element can be considered its own tournament.
+
+
+
+[
+[
+  [ ["Kristen", "P"], ["Dave", "S"] ],
+  [ ["Richard", "R"], ["Michael", "S"] ],
+],
+[
+  [ ["Allen", "S"], ["Omer", "P"] ],
+  [ ["David E.", "R"], ["Richard X.", "P"] ]
+]
+]
+
+
+
+Under this scenario, Dave would beat Kristen (S>P), Richard would beat Michael (R>S), and then Dave and Richard would play (Richard wins since R>S); similarly, Allen would beat Omer, Richard X. would beat David E., and Allen and Richard X. would play (Allen wins since S>P); and finally Richard would beat Allen since R>S, that is, continue until there is only a single winner.
+
+●      Write a method rps_tournament_winner that takes a tournament encoded as a bracketed array and returns the winner (for the above example, it should return [“Richard”, “R”]).
+
+●      Tournaments can be nested arbitrarily deep, i.e., it may require multiple rounds to get to a single winner. You can assume that the initial array is well formed (that is, there are 2N players, and each one participates in exactly one match per round).
+
+ 
+
+Q5. An anagram is a word obtained by rearranging the letters of another word. For example, “rats”, “tars” and “star” are an anagram group because they are made up of the same letters. Given an array of strings, write a method that groups them into anagram groups and returns the array of groups. Case does not matter in classifying string as anagrams (but case should be preserved in the output), and the order of the anagrams in the groups does not matter. Example:
+
+ 
+
+# input: ['cars', 'for', 'potatoes', 'racs', 'four','scar', 'creams', 'scream']
+#  => output:  [["cars", "racs", "scar"], ["four"], ["for"], ["potatoes"], ["creams", "scream"]]
+# HINT: you can quickly tell if two words are anagrams by sorting their
+#  letters, keeping in mind that upper vs lowercase doesn't matter
+
+
+
+def combine_anagrams(words)
+ #   <YOUR CODE HERE>
+end
+
+ 
+
+Q6. Create a class Dessert with getters and setters for name and calories.  Define instance methods healthy?, which returns true if a dessert has less than 200 calories, and delicious?, which returns true for all desserts. Create a class JellyBean that extends Dessert, and add a getter and setter for flavor. Modify delicious? to return false if the flavor is black licorice (but delicious? should still return true for all other flavors and for all non-JellyBean desserts). Here is the framework (you may define additional helper methods):
+
+
+
+class Dessert
+ def initialize(name, calories)
+   # YOUR CODE HERE
+ end
+
+
+
+ def healthy?
+   # YOUR CODE HERE
+ end
+
+
+
+ def delicious?
+   # YOUR CODE HERE
+ end
+end
+
+
+
+class JellyBean < Dessert
+ def initialize(name, calories, flavor)
+   # YOUR CODE HERE
+ end
+
+
+
+ def delicious?
+   # YOUR CODE HERE
+ end
+end
+
+

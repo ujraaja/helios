@@ -14099,3 +14099,1540 @@ Cannot render console from 10.240.0.207! Allowed networks: 10.240.0.139, 127.0.0
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.203 at 2016-04-08 07:03:13 +0000
 Cannot render console from 10.240.0.203! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/" for 10.240.0.200 at 2016-04-18 04:05:35 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (58.3ms)
+Completed 200 OK in 487ms (Views: 451.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.189 at 2016-04-18 04:05:36 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 10.240.0.75 at 2016-04-18 04:05:36 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.179 at 2016-04-18 04:05:36 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.157 at 2016-04-18 04:05:36 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.240.0.206 at 2016-04-18 04:05:36 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.240.0.207 at 2016-04-18 04:05:36 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.240.0.166 at 2016-04-18 04:05:36 +0000
+Cannot render console from 10.240.0.166! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.167 at 2016-04-18 04:05:36 +0000
+Cannot render console from 10.240.0.167! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.157 at 2016-04-18 04:05:36 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.179 at 2016-04-18 04:05:36 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started POST "/spreadsheets" for 10.240.0.206 at 2016-04-18 04:05:40 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I3bjsM0l0SH56+mMZ1DK73bQolBSimxhTHMa++2Rxoh8aao69Q+MB/Bx61MJ8gtuuxuGCfd1PkpHwy2iketGUQ==", "spreadsheet"=>{"name"=>""}, "commit"=>"Save"}
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 10.240.0.157 at 2016-04-18 04:05:40 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.2ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/site/index" for 10.240.0.207 at 2016-04-18 04:06:25 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.2ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 49ms (Views: 38.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.179 at 2016-04-18 04:06:26 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 10.240.0.192 at 2016-04-18 04:06:26 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.179 at 2016-04-18 04:06:26 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.179 at 2016-04-18 04:06:26 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.240.0.192 at 2016-04-18 04:06:26 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.240.0.207 at 2016-04-18 04:06:26 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.240.0.207 at 2016-04-18 04:06:26 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.192 at 2016-04-18 04:06:26 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.165 at 2016-04-18 04:06:27 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.179 at 2016-04-18 04:06:27 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started POST "/spreadsheets" for 10.240.0.207 at 2016-04-18 04:06:37 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K17eCrPOR25IF1+dMdnAirGg16m8QlIQ4mLrLJPpQSN0QZeAi+QaSEGNXUJfewELfGvz8Bm9ADvp0tx175PB+g==", "spreadsheet"=>{"name"=>"Miguel", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe44143ad28 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-xl3t4b.txt>, @original_filename="probs.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"probs.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 79ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 10.240.0.206 at 2016-04-18 04:06:38 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.2ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/site/index" for 10.240.0.204 at 2016-04-18 04:08:22 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.2ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 54ms (Views: 39.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.166 at 2016-04-18 04:08:23 +0000
+Cannot render console from 10.240.0.166! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 10.240.0.192 at 2016-04-18 04:08:23 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.110 at 2016-04-18 04:08:23 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.208 at 2016-04-18 04:08:23 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.240.0.206 at 2016-04-18 04:08:23 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.240.0.197 at 2016-04-18 04:08:23 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.240.0.167 at 2016-04-18 04:08:23 +0000
+Cannot render console from 10.240.0.167! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.165 at 2016-04-18 04:08:23 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.166 at 2016-04-18 04:08:23 +0000
+Cannot render console from 10.240.0.166! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.189 at 2016-04-18 04:08:23 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started POST "/spreadsheets" for 10.240.0.208 at 2016-04-18 04:08:33 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Od9xXVBcr0dK+J9MZAXXxQSu0WMCBmO2L7fRcAhHF9FmwDjXaHbyYUNinZMKpxZEyWX1Oqf5MZ0kB+YpdD2XCA==", "spreadsheet"=>{"name"=>"Yoyo", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe4420b25d8 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-4df90b.txt>, @original_filename="eduroam locations.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"eduroam locations.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 10.240.0.200 at 2016-04-18 04:08:33 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.2ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.75 at 2016-04-18 04:09:07 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cKssZ3KwnV3c2vk/BH2hXL2s1PaOMWuzi0xiQAIm8R0vtGXtSprAe9VA++Bq32DdcGfwryvOOZiA/FUZflxxxA==", "spreadsheet"=>{"name"=>"Hur", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe441668c08 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-1nse02y.txt>, @original_filename="hw.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"hw.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 10.240.0.179 at 2016-04-18 04:09:07 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.4ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 66ms (Views: 47.1ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.186 at 2016-04-18 04:10:11 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6yOrvB6KetY6dItuGhzYkklIpCfrSgoW879qXMW8yFu0POI2JqAn8DPuibF0vhkThIOAfk61WD34D10FucZIgg==", "spreadsheet"=>{"name"=>"Yup", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe42c23ba00 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-1nt29xn.txt>, @original_filename="619 notes.txt", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"619 notes.txt\"\r\nContent-Type: application/octet-stream\r\n">}, "commit"=>"Save"}
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 10.240.0.186 at 2016-04-18 04:10:12 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.4ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 68ms (Views: 49.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/site/index" for 10.240.0.186 at 2016-04-18 04:10:49 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 104ms (Views: 92.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.186 at 2016-04-18 04:10:50 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 10.240.0.186 at 2016-04-18 04:10:50 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.192 at 2016-04-18 04:10:50 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.197 at 2016-04-18 04:10:50 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.240.0.207 at 2016-04-18 04:10:50 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.240.0.186 at 2016-04-18 04:10:50 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.240.0.75 at 2016-04-18 04:10:50 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.75 at 2016-04-18 04:10:51 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.208 at 2016-04-18 04:10:51 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.179 at 2016-04-18 04:10:51 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started POST "/spreadsheets" for 10.240.0.207 at 2016-04-18 04:11:00 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B8CRql3W9SMCPPZp5u4ed5uClnQVRA6OrB7AdDP46c1Y39ggZfyoBQum9LaITN/2VkmyLbC7XKWnrvctT4JpFA==", "spreadsheet"=>{"name"=>"hey", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe42c90ac00 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-af5ltp.txt>, @original_filename="cruise info.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"cruise info.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 10.240.0.207 at 2016-04-18 04:11:01 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.5ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/site/index" for 10.240.0.197 at 2016-04-18 04:11:09 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.2ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 79ms (Views: 62.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.204 at 2016-04-18 04:11:10 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 10.240.0.204 at 2016-04-18 04:11:10 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.179 at 2016-04-18 04:11:10 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.203 at 2016-04-18 04:11:10 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.240.0.203 at 2016-04-18 04:11:10 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.240.0.75 at 2016-04-18 04:11:10 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.240.0.187 at 2016-04-18 04:11:10 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.110 at 2016-04-18 04:11:10 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.110 at 2016-04-18 04:11:10 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.110 at 2016-04-18 04:11:10 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started POST "/spreadsheets" for 10.240.0.204 at 2016-04-18 04:11:19 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZWswzoXCZAKRmTt1dRUi0hmJjMLL/ujVwc+dFZDs6wo6dHlEveg5JJgDOaobt+NT1EKom24Buv7Kf6pM7JZr0w==", "spreadsheet"=>{"name"=>"zip", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe4420406b8 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-db85zg.txt>, @original_filename="notes.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"notes.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 10.240.0.166 at 2016-04-18 04:11:19 +0000
+Cannot render console from 10.240.0.166! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.5ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 49ms (Views: 46.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/site/index" for 10.240.0.208 at 2016-04-18 04:13:13 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.5ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 119ms (Views: 103.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.186 at 2016-04-18 04:13:13 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 10.240.0.186 at 2016-04-18 04:13:13 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.75 at 2016-04-18 04:13:13 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.186 at 2016-04-18 04:13:13 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.240.0.208 at 2016-04-18 04:13:13 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.240.0.186 at 2016-04-18 04:13:13 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.240.0.157 at 2016-04-18 04:13:14 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.186 at 2016-04-18 04:13:14 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.167 at 2016-04-18 04:13:14 +0000
+Cannot render console from 10.240.0.167! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.186 at 2016-04-18 04:13:14 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started POST "/spreadsheets" for 10.240.0.165 at 2016-04-18 04:13:29 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JfnN4XOSXUrMVTKj9DSEVj4tK1DwWOqBh7irxWiwZGV65oRrS7gAbMXPMHyalkXX8+YPCVWnuKqMCJycFMrkvA==", "spreadsheet"=>{"name"=>"No", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe42c30c380 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-123nm6.txt>, @original_filename="eduroam locations.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"eduroam locations.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `original_filename' for #<SpreadsheetsController:0x007fe42c30eab8>):
+  app/controllers/spreadsheets_controller.rb:28:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (115.1ms)
+
+
+Started GET "/site/index" for 10.240.0.204 at 2016-04-18 04:14:04 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.4ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 78ms (Views: 62.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.186 at 2016-04-18 04:14:04 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 10.240.0.207 at 2016-04-18 04:14:04 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.186 at 2016-04-18 04:14:05 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.204 at 2016-04-18 04:14:05 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.240.0.186 at 2016-04-18 04:14:05 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.240.0.179 at 2016-04-18 04:14:05 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.240.0.186 at 2016-04-18 04:14:05 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.204 at 2016-04-18 04:14:05 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.186 at 2016-04-18 04:14:05 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.179 at 2016-04-18 04:14:06 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started POST "/spreadsheets" for 10.240.0.197 at 2016-04-18 04:14:15 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GsUZ8j4oxs6qR3h1Igp+DnNJWNkNo0ZkCRI+uEp2aR9F2lB4BgKb6KPdeqpMqL+PvoJ8gKhcFE8CognhNgzpxg==", "spreadsheet"=>{"name"=>"fresh", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe42c70b580 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-8a3wby.txt>, @original_filename="n.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"n.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 118ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 10.240.0.75 at 2016-04-18 04:14:16 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.8ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/site/index" for 10.240.0.208 at 2016-04-18 04:15:24 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.2ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 55ms (Views: 38.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.186 at 2016-04-18 04:15:24 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 10.240.0.179 at 2016-04-18 04:15:24 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.200 at 2016-04-18 04:15:24 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.110 at 2016-04-18 04:15:24 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.240.0.200 at 2016-04-18 04:15:24 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.240.0.186 at 2016-04-18 04:15:24 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.240.0.167 at 2016-04-18 04:15:24 +0000
+Cannot render console from 10.240.0.167! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.186 at 2016-04-18 04:15:24 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.167 at 2016-04-18 04:15:25 +0000
+Cannot render console from 10.240.0.167! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.179 at 2016-04-18 04:15:25 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started POST "/spreadsheets" for 10.240.0.179 at 2016-04-18 04:15:35 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zRhLZlLs+AXu623fWoUuouDYhASdGThxjPEqQlTL18WSBwLsasalI+dxbwA0J+8jLROgXTjmalqHQR0bKLFXHA==", "spreadsheet"=>{"name"=>"great", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x00000004231190 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-cogk8.txt>, @original_filename="hw.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"hw.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `keys' for #<ActionDispatch::Http::UploadedFile:0x00000004231190>):
+  app/controllers/spreadsheets_controller.rb:22:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (85.9ms)
+
+
+Started GET "/site/index" for 10.240.0.186 at 2016-04-18 04:16:54 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.2ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 57ms (Views: 36.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.203 at 2016-04-18 04:16:54 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 10.240.0.167 at 2016-04-18 04:16:54 +0000
+Cannot render console from 10.240.0.167! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.192 at 2016-04-18 04:16:54 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.203 at 2016-04-18 04:16:55 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.240.0.187 at 2016-04-18 04:16:55 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.240.0.200 at 2016-04-18 04:16:55 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.240.0.187 at 2016-04-18 04:16:55 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.186 at 2016-04-18 04:16:55 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.186 at 2016-04-18 04:16:55 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.203 at 2016-04-18 04:16:55 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started POST "/spreadsheets" for 10.240.0.206 at 2016-04-18 04:17:15 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xKJsZl0q8pHw47yCBC0kxiLYAPFsXom4WKPUCXMGysubvSXsZQCvt/l5vl1qj+VH7xMkqMmh25NTE+NQD3xKEg==", "spreadsheet"=>{"name"=>"non", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe4419f5920 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-9n43jd.txt>, @original_filename="hw.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"hw.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 10.240.0.206 at 2016-04-18 04:17:16 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.3ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.186 at 2016-04-18 04:19:12 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ahq5T1uMbpzSmMV9utKu3YvR3vZDxBvauE6DEOC125c1BfDFY6YzutsCx6LUcG9cRhr6r+Y7SfGz/rRJnM9bTg==", "spreadsheet"=>{"name"=>"mb", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe442066480 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-kv6mb1.txt>, @original_filename="eduroam locations.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"eduroam locations.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 10.240.0.208 at 2016-04-18 04:19:12 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.2ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 49ms (Views: 36.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/site/index" for 10.240.0.206 at 2016-04-18 04:32:55 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.2ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 46ms (Views: 36.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.187 at 2016-04-18 04:32:55 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 10.240.0.203 at 2016-04-18 04:32:55 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.203 at 2016-04-18 04:32:55 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.203 at 2016-04-18 04:32:55 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.240.0.75 at 2016-04-18 04:32:55 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.240.0.157 at 2016-04-18 04:32:56 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.240.0.204 at 2016-04-18 04:32:56 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.189 at 2016-04-18 04:32:56 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.166 at 2016-04-18 04:32:56 +0000
+Cannot render console from 10.240.0.166! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.206 at 2016-04-18 04:32:56 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started POST "/spreadsheets" for 10.240.0.200 at 2016-04-18 04:33:05 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Psbr4/AkPDw9dI0pW3s8Z00AN/rH6SHfvoWzNwwfVN9h2aJpyA5hGjTuj/Y12f3mgMsTo2IWc/S1NYRucGXUBg==", "spreadsheet"=>{"name"=>"aza", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe441ed0ff8 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-13bg13y.txt>, @original_filename="619 notes.txt", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"619 notes.txt\"\r\nContent-Type: application/octet-stream\r\n">}, "commit"=>"Save"}
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 82ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 10.240.0.167 at 2016-04-18 04:33:05 +0000
+Cannot render console from 10.240.0.167! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/site/index" for 10.240.0.203 at 2016-04-18 04:34:24 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.2ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 35ms (Views: 26.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.197 at 2016-04-18 04:34:42 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YG4jpYALHShAQ8Fv2PU2IctC1cy5HIl/3h2MELxqKPE/cWovuCFADknZw7C2V/egBonxlRzj21TVrbtJwBCoKA==", "spreadsheet"=>{"name"=>"asas", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe42c348a38 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-1nv9e72.txt>, @original_filename="cruise info.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"cruise info.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `tempfile' for #<SpreadsheetsController:0x007fe42c34b1c0>):
+  app/controllers/spreadsheets_controller.rb:28:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (104.6ms)
+
+
+Started GET "/site/index" for 10.240.0.206 at 2016-04-18 04:36:15 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 176ms (Views: 166.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.204 at 2016-04-18 04:36:16 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 10.240.0.204 at 2016-04-18 04:36:16 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.204 at 2016-04-18 04:36:16 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.204 at 2016-04-18 04:36:16 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.240.0.204 at 2016-04-18 04:36:16 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.240.0.204 at 2016-04-18 04:36:16 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.240.0.166 at 2016-04-18 04:36:16 +0000
+Cannot render console from 10.240.0.166! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.204 at 2016-04-18 04:36:16 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.75 at 2016-04-18 04:36:16 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.200 at 2016-04-18 04:36:16 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started POST "/spreadsheets" for 10.240.0.167 at 2016-04-18 04:36:25 +0000
+Cannot render console from 10.240.0.167! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tUI9cIm7zO6xK2c6XnJKaKyM8ifJQ5VneuPtVpm7e+HqXXT6sZGRyLixZeUw0IvpYUfWfmy8x0xxU9oP5cH7OA==", "spreadsheet"=>{"name"=>"bibi", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x000000030a5bd8 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-50f7zc.txt>, @original_filename="notes.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"notes.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `tempfile' for nil:NilClass):
+  app/controllers/spreadsheets_controller.rb:28:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (111.5ms)
+
+
+Started GET "/site/index" for 10.240.0.189 at 2016-04-18 04:37:51 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.3ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 144ms (Views: 127.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.187 at 2016-04-18 04:37:51 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 10.240.0.204 at 2016-04-18 04:37:51 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.157 at 2016-04-18 04:37:51 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.75 at 2016-04-18 04:37:51 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.240.0.204 at 2016-04-18 04:37:52 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.240.0.166 at 2016-04-18 04:37:52 +0000
+Cannot render console from 10.240.0.166! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.240.0.157 at 2016-04-18 04:37:52 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.204 at 2016-04-18 04:37:52 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.204 at 2016-04-18 04:37:53 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.204 at 2016-04-18 04:37:53 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started POST "/spreadsheets" for 10.240.0.204 at 2016-04-18 04:38:02 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m2C0vRjWEu3FZgDilS8fWncEUr/dBOaqt9fhSx8EEObEf/03IPxPy8z8Aj37jd7bus925nj7tIG8Z9YSY36QPw==", "spreadsheet"=>{"name"=>"zoom", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe4415c2f60 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-1vy4rv6.txt>, @original_filename="notes.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"notes.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 10.240.0.165 at 2016-04-18 04:38:02 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/site/index" for 10.240.0.197 at 2016-04-18 04:42:10 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.3ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 57ms (Views: 39.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.157 at 2016-04-18 04:42:10 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 10.240.0.75 at 2016-04-18 04:42:10 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.75 at 2016-04-18 04:42:10 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.189 at 2016-04-18 04:42:10 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.240.0.75 at 2016-04-18 04:42:10 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.240.0.75 at 2016-04-18 04:42:11 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.240.0.75 at 2016-04-18 04:42:11 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.166 at 2016-04-18 04:42:11 +0000
+Cannot render console from 10.240.0.166! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.206 at 2016-04-18 04:42:11 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.208 at 2016-04-18 04:42:11 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started POST "/spreadsheets" for 10.240.0.189 at 2016-04-18 04:42:24 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Au2Hmp+BSsaof43zBcSeX4sa6yz/6Y4z/xNzbW/n4Jxd8s4Qp6sX4KHljyxrZl/eRtHPdVoW3Bj0o0Q0E51gRQ==", "spreadsheet"=>{"name"=>"Miguel", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe42cbe2298 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-1ku8qg3.txt>, @original_filename="hw.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"hw.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+TypeError (no implicit conversion of String into Integer):
+  app/controllers/spreadsheets_controller.rb:30:in `[]'
+  app/controllers/spreadsheets_controller.rb:30:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (121.2ms)
+
+
+Started GET "/site/index" for 10.240.0.189 at 2016-04-18 04:43:38 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.4ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 68ms (Views: 57.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.189 at 2016-04-18 04:43:38 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 10.240.0.157 at 2016-04-18 04:43:38 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.189 at 2016-04-18 04:43:38 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.189 at 2016-04-18 04:43:39 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.240.0.189 at 2016-04-18 04:43:39 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.240.0.110 at 2016-04-18 04:43:39 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.240.0.189 at 2016-04-18 04:43:39 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.165 at 2016-04-18 04:43:39 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.197 at 2016-04-18 04:43:39 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.110 at 2016-04-18 04:43:39 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started POST "/spreadsheets" for 10.240.0.197 at 2016-04-18 04:43:47 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xGo0+UuKjhgsylbw9x7BQ+r44XMf0oBe16rUPA6YmeebdX1zc6DTPiVQVC+ZvADCJzPFKrot0nXcGuNlcuIZPg==", "spreadsheet"=>{"name"=>"mic", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe42c6c4338 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-lgvhwr.txt>, @original_filename="to do.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"to do.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 0.0ms)
+
+TypeError (no implicit conversion of String into Integer):
+  app/controllers/spreadsheets_controller.rb:30:in `[]'
+  app/controllers/spreadsheets_controller.rb:30:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (27.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (117.5ms)
+
+
+Started GET "/site/index" for 10.240.0.189 at 2016-04-18 04:44:10 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.3ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 63ms (Views: 37.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.197 at 2016-04-18 04:44:10 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 10.240.0.189 at 2016-04-18 04:44:10 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.189 at 2016-04-18 04:44:11 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.189 at 2016-04-18 04:44:11 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.240.0.189 at 2016-04-18 04:44:11 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.240.0.189 at 2016-04-18 04:44:11 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.240.0.197 at 2016-04-18 04:44:11 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.197 at 2016-04-18 04:44:11 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.157 at 2016-04-18 04:44:11 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.189 at 2016-04-18 04:44:12 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started POST "/spreadsheets" for 10.240.0.208 at 2016-04-18 04:44:22 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OyXkT1SW7JbdnOP5lfNvhmSHPbYOYbzBEDu73f9uNEVkOq3FbLyxsNQG4Sb7Ua4HqUwZ76ue7uobi4yEgxS0nA==", "spreadsheet"=>{"name"=>"maz", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe42c89a7e8 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-1niw9p.txt>, @original_filename="n.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"n.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+TypeError (no implicit conversion of String into Integer):
+  app/controllers/spreadsheets_controller.rb:30:in `[]'
+  app/controllers/spreadsheets_controller.rb:30:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (26.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (108.8ms)
+
+
+Started GET "/site/index" for 10.240.0.189 at 2016-04-18 04:45:08 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.2ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 53ms (Views: 42.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.189 at 2016-04-18 04:45:17 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JoeYBqeGuh4RO7v6jvFwpuDFcTgwqFxhRQd9ApTpcPV5mNGMn6znOBihuSXgU7EnLQ5VYZVXDkpOt0pb6JPwLA==", "spreadsheet"=>{"name"=>"mk", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe42c4fcb68 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-wm2p61.txt>, @original_filename="to do.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"to do.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+TypeError (no implicit conversion of String into Integer):
+  app/controllers/spreadsheets_controller.rb:30:in `[]'
+  app/controllers/spreadsheets_controller.rb:30:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (17.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (74.3ms)
+
+
+Started GET "/site/index" for 10.240.0.192 at 2016-04-18 04:45:48 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.3ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 57ms (Views: 43.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.165 at 2016-04-18 04:45:56 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nRFrtt/W2IRNaYlmhUzMNKNsHwhBVPhC0MLQOCnbfx7CDiI85/yFokTzi7nr7g21bqc7UeSrqmnbcudhVaH/xw==", "spreadsheet"=>{"name"=>"go", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe44181a1a0 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-466owm.txt>, @original_filename="probs.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"probs.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 0.0ms)
+
+TypeError (no implicit conversion of String into Integer):
+  app/controllers/spreadsheets_controller.rb:30:in `[]'
+  app/controllers/spreadsheets_controller.rb:30:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (100.7ms)
+
+
+Started GET "/site/index" for 10.240.0.197 at 2016-04-18 04:46:12 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 83ms (Views: 62.3ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/spreadsheets" for 10.240.0.189 at 2016-04-18 04:46:24 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#index as HTML
+Redirected to http://book-littlebass09.c9users.io:8080/site/facultyOutput
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/site/facultyOutput" for 10.240.0.208 at 2016-04-18 04:46:24 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#facultyOutput as HTML
+  Rendered site/facultyOutput.html.haml within layouts/application (9.0ms)
+Completed 200 OK in 51ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 10.240.0.75 at 2016-04-18 04:46:28 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.3ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 50ms (Views: 47.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.240.0.157 at 2016-04-18 04:46:42 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 69ms (Views: 48.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.157 at 2016-04-18 04:46:43 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 10.240.0.192 at 2016-04-18 04:46:43 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.200 at 2016-04-18 04:46:43 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.187 at 2016-04-18 04:46:44 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.240.0.75 at 2016-04-18 04:46:44 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.240.0.165 at 2016-04-18 04:46:44 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.240.0.75 at 2016-04-18 04:46:44 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.200 at 2016-04-18 04:46:44 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.189 at 2016-04-18 04:46:44 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.189 at 2016-04-18 04:46:44 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started POST "/spreadsheets" for 10.240.0.189 at 2016-04-18 04:46:55 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dold/VCbXuJA7QgaAzalpMRWhiDAmFMg3c75bbJZH9QplhR3aLEDxEl3CsVtlGQlCZ2ieWVnAQvWfs40ziOfDQ==", "spreadsheet"=>{"name"=>"gagn", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe441fd4d28 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-jy65k4.txt>, @original_filename="hw.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"hw.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+Completed 500 Internal Server Error in 125ms (ActiveRecord: 0.0ms)
+
+TypeError (no implicit conversion of String into Integer):
+  app/controllers/spreadsheets_controller.rb:30:in `[]'
+  app/controllers/spreadsheets_controller.rb:30:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.5ms)
+
+
+Started GET "/spreadsheets" for 10.240.0.203 at 2016-04-18 04:47:36 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#index as HTML
+Redirected to http://book-littlebass09.c9users.io:8080/site/facultyOutput
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/site/facultyOutput" for 10.240.0.200 at 2016-04-18 04:47:36 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#facultyOutput as HTML
+  Rendered site/facultyOutput.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 48ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.240.0.167 at 2016-04-18 04:47:38 +0000
+Cannot render console from 10.240.0.167! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.2ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 71ms (Views: 55.9ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.203 at 2016-04-18 04:47:47 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y9kOYDg/Pafrle+qyg91qNrL8fzLCo8qzGjRjP+1rw+UxkfqABVggeIP7XWkrbQpFwDVpW713QHH2ObVg88v1g==", "spreadsheet"=>{"name"=>"gagn", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe42c7aa7c0 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-t4f7s0.txt>, @original_filename="probs.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"probs.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+TypeError (no implicit conversion of String into Integer):
+  app/controllers/spreadsheets_controller.rb:31:in `[]'
+  app/controllers/spreadsheets_controller.rb:31:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (123.6ms)
+
+
+Started GET "/" for 10.240.0.208 at 2016-04-18 04:49:39 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 49ms (Views: 31.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 10.240.0.203 at 2016-04-18 04:49:40 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.2ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 203ms (Views: 201.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.75 at 2016-04-18 04:49:52 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e9A1nK/OjvJt6/z7smBZ547MjHKLnLE1pD94EGbDcP8kz3wWl+TT1GRx/iTcwphmQweoKy5j4x6vj09JGrnwJg==", "spreadsheet"=>{"name"=>"jij", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe4420e4b50 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-18emup5.txt>, @original_filename="hw.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"hw.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+TypeError (no implicit conversion of String into Integer):
+  app/controllers/spreadsheets_controller.rb:31:in `[]'
+  app/controllers/spreadsheets_controller.rb:31:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (18.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (101.3ms)
+
+
+Started GET "/" for 10.240.0.157 at 2016-04-18 04:50:21 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 62ms (Views: 47.7ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.208 at 2016-04-18 04:50:33 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZnFHQEvleb+IoVdlL4muDYFYpaY0JUM6IxrHdQXwN2o5bg7Kc88kmYE7VbpBK2+MTJOB/5HaEREoqvAseYq3sw==", "spreadsheet"=>{"name"=>"hung", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe42cb74b30 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-1wdrcw3.txt>, @original_filename="probs.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"probs.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms)
+
+TypeError (no implicit conversion of String into Integer):
+  app/controllers/spreadsheets_controller.rb:31:in `[]'
+  app/controllers/spreadsheets_controller.rb:31:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (118.6ms)
+
+
+Started GET "/" for 10.240.0.200 at 2016-04-18 04:50:57 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.2ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 87ms (Views: 31.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.206 at 2016-04-18 04:51:08 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t6wO+iKLBBhK1BkVsOL7odP+W0Ybk0DvKXnPnZl690Pos0dwGqFZPkNOG8reQDogHjV/H75sEsQiyfjE5QB3mg==", "spreadsheet"=>{"name"=>"bro", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe42c965a88 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-1xlc7gn.txt>, @original_filename="hw.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"hw.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+TypeError (no implicit conversion of String into Integer):
+  app/controllers/spreadsheets_controller.rb:31:in `[]'
+  app/controllers/spreadsheets_controller.rb:31:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (109.5ms)
+
+
+Started GET "/" for 10.240.0.186 at 2016-04-18 04:51:29 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 127ms (Views: 41.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 10.240.0.166 at 2016-04-18 04:51:31 +0000
+Cannot render console from 10.240.0.166! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.3ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (15.8ms)
+Completed 200 OK in 47ms (Views: 46.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.75 at 2016-04-18 04:51:40 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TaXyGK/ApK+sLFYcTjoocbvOQr7UQAvbFT7oB9CC1VQSuruSl+r5iaW2VMMgmOnwdgVm53G/WfAejt9erPhVjQ==", "spreadsheet"=>{"name"=>"tame", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe42c3f53c8 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-1qwfxvs.txt>, @original_filename="probs.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"probs.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 185ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 10.240.0.186 at 2016-04-18 04:51:41 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 47ms (Views: 45.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.75 at 2016-04-18 04:54:42 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0rdKYJLu939QhGB/+nCDb7WjVjX/4zUNRSPYcAt/NPWNqAPqqsSqWVkeYqCU0kLueGhybFocZyZOk+8pdwW0LA==", "spreadsheet"=>{"name"=>"yolo", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe441ea6078 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-t5v8pb.txt>, @original_filename="probs.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"probs.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "yolo"], ["attachment", "probs.txt"], ["created_at", "2016-04-18 04:54:42.680117"], ["updated_at", "2016-04-18 04:54:42.680117"]]
+  [1m[36m (17.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 114ms (ActiveRecord: 19.1ms)
+
+
+Started GET "/site/index" for 10.240.0.208 at 2016-04-18 04:54:42 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/site/index" for 10.240.0.75 at 2016-04-18 04:55:32 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.3ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 191ms (Views: 42.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.165 at 2016-04-18 04:55:32 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 10.240.0.189 at 2016-04-18 04:55:32 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.204 at 2016-04-18 04:55:32 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.208 at 2016-04-18 04:55:32 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.240.0.204 at 2016-04-18 04:55:32 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.240.0.189 at 2016-04-18 04:55:32 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.240.0.165 at 2016-04-18 04:55:33 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.208 at 2016-04-18 04:55:33 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.186 at 2016-04-18 04:55:33 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.189 at 2016-04-18 04:55:33 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started POST "/spreadsheets" for 10.240.0.167 at 2016-04-18 04:55:49 +0000
+Cannot render console from 10.240.0.167! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UoQcF87BgroshPZ4oCuR0Lb/chA/elAVDxBuOGRQtoYNm1Wd9uvfnCUe9KfOiVBRezRWSZqFAj4EoFlhGCo2Xw==", "spreadsheet"=>{"name"=>"Hey", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe441292bd8 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-7xir7w.txt>, @original_filename="lines.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"lines.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (29.1ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Hey"], ["attachment", "lines.txt"], ["created_at", "2016-04-18 04:55:49.650179"], ["updated_at", "2016-04-18 04:55:49.650179"]]
+  [1m[35m (14.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 85ms (ActiveRecord: 43.8ms)
+
+
+Started GET "/site/index" for 10.240.0.208 at 2016-04-18 04:55:49 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.3ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (8.1ms)
+Completed 200 OK in 52ms (Views: 50.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.186 at 2016-04-18 04:57:23 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rpb+60lZLW0YVQhUAtxkKr4UdgrBDotVAZ9DLXnVHpHxibdhcXNwSxHPCotsfqWrc99SU2Tx2X4KL3R0Ba+eSA==", "spreadsheet"=>{"name"=>"My Sheet", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe428069ed8 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-5o3n9n.txt>, @original_filename="hw.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"hw.txt\"\r\nContent-Type: text/plain\r\n">}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "My Sheet"], ["attachment", "hw.txt"], ["created_at", "2016-04-18 04:57:23.938876"], ["updated_at", "2016-04-18 04:57:23.938876"]]
+  [1m[35m (13.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 73ms (ActiveRecord: 14.8ms)
+
+
+Started GET "/site/index" for 10.240.0.186 at 2016-04-18 04:57:24 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.3ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 52ms (Views: 50.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.157 at 2016-04-18 05:07:49 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hoOwaMHb23aKlTB5N7KNwDmkcH/J0ioHPFukLQixdSTZnPni+fGGUIMPMqZZEExB9G9UJmwteCw365N0dMv1/Q==", "spreadsheet"=>{"name"=>"Playa"}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Playa"], ["created_at", "2016-04-18 05:07:49.615419"], ["updated_at", "2016-04-18 05:07:49.615419"]]
+  [1m[35m (21.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 23.2ms)
+
+NoMethodError (undefined method `original_filename' for nil:NilClass):
+  app/controllers/spreadsheets_controller.rb:23:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (114.4ms)
+
+
+Started GET "/site/index" for 10.240.0.75 at 2016-04-18 05:07:56 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.3ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 44ms (Views: 43.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.75 at 2016-04-18 05:07:56 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 10.240.0.75 at 2016-04-18 05:07:56 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.75 at 2016-04-18 05:07:56 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.75 at 2016-04-18 05:07:56 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.240.0.75 at 2016-04-18 05:07:56 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.240.0.75 at 2016-04-18 05:07:56 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.240.0.204 at 2016-04-18 05:07:56 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.204 at 2016-04-18 05:07:56 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.110 at 2016-04-18 05:07:56 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.75 at 2016-04-18 05:07:56 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started POST "/spreadsheets" for 10.240.0.166 at 2016-04-18 05:08:22 +0000
+Cannot render console from 10.240.0.166! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KwNGXZx511Y3JMazHlCt51sZ0Sjmv527Y9ZtAGix8qh0HA/XpFOKcD6+xGxw8mxmltL1cUNAz5BoZlpZFMtycQ==", "spreadsheet"=>{"name"=>"Playaa", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007fe42c1f1c70 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160418-1986-13kyjwz.csv>, @original_filename="Players.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"Players.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Playaa"], ["attachment", "Players.csv"], ["created_at", "2016-04-18 05:08:22.960647"], ["updated_at", "2016-04-18 05:08:22.960647"]]
+  [1m[35m (18.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 19.1ms)
+
+NameError (uninitialized constant SpreadsheetsController::CSV):
+  app/controllers/spreadsheets_controller.rb:44:in `populate_db'
+  app/controllers/spreadsheets_controller.rb:27:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (123.0ms)
