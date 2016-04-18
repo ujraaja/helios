@@ -4,19 +4,11 @@ class SiteController < ApplicationController
     @spreadsheets = Spreadsheet.all
   end
   
-  def selectStudentOrFaculty
-  end
-  
-  def facultyFilterSelection
-  end
-  
   def studentFilterSelection
     
     @cats = Cat.all
   end
   
-  def facultyOutput
-  end
   
   def studentOutput
     puts "HOWDY!"

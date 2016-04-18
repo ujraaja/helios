@@ -2,11 +2,11 @@ require 'csv'
 
 class SpreadsheetsController < ApplicationController
   def index
-    redirect_to site_facultyOutput_path
+    redirect_to site_studentOutput_path
   end
 
   def new
-    redirect_to site_facultyOutput_path
+    redirect_to site_studentOutput_path
   end
 
   def create
@@ -36,7 +36,7 @@ class SpreadsheetsController < ApplicationController
   end
 
   def destroy
-    redirect_to site_facultyOutput_path
+    redirect_to site_studentOutput_path
   end
   
   private
