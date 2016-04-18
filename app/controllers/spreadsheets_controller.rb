@@ -1,3 +1,5 @@
+require 'csv'
+
 class SpreadsheetsController < ApplicationController
   def index
     redirect_to site_facultyOutput_path
@@ -24,8 +26,7 @@ class SpreadsheetsController < ApplicationController
       command = "cat " + location
       system(command)
       
-      populate_db(location)
-      
+      parse_csv(location)
       
       if saved
          redirect_to site_index_path, notice: "The Spreadsheet #{@spreadsheet.name} has been uploaded."
@@ -39,44 +40,47 @@ class SpreadsheetsController < ApplicationController
   end
   
   private
-      
-    def populate_db(csvFile)
-      csv_data = CSV.read csvFile
-      headers = csv_data.shift
-      tableNameStartIndex = csvFile.rindex('/') + 1
-      tableName = csvFile[tableNameStartIndex..csvFile.length-5]
-      tableName = tableName.underscore.camelize
-      tableName = "Data" + tableName
-      table = tableName.constantize
-      string_data = csv_data.map do |row| 
-          row.map do |cell|
-              cell.to_s
-          end
-      end
-      array_of_hashes = []
-      string_data.map do |row| 
-          array_of_hashes << Hash[*headers.zip(row).flatten]
-      end
-      puts array_of_hashes
-      array_of_hashes.each do |value|
-          table.create!(value)
-      end
-    end
-    
-    def spreadsheet_params
+      def spreadsheet_params
         params.require(:spreadsheet).permit(:name, :attachment)
       end
       
-      def create_db_schema(tableName, attrs)    #attrs -> array of attributes as strings
+      def create_db_schema(tableName, attrs, datatypes)    #attrs -> array of attributes as strings
         tableName = tableName.underscore.camelize
         tableName = "Data" + tableName
         attributes = ""
+        ind = 0
         attrs.each do |attr|
           attributes << attr
-          attributes << ":string "
+          attributes << ":"
+          attributes << datatypes[ind]
+          attributes << " "
+          ind = ind + 1
         end
         `rails generate model #{tableName} #{attributes}`
         `rake db:migrate`
+      end
+      
+      def isInt(value)
+        value == value.to_i.to_s
+      end
+      
+      def determine_db_datatypes(csv_data, headers)
+        datatypes = []
+        headers.each do |header|
+          datatypes << "integer"
+        end
+        csv_data.map do |row| 
+            ind = 0
+            row.map do |cell|
+                if datatypes[ind] == "integer"
+                  if !isInt(cell.to_s)
+                    datatypes[ind] = "string"
+                  end
+                  ind = ind+1
+                end
+            end
+        end
+        return datatypes
       end
       
       def parse_csv(csvFile)
@@ -84,6 +88,7 @@ class SpreadsheetsController < ApplicationController
         headers = csv_data.shift
         tableNameStartIndex = csvFile.rindex('/') + 1
         tableName = csvFile[tableNameStartIndex..csvFile.length-5]
-        create_db_schema(tableName, headers)
+        datatypes = determine_db_datatypes(csv_data, headers)
+        create_db_schema(tableName, headers, datatypes)
       end
 end
