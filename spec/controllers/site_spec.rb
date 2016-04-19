@@ -1,73 +1,51 @@
 require 'rails_helper'
 
-RSpec.describe "SiteController", type: :controller do
-	it "#root" do
-		visit('/')
-		expect(response).to have_http_status(200)
-        expect(response).to render_template(:index)
+RSpec.describe SiteController, type: :controller do
+	describe "GET #index" do
+		it "render index template" do
+			get :index
+			expect(response).to have_http_status(200)
+	    	expect(response).to render_template :index
+	  end
 	end
 
-	describe "#index" do
-		before(:each) do
-			visit site_index_path			
-		end
-
-		it "#index" do
+	describe "GET #selectStudentOrFaculty" do
+		it "render selectStudentOrFaculty template" do
+			get :selectStudentOrFaculty
 			expect(response).to have_http_status(200)
-			expect(response).to render_template(:index)
-		end
-
-		it "redirects to selectStudentOrFaculty" do
-			click_on "Select"
-			expect(current_path).to eq(site_selectStudentOrFaculty_path)
-			expect(page).to have_content("Students or Faculty")
+			expect(response).to render_template :selectStudentOrFaculty
 		end
 	end
 
-	describe "#selectStudentOrFaculty" do
-		before(:each) do
-			visit site_selectStudentOrFaculty_path
-		end
-
-		it "#selectStudentOrFaculty" do
+	describe "GET #facultyFilterSelection" do
+		it "render facultyFilterSelection template" do
+			get :facultyFilterSelection
 			expect(response).to have_http_status(200)
-			expect(response).to render_template(:selectStudentOrFaculty)
+			expect(response).to render_template :facultyFilterSelection
 		end
+	end
 
-		it "redirects to studentFilterSelection" do
-			click_on "Students"
-			expect(current_path).to eq(site_studentFilterSelection_path)
-			expect(page).to have_content("Students")
-		end
-
-		it "redirects to facultyFilterSelection" do
-			click_on "Faculty"
-			expect(current_path).to eq(site_facultyFilterSelection_path)
-			expect(page).to have_content("Faculty")
+	describe "GET #studentFilterSelection" do
+		it "render studentFilterSelection template" do
+			get :studentFilterSelection
+			expect(response).to have_http_status(200)
+			expect(response).to render_template :studentFilterSelection
 		end
 	end
 	
-	it "#facultyFilterSelection" do
-		visit site_facultyFilterSelection_path
-		expect(response).to have_http_status(200)
-		expect(response).to render_template(:facultyFilterSelection)
+	describe "GET #facultyOutput" do
+		it "render facultyOutput template" do
+			get :facultyOutput
+			expect(response).to have_http_status(200)
+			expect(response).to render_template :facultyOutput
+		end
 	end
 
-	it "#studentFilterSelection" do
-		visit site_studentFilterSelection_path
-		expect(response).to have_http_status(200)
-		expect(response).to render_template(:studentFilterSelection)
-	end
-
-	it "#facultyOutput" do
-		visit site_facultyOutput_path
-		expect(response).to have_http_status(200)
-		expect(response).to render_template(:facultyOutput)
-	end
-
-	it "#studentOutput" do
-		visit site_studentOutput_path
-		expect(response).to have_http_status(200)
-		expect(response).to render_template(:studentOutput)
+	describe "GET #studentOutput" do
+		it "render studentOutput template" do
+			get :studentOutput
+			expect(response).to have_http_status(200)
+			expect(response).to render_template :studentOutput
+		end
 	end
 end
