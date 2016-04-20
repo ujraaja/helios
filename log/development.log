@@ -15787,3 +15787,1284 @@ Processing by SiteController#index as HTML
   [1m[36mSpreadsheet Load (0.4ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
   Rendered site/index.html.haml within layouts/application (5.8ms)
 Completed 200 OK in 75ms (Views: 73.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.240.0.203 at 2016-04-19 23:46:52 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.4ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (60.5ms)
+Completed 200 OK in 651ms (Views: 597.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/site/studentFilterSelection" for 10.240.0.186 at 2016-04-19 23:46:55 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant SiteController::Cat):
+  app/controllers/site_controller.rb:9:in `studentFilterSelection'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (21.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (166.6ms)
+
+
+Started GET "/" for 10.240.0.167 at 2016-04-20 00:56:18 +0000
+Cannot render console from 10.240.0.167! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.1) lib/active_record/migration.rb:393:in `check_pending!'
+  activerecord (4.2.1) lib/active_record/migration.rb:374:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (147.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateData (20160420005400)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "data" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160420005400"]]
+  [1m[36m (10.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 10.240.0.192 at 2016-04-20 00:57:17 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.3ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (55.8ms)
+Completed 200 OK in 531ms (Views: 492.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.165 at 2016-04-20 00:57:18 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.240.0.165 at 2016-04-20 00:57:18 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 10.240.0.110 at 2016-04-20 00:57:18 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.192 at 2016-04-20 00:57:18 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.240.0.203 at 2016-04-20 00:57:18 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.167 at 2016-04-20 00:57:18 +0000
+Cannot render console from 10.240.0.167! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.240.0.208 at 2016-04-20 00:57:18 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.110 at 2016-04-20 00:57:18 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.187 at 2016-04-20 00:57:18 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.197 at 2016-04-20 00:57:18 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/site/studentFilterSelection" for 10.240.0.208 at 2016-04-20 00:59:07 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Rendered site/studentFilterSelection.html.haml within layouts/application (66.0ms)
+Completed 200 OK in 207ms (Views: 197.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.240.0.157 at 2016-04-20 01:04:15 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 63ms (Views: 46.0ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.197 at 2016-04-20 01:04:49 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZEFHl/JJkLWXnjwYV6Ns9Mm4AbmMG+gLjXAZU4RB8B8JziPxqkA5TMgkglm1LE1gbNwR8o2Q6vQuwiUqD5nfLA==", "spreadsheet"=>{"name"=>"Cats", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f04a1e430 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-wdzuxo.csv>, @original_filename="Cats.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"Cats.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Cats"], ["attachment", "Cats.csv"], ["created_at", "2016-04-20 01:04:49.646104"], ["updated_at", "2016-04-20 01:04:49.646104"]]
+  [1m[36m (10.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 73ms (ActiveRecord: 11.6ms)
+
+
+Started GET "/site/index" for 10.240.0.204 at 2016-04-20 01:04:49 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.5ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (10.1ms)
+Completed 200 OK in 56ms (Views: 53.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.207 at 2016-04-20 01:06:35 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SbRCZbxXgW/xHkUy7lhcXk0Fk8Z2/zY8JYsl8WQMfHEkOyYD5F4olq6k+3MM133K6GGDjXd0NMOGORmI79RTQg==", "spreadsheet"=>{"name"=>"Cats", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f04db41d0 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-1i9na8l.csv>, @original_filename="Cats.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"Cats.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Cats"], ["attachment", "Cats.csv"], ["created_at", "2016-04-20 01:06:35.798314"], ["updated_at", "2016-04-20 01:06:35.798314"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "cats" ("name", "color", "age", "eye_color", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "James"], ["color", "Blue"], ["age", 17], ["eye_color", "Grey"], ["created_at", "2016-04-20 01:06:35.850345"], ["updated_at", "2016-04-20 01:06:35.850345"]]
+  [1m[35m (9.3ms)[0m  commit transaction
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 85ms (ActiveRecord: 26.7ms)
+
+
+Started GET "/site/index" for 10.240.0.75 at 2016-04-20 01:06:35 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.3ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 44ms (Views: 42.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/site/studentFilterSelection" for 10.240.0.192 at 2016-04-20 01:06:50 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentFilterSelection as HTML
+  Rendered site/studentFilterSelection.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/site/studentOutput" for 10.240.0.200 at 2016-04-20 01:06:57 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o4PkLWgGx951GaHpOJKjs5JM/eIvPeoAcqC4OGr9Uy3ODIBLMA9uJyqjH6jaHYInNyjtqS626P/REoRB4SV8Hg==", "commit"=>"Apply Filters"}
+  [1m[35mCat Load (0.5ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered site/studentOutput.html.haml within layouts/application (9.3ms)
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/site/studentOutput" for 10.240.0.203 at 2016-04-20 01:07:46 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o4PkLWgGx951GaHpOJKjs5JM/eIvPeoAcqC4OGr9Uy3ODIBLMA9uJyqjH6jaHYInNyjtqS626P/REoRB4SV8Hg==", "attribute0"=>"count", "attribute1"=>"name", "attribute2"=>"color", "attribute3"=>"eye_color", "commit"=>"Apply Filters"}
+  [1m[36mCat Load (0.4ms)[0m  [1mSELECT "cats".* FROM "cats"[0m
+  Rendered site/studentOutput.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/site/studentOutput" for 10.240.0.200 at 2016-04-20 01:08:24 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#studentOutput as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o4PkLWgGx951GaHpOJKjs5JM/eIvPeoAcqC4OGr9Uy3ODIBLMA9uJyqjH6jaHYInNyjtqS626P/REoRB4SV8Hg==", "attribute0"=>"name", "attribute1"=>"color", "attribute2"=>"age", "attribute3"=>"eye_color", "commit"=>"Apply Filters"}
+  [1m[35mCat Load (0.3ms)[0m  SELECT "cats".* FROM "cats"
+  Rendered site/studentOutput.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.186 at 2016-04-20 01:16:20 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b/OUIKMsTJCV8AnUZBYwbmQAGhGzeYA+kkJ2jusuDnsCfPBG+yXlacpKt5WGmRH6wWQKWrLygsEx8Er3YPYhSA==", "spreadsheet"=>{"name"=>"Cats", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f19daeb30 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-qc0nxc.xlsx>, @original_filename="fall 2015 - 12th day data-CSCE - Copy (1).xlsx", @content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"fall 2015 - 12th day data-CSCE - Copy (1).xlsx\"\r\nContent-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\r\n">}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Cats"], ["attachment", "fall_2015_-_12th_day_data-CSCE_-_Copy__1_.xlsx"], ["created_at", "2016-04-20 01:16:20.904402"], ["updated_at", "2016-04-20 01:16:20.904402"]]
+  [1m[35m (9.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 12.0ms)
+
+Errno::ENOENT (No such file or directory @ rb_sysopen - public/uploads/spreadsheet/attachment/fall 2015 - 12th day data-CSCE - Copy (1).xlsx):
+  app/controllers/spreadsheets_controller.rb:30:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (20.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (99.1ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.186 at 2016-04-20 01:18:18 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b/OUIKMsTJCV8AnUZBYwbmQAGhGzeYA+kkJ2jusuDnsCfPBG+yXlacpKt5WGmRH6wWQKWrLygsEx8Er3YPYhSA==", "spreadsheet"=>{"name"=>"Cats", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f045033b0 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-1olqewq.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Cats"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:18:18.563583"], ["updated_at", "2016-04-20 01:18:18.563583"]]
+  [1m[36m (12.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 2733ms (ActiveRecord: 12.9ms)
+
+
+Started GET "/site/index" for 10.240.0.203 at 2016-04-20 01:18:21 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.5ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.179 at 2016-04-20 01:18:55 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7x2JxfHH/cgZ3pG2h59SGPkmpXhwaz6aKxedh0c7srmCku2jqc5UMUZkL/dlEHOMXEK1M3HgPGWIpaH+zOOdig==", "spreadsheet"=>{"name"=>"gangsta", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f044630b8 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-y2u2yu.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "gangsta"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:18:55.178630"], ["updated_at", "2016-04-20 01:18:55.178630"]]
+  [1m[36m (19.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 57ms (ActiveRecord: 20.5ms)
+
+
+Started GET "/site/index" for 10.240.0.192 at 2016-04-20 01:18:55 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.5ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.157 at 2016-04-20 01:20:41 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZvxRYgPJRhqF/TVORWcdlum+uwWj3ORXPLyeovQNrdoLczUEW8Dv49pHiw+n6DwCTNqrTqJX5qifDqLbf9WC6Q==", "spreadsheet"=>{"name"=>"dvdv", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f04cb92d0 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-wyxplb.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "dvdv"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:20:41.462593"], ["updated_at", "2016-04-20 01:20:41.462593"]]
+  [1m[36m (12.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 52ms (ActiveRecord: 13.9ms)
+
+
+Started GET "/site/index" for 10.240.0.208 at 2016-04-20 01:20:41 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.4ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (8.3ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.179 at 2016-04-20 01:21:37 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mSaI/OISiIaKMyHpkDPLLVm1zHOfp7rI3lIEJ+EE8cD0qeyauhshf9WJn6hyvOq5/NHcOJ4suDd94Dheatze8w==", "spreadsheet"=>{"name"=>"dvdv", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f19d64760 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-19lc6ng.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "dvdv"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:21:37.594393"], ["updated_at", "2016-04-20 01:21:37.594393"]]
+  [1m[36m (11.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 53ms (ActiveRecord: 13.7ms)
+
+
+Started GET "/site/index" for 10.240.0.165 at 2016-04-20 01:21:37 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.4ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.187 at 2016-04-20 01:22:09 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AQ+8096IKbjq3ROou62jqGPEe1+rerK/I6Q5ryNUXBRsgNi1hoGAQbVnrelZIoI8xqBrFKrxsECAFgXWqIxzJw==", "spreadsheet"=>{"name"=>"dvdv", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f04b650f0 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-au0pjq.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "dvdv"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:22:09.700096"], ["updated_at", "2016-04-20 01:22:09.700096"]]
+  [1m[36m (12.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 50ms (ActiveRecord: 13.8ms)
+
+
+Started GET "/site/index" for 10.240.0.75 at 2016-04-20 01:22:09 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.192 at 2016-04-20 01:22:28 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BqSE6q4WAHjP+N9XzDugB+tkgwgpaV/L9QHP4eYHQaprK+CM9h+pgZBCYRYutIGTTgCTQyjiXTRWs/OYbd9umQ==", "spreadsheet"=>{"name"=>"dvdv", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f04483ac0 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-17x7wyn.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "dvdv"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:22:28.415060"], ["updated_at", "2016-04-20 01:22:28.415060"]]
+  [1m[36m (13.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 15.5ms)
+
+TypeError (no implicit conversion of nil into String):
+  app/controllers/spreadsheets_controller.rb:34:in `+'
+  app/controllers/spreadsheets_controller.rb:34:in `block (2 levels) in create'
+  app/controllers/spreadsheets_controller.rb:33:in `each'
+  app/controllers/spreadsheets_controller.rb:33:in `block in create'
+  app/controllers/spreadsheets_controller.rb:32:in `each'
+  app/controllers/spreadsheets_controller.rb:32:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (20.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (112.9ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.189 at 2016-04-20 01:23:24 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BqSE6q4WAHjP+N9XzDugB+tkgwgpaV/L9QHP4eYHQaprK+CM9h+pgZBCYRYutIGTTgCTQyjiXTRWs/OYbd9umQ==", "spreadsheet"=>{"name"=>"dvdv", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f19984c08 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-1cz1cwa.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "dvdv"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:23:24.366836"], ["updated_at", "2016-04-20 01:23:24.366836"]]
+  [1m[35m (15.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 16.9ms)
+
+TypeError (no implicit conversion of nil into String):
+  app/controllers/spreadsheets_controller.rb:34:in `+'
+  app/controllers/spreadsheets_controller.rb:34:in `block (2 levels) in create'
+  app/controllers/spreadsheets_controller.rb:33:in `each'
+  app/controllers/spreadsheets_controller.rb:33:in `block in create'
+  app/controllers/spreadsheets_controller.rb:32:in `each'
+  app/controllers/spreadsheets_controller.rb:32:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (107.7ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.189 at 2016-04-20 01:23:47 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BqSE6q4WAHjP+N9XzDugB+tkgwgpaV/L9QHP4eYHQaprK+CM9h+pgZBCYRYutIGTTgCTQyjiXTRWs/OYbd9umQ==", "spreadsheet"=>{"name"=>"dvdv", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f0c046900 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-4lunz9.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "dvdv"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:23:47.682424"], ["updated_at", "2016-04-20 01:23:47.682424"]]
+  [1m[36m (9.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 63ms (ActiveRecord: 12.8ms)
+
+
+Started GET "/site/index" for 10.240.0.189 at 2016-04-20 01:23:47 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.208 at 2016-04-20 01:24:02 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y8srRXG/4tkzTCEM5xc+mRvrXAI3ZotHvgp8lYAVt+OmRE8jKbZLIGz2n00FmB8Nvo9MSTbtibgduEDsC82Y0A==", "spreadsheet"=>{"name"=>"hey", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f042aece0 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-x91yvx.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "hey"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:24:02.721767"], ["updated_at", "2016-04-20 01:24:02.721767"]]
+  [1m[36m (12.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 53ms (ActiveRecord: 14.3ms)
+
+
+Started GET "/site/index" for 10.240.0.200 at 2016-04-20 01:24:02 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.7ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 40ms (Views: 38.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.207 at 2016-04-20 01:24:15 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DjHEmWLNLV0Xza5k6CE80HQfWEVjiBJBOnUFPx7KxPFjvqD/OsSEpEh3ECUKrh1E0XtIDmIDEL6ZxzlGlRLrwg==", "spreadsheet"=>{"name"=>"hhh", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f1929aaa0 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-10sd3cl.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "hhh"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:24:15.269495"], ["updated_at", "2016-04-20 01:24:15.269495"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 13.5ms)
+
+NoMethodError (undefined method `lowercase' for nil:NilClass):
+  app/controllers/spreadsheets_controller.rb:34:in `block (2 levels) in create'
+  app/controllers/spreadsheets_controller.rb:33:in `each'
+  app/controllers/spreadsheets_controller.rb:33:in `block in create'
+  app/controllers/spreadsheets_controller.rb:32:in `each'
+  app/controllers/spreadsheets_controller.rb:32:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (127.6ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.206 at 2016-04-20 01:24:35 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DjHEmWLNLV0Xza5k6CE80HQfWEVjiBJBOnUFPx7KxPFjvqD/OsSEpEh3ECUKrh1E0XtIDmIDEL6ZxzlGlRLrwg==", "spreadsheet"=>{"name"=>"hhh", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f04d018a0 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-1uwzfxg.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "hhh"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:24:35.780851"], ["updated_at", "2016-04-20 01:24:35.780851"]]
+  [1m[35m (11.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Completed 500 Internal Server Error in 170ms (ActiveRecord: 13.3ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/spreadsheets_controller.rb:34:in `block (2 levels) in create'
+  app/controllers/spreadsheets_controller.rb:33:in `each'
+  app/controllers/spreadsheets_controller.rb:33:in `block in create'
+  app/controllers/spreadsheets_controller.rb:32:in `each'
+  app/controllers/spreadsheets_controller.rb:32:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (113.9ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.75 at 2016-04-20 01:25:02 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DjHEmWLNLV0Xza5k6CE80HQfWEVjiBJBOnUFPx7KxPFjvqD/OsSEpEh3ECUKrh1E0XtIDmIDEL6ZxzlGlRLrwg==", "spreadsheet"=>{"name"=>"hhh", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f046170f8 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-9qysck.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "hhh"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:25:02.593745"], ["updated_at", "2016-04-20 01:25:02.593745"]]
+  [1m[36m (32.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 93ms (ActiveRecord: 34.7ms)
+
+
+Started GET "/site/index" for 10.240.0.75 at 2016-04-20 01:25:02 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (4.8ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (10.3ms)
+Completed 200 OK in 57ms (Views: 50.4ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.75 at 2016-04-20 01:25:11 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IRP0kQ4xP+iF05k7KPD7BfeQ0+fxM3sTI+g5h3+DmxxMnJD3VjiWEdppJ3rKf9qRUvTDrPC4eeyAWgX+9Fu0Lw==", "spreadsheet"=>{"name"=>"SpreadSheet", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f0428a318 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-3etj14.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "SpreadSheet"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:25:11.126312"], ["updated_at", "2016-04-20 01:25:11.126312"]]
+  [1m[36m (22.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 135ms (ActiveRecord: 24.8ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/spreadsheets_controller.rb:36:in `block (2 levels) in create'
+  app/controllers/spreadsheets_controller.rb:33:in `each'
+  app/controllers/spreadsheets_controller.rb:33:in `block in create'
+  app/controllers/spreadsheets_controller.rb:32:in `each'
+  app/controllers/spreadsheets_controller.rb:32:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (205.8ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.165 at 2016-04-20 01:25:24 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IRP0kQ4xP+iF05k7KPD7BfeQ0+fxM3sTI+g5h3+DmxxMnJD3VjiWEdppJ3rKf9qRUvTDrPC4eeyAWgX+9Fu0Lw==", "spreadsheet"=>{"name"=>"SpreadSheet", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f195228e0 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-pjwkdj.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "SpreadSheet"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:25:24.752007"], ["updated_at", "2016-04-20 01:25:24.752007"]]
+  [1m[35m (13.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 85ms (ActiveRecord: 15.8ms)
+
+
+Started GET "/site/index" for 10.240.0.187 at 2016-04-20 01:25:24 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.4ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (18.0ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.189 at 2016-04-20 01:25:58 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1JX/cTXSvS3EagefXSZWYyq0A++jDqQnmL5aZw+ZQE65GpsXbdsU1JvQud6/qXf3j9ATpKKFptg7DGYehEFvfQ==", "spreadsheet"=>{"name"=>"gangsta", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f043337d8 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-88qov2.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "gangsta"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:25:58.889911"], ["updated_at", "2016-04-20 01:25:58.889911"]]
+  [1m[35m (10.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 12.4ms)
+
+ArgumentError (wrong number of arguments (0 for 1..2)):
+  app/controllers/spreadsheets_controller.rb:34:in `gsub!'
+  app/controllers/spreadsheets_controller.rb:34:in `block (2 levels) in create'
+  app/controllers/spreadsheets_controller.rb:33:in `each'
+  app/controllers/spreadsheets_controller.rb:33:in `block in create'
+  app/controllers/spreadsheets_controller.rb:32:in `each'
+  app/controllers/spreadsheets_controller.rb:32:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (19.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (155.2ms)
+
+
+Started GET "/site/index" for 10.240.0.157 at 2016-04-20 01:26:20 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.2ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 41ms (Views: 30.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.204 at 2016-04-20 01:26:28 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y2b+pIarHXDgGJnyA6cQ2/sLPQzDOr+DlMJoGYFjN9IO6ZrC3qK0ib+iJ7PhKDFPXm8tR8KxvXw3cFRgCrsY4Q==", "spreadsheet"=>{"name"=>"SpreadSheet", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f19425898 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-10h2ira.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "SpreadSheet"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:26:28.426931"], ["updated_at", "2016-04-20 01:26:28.426931"]]
+  [1m[35m (12.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 13.5ms)
+
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  app/controllers/spreadsheets_controller.rb:35:in `block (2 levels) in create'
+  app/controllers/spreadsheets_controller.rb:33:in `each'
+  app/controllers/spreadsheets_controller.rb:33:in `block in create'
+  app/controllers/spreadsheets_controller.rb:32:in `each'
+  app/controllers/spreadsheets_controller.rb:32:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (111.0ms)
+
+
+Started GET "/site/index" for 10.240.0.157 at 2016-04-20 01:26:57 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.8ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (10.5ms)
+Completed 200 OK in 93ms (Views: 75.1ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.187 at 2016-04-20 01:27:03 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CuCLndkQwszDq1BOaZOfAKKEHIHGr4jo+tYvRLG0tOpnb+/7gRlrNZwR7g+LHL6UB+AMysckihdZZBM9Omyb2Q==", "spreadsheet"=>{"name"=>"gangsta", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f049197b0 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-9odlgq.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "gangsta"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:27:03.414940"], ["updated_at", "2016-04-20 01:27:03.414940"]]
+  [1m[35m (11.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 12.7ms)
+
+NoMethodError (undefined method `downcase!' for nil:NilClass):
+  app/controllers/spreadsheets_controller.rb:35:in `block (2 levels) in create'
+  app/controllers/spreadsheets_controller.rb:33:in `each'
+  app/controllers/spreadsheets_controller.rb:33:in `block in create'
+  app/controllers/spreadsheets_controller.rb:32:in `each'
+  app/controllers/spreadsheets_controller.rb:32:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (112.2ms)
+
+
+Started GET "/site/index" for 10.240.0.197 at 2016-04-20 01:28:43 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.3ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 50ms (Views: 36.7ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.192 at 2016-04-20 01:28:48 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kqfH56/4NilTSZia4GEppwMRgD1++QyperlZUgaoDMz/KKOB9/Gf0AzzJtsC7ggzpnWQdn9yDlbZC2UrjXAj/w==", "spreadsheet"=>{"name"=>"hhh", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f19cd1be0 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-t69q1s.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "hhh"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:28:48.063443"], ["updated_at", "2016-04-20 01:28:48.063443"]]
+  [1m[35m (11.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 60ms (ActiveRecord: 12.0ms)
+
+
+Started GET "/site/index" for 10.240.0.197 at 2016-04-20 01:28:48 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.5ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 40ms (Views: 35.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.157 at 2016-04-20 01:29:06 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mSQEh7VZXEGQXYlshKzuVQ9kVJExHbDev/b2vBrUBez0q2Dh7VD1uM/nNy1mI8/BqgBE2jCWsiEcRMrFkQwq3w==", "spreadsheet"=>{"name"=>"Cats", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f04958820 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-1w8nseo.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Cats"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:29:06.517895"], ["updated_at", "2016-04-20 01:29:06.517895"]]
+  [1m[35m (12.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 57ms (ActiveRecord: 13.9ms)
+
+
+Started GET "/site/index" for 10.240.0.157 at 2016-04-20 01:29:06 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.3ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 39ms (Views: 37.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.192 at 2016-04-20 01:29:23 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/6RoAlV7HuYC94etCmgD/D5OXT+TDHWYGlMvjhctJiWSKwxkDXK3H11NOezo5yJomypNdJKHd2e54RP3nPUJFg==", "spreadsheet"=>{"name"=>"Cats", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f194cdef8 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-7zn5dv.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Cats"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:29:23.587178"], ["updated_at", "2016-04-20 01:29:23.587178"]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  commit transaction
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 57ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/site/index" for 10.240.0.197 at 2016-04-20 01:29:23 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.5ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 47ms (Views: 45.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.197 at 2016-04-20 01:31:23 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HUMF9sfdNNMieYxWFcffh+L0YC5E1YlnccCLwLsWZ5xwzGGQn9SdKn3DMhf3SP4TR5BwZUVei5jScre5MM5Irw==", "spreadsheet"=>{"name"=>"Cats", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f046e7eb0 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-1oem8lj.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Cats"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:31:23.558806"], ["updated_at", "2016-04-20 01:31:23.558806"]]
+  [1m[35m (56.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 106ms (ActiveRecord: 57.0ms)
+
+
+Started GET "/site/index" for 10.240.0.207 at 2016-04-20 01:31:23 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.6ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 50ms (Views: 48.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.189 at 2016-04-20 01:31:52 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i4KQO5D5B9yCFHW2Ywp84o6XbOAZahr93Irqh9ucHVHmDfRdyPCuJd2uy/eBhV12K/N8qxjhGAJ/ONb+UEQyYg==", "spreadsheet"=>{"name"=>"gangsta", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f044ad208 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-1hmzshx.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "gangsta"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:31:52.268243"], ["updated_at", "2016-04-20 01:31:52.268243"]]
+  [1m[35m (10.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 49ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/site/index" for 10.240.0.165 at 2016-04-20 01:31:52 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.7ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.192 at 2016-04-20 01:34:44 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kgxrzikmR/T6D0YY5+Gx02zmhlxJ649Ltw24waGrSnH/gw+ocS/uDaW1+FkFbpBHyYKWF0hgjbQUv4S4KnNlQg==", "spreadsheet"=>{"name"=>"hey", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f04c282d0 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-1t2bf0h.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "hey"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:34:44.077084"], ["updated_at", "2016-04-20 01:34:44.077084"]]
+  [1m[35m (14.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 16.2ms)
+
+NoMethodError (undefined method `gsub!' for nil:NilClass):
+  app/controllers/spreadsheets_controller.rb:34:in `block (2 levels) in create'
+  app/controllers/spreadsheets_controller.rb:33:in `each'
+  app/controllers/spreadsheets_controller.rb:33:in `block in create'
+  app/controllers/spreadsheets_controller.rb:32:in `each'
+  app/controllers/spreadsheets_controller.rb:32:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (120.4ms)
+
+
+Started GET "/site/index" for 10.240.0.197 at 2016-04-20 01:36:12 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.7ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 55ms (Views: 42.3ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.197 at 2016-04-20 01:36:17 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2KskPh7pHsE0eeIp/Vic/q06zond3h5aRM/VbUEg5+O1JEBYRuC3OGvDXGgf171qCF7ewtxVHKXnfekUyvjI0A==", "spreadsheet"=>{"name"=>"Cats", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f043c5ef8 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-1wfwd8c.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Cats"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:36:17.983100"], ["updated_at", "2016-04-20 01:36:17.983100"]]
+  [1m[35m (9.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 210ms (ActiveRecord: 10.9ms)
+
+
+Started GET "/site/index" for 10.240.0.197 at 2016-04-20 01:36:18 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.6ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 39ms (Views: 37.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.203 at 2016-04-20 01:36:34 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BzaVS7tU4EGPWpItsj/MeA7r5TVG25Wcs3ge1nNKiUpqufEt411JuNDgLGxQsO3sq4/1fkdQl2MQyiKv+JKmeQ==", "spreadsheet"=>{"name"=>"gangsta", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f04d2a430 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-3cpbu9.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "gangsta"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:36:34.736474"], ["updated_at", "2016-04-20 01:36:34.736474"]]
+  [1m[35m (24.1ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 97ms (ActiveRecord: 25.2ms)
+
+
+Started GET "/site/index" for 10.240.0.203 at 2016-04-20 01:36:34 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (1.3ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 60ms (Views: 57.5ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.186 at 2016-04-20 01:37:50 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6IXOReYpYr2j2/UerpfzwR7b1ghFi42+y8g6/+63P92FCqojviDLRPxhS19MGNJVu7/GQ0QAj0FoegaGZW8Q7g==", "spreadsheet"=>{"name"=>"Cats", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f19e3de20 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-17l2b1y.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.5ms)[0m  INSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Cats"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:37:50.973319"], ["updated_at", "2016-04-20 01:37:50.973319"]]
+  [1m[36m (27.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 165ms (ActiveRecord: 38.5ms)
+
+
+Started GET "/site/index" for 10.240.0.157 at 2016-04-20 01:37:51 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.7ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (12.6ms)
+Completed 200 OK in 99ms (Views: 96.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.207 at 2016-04-20 01:39:00 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gpzxVI6ONt8fBtDl9w068vH1QMDVm/lokX93/BQylMzvE5Uy1oefJkC8bqQVghtmVJFQi9QQ+5cyzUuFn+q7/w==", "spreadsheet"=>{"name"=>"dvdv", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f7f04c44728 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-3284-1jpie5o.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "dvdv"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:39:00.278712"], ["updated_at", "2016-04-20 01:39:00.278712"]]
+  [1m[36m (20.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 110ms (ActiveRecord: 22.9ms)
+
+
+Started GET "/site/index" for 10.240.0.207 at 2016-04-20 01:39:00 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.8ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (12.5ms)
+Completed 200 OK in 64ms (Views: 61.5ms | ActiveRecord: 0.8ms)
+  [1m[36m (16.2ms)[0m  [1mCREATE TABLE "cats" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "color" varchar, "age" integer, "eye_color" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (15.0ms)[0m  CREATE TABLE "data" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (9.2ms)[0m  [1mCREATE TABLE "spreadsheets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "attachment" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (20.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (10.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (11.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160420005400')
+  [1m[36m (19.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160330173234')[0m
+  [1m[35m (11.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160406021822')
+  [1m[36m (12.4ms)[0m  [1mCREATE TABLE "cats" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "color" varchar, "age" integer, "eye_color" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (8.0ms)[0m  CREATE TABLE "data" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (9.1ms)[0m  [1mCREATE TABLE "spreadsheets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "attachment" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (9.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (14.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (20.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160420005400')
+  [1m[36m (16.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160330173234')[0m
+  [1m[35m (24.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160406021822')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cats" ("name", "color", "age", "eye_color", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tim"], ["color", "Brown"], ["age", 7], ["eye_color", "Brown"], ["created_at", "2016-04-20 01:39:40.114278"], ["updated_at", "2016-04-20 01:39:40.114278"]]
+  [1m[35m (9.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "cats" ("name", "color", "age", "eye_color", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Brandon"], ["color", "Grey"], ["age", 1], ["eye_color", "Green"], ["created_at", "2016-04-20 01:39:40.136530"], ["updated_at", "2016-04-20 01:39:40.136530"]]
+  [1m[36m (10.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cats" ("name", "color", "age", "eye_color", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Zeek"], ["color", "Orange"], ["age", 2], ["eye_color", "Blue"], ["created_at", "2016-04-20 01:39:40.149393"], ["updated_at", "2016-04-20 01:39:40.149393"]]
+  [1m[35m (11.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cats" ("name", "color", "age", "eye_color", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Greg"], ["color", "Black"], ["age", 5], ["eye_color", "Brown"], ["created_at", "2016-04-20 01:39:40.163633"], ["updated_at", "2016-04-20 01:39:40.163633"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "cats" ("name", "color", "age", "eye_color", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Shay"], ["color", "Orange"], ["age", 3], ["eye_color", "Brown"], ["created_at", "2016-04-20 01:39:40.176783"], ["updated_at", "2016-04-20 01:39:40.176783"]]
+  [1m[35m (17.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "cats" ("name", "color", "age", "eye_color", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Sandra"], ["color", "Black"], ["age", 7], ["eye_color", "Blue"], ["created_at", "2016-04-20 01:39:40.203466"], ["updated_at", "2016-04-20 01:39:40.203466"]]
+  [1m[36m (9.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cats" ("name", "color", "age", "eye_color", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Bobo"], ["color", "Brown"], ["age", 8], ["eye_color", "Green"], ["created_at", "2016-04-20 01:39:40.216766"], ["updated_at", "2016-04-20 01:39:40.216766"]]
+  [1m[35m (9.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "cats" ("name", "color", "age", "eye_color", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Johnny"], ["color", "Grey"], ["age", 10], ["eye_color", "Green"], ["created_at", "2016-04-20 01:39:40.229189"], ["updated_at", "2016-04-20 01:39:40.229189"]]
+  [1m[36m (11.6ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/site/index" for 10.240.0.192 at 2016-04-20 01:53:22 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.4ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (155.3ms)
+Completed 200 OK in 1290ms (Views: 1242.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/cats.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.75 at 2016-04-20 01:53:24 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/default.self-5e54a2fa4fb48dd1c5f3b328e885221298fa333611e2ce741f05dbe547de38d1.css?body=1" for 10.240.0.197 at 2016-04-20 01:53:25 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.75 at 2016-04-20 01:53:25 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 10.240.0.165 at 2016-04-20 01:53:25 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.240.0.179 at 2016-04-20 01:53:25 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.240.0.167 at 2016-04-20 01:53:25 +0000
+Cannot render console from 10.240.0.167! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.240.0.208 at 2016-04-20 01:53:25 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/cats.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.207 at 2016-04-20 01:53:25 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/spreadsheets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.240.0.167 at 2016-04-20 01:53:25 +0000
+Cannot render console from 10.240.0.167! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.75 at 2016-04-20 01:53:25 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+
+
+Started POST "/spreadsheets" for 10.240.0.204 at 2016-04-20 01:53:30 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m8O/1yuSdLIyecTSn8Wxd/1VQ42pxUl3XmMOV8pIMPX2TNuxc5vdS23DepN9SpDjWDFTxqhOS4j90TIuQZAfxg==", "spreadsheet"=>{"name"=>"gump", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f16c179b6c8 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-4538-15d22ez.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "gump"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:53:30.290267"], ["updated_at", "2016-04-20 01:53:30.290267"]]
+  [1m[36m (13.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 108ms (ActiveRecord: 15.1ms)
+
+
+Started GET "/site/index" for 10.240.0.165 at 2016-04-20 01:53:30 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.4ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 112ms (Views: 106.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.204 at 2016-04-20 01:55:12 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w/7PZuIjP44dqyDR6ea7Bdm2TanbeHr09pgUYtq4La2ucasAuiqWd0IRnpALaZqRfNJd4trzeAtVKigbUWACng==", "spreadsheet"=>{"name"=>"Cats", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f16c1dee778 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-4538-u2671o.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Cats"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:55:12.350120"], ["updated_at", "2016-04-20 01:55:12.350120"]]
+  [1m[36m (10.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 85ms (ActiveRecord: 12.1ms)
+
+NameError (undefined local variable or method `i' for #<SpreadsheetsController:0x007f16c1e08f60>):
+  app/controllers/spreadsheets_controller.rb:66:in `block in printData'
+  app/controllers/spreadsheets_controller.rb:48:in `each'
+  app/controllers/spreadsheets_controller.rb:48:in `printData'
+  app/controllers/spreadsheets_controller.rb:34:in `block in create'
+  app/controllers/spreadsheets_controller.rb:33:in `each'
+  app/controllers/spreadsheets_controller.rb:33:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (151.8ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.186 at 2016-04-20 01:55:59 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w/7PZuIjP44dqyDR6ea7Bdm2TanbeHr09pgUYtq4La2ucasAuiqWd0IRnpALaZqRfNJd4trzeAtVKigbUWACng==", "spreadsheet"=>{"name"=>"Cats", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f16c1ed10a0 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-4538-199gt3j.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Cats"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:55:59.406888"], ["updated_at", "2016-04-20 01:55:59.406888"]]
+  [1m[35m (10.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 60ms (ActiveRecord: 11.6ms)
+
+
+Started GET "/site/index" for 10.240.0.192 at 2016-04-20 01:55:59 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.4ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 50ms (Views: 48.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.110 at 2016-04-20 01:56:46 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GDCnKB5oT37R7AAids9fgFFYubcryeqXcBSZGeyLDx11v8NORmHmh45WvmOUQH4U9Dyp/CpC6GjTpqVgZ1MgLg==", "spreadsheet"=>{"name"=>"dvdv", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f16c1c0d5a8 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-4538-13ahlwm.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "dvdv"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 01:56:46.964332"], ["updated_at", "2016-04-20 01:56:46.964332"]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  commit transaction
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 64ms (ActiveRecord: 12.1ms)
+
+
+Started GET "/site/index" for 10.240.0.110 at 2016-04-20 01:56:47 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[36mSpreadsheet Load (0.5ms)[0m  [1mSELECT "spreadsheets".* FROM "spreadsheets"[0m
+  Rendered site/index.html.haml within layouts/application (10.8ms)
+Completed 200 OK in 64ms (Views: 62.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.203 at 2016-04-20 01:59:10 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1/LjTYhSZ1gvPKKbNzhePY11Huq4peTDpfV1U1wBe0G6fYcr0FvOoXCGHNrVt3+pKBEOobku5jwGR0kq19lUcg==", "spreadsheet"=>{"name"=>"gangsta", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f16c27f31d8 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-4538-fztlhd.csv>, @original_filename="fall2015.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"fall2015.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "gangsta"], ["attachment", "fall2015.csv"], ["created_at", "2016-04-20 01:59:10.839646"], ["updated_at", "2016-04-20 01:59:10.839646"]]
+  [1m[35m (13.4ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Completed 500 Internal Server Error in 1390ms (ActiveRecord: 15.4ms)
+
+NoMethodError (undefined method `create' for Data:Class):
+  app/controllers/spreadsheets_controller.rb:35:in `block in create'
+  app/controllers/spreadsheets_controller.rb:32:in `each'
+  app/controllers/spreadsheets_controller.rb:32:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (36.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (149.1ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.110 at 2016-04-20 02:01:17 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1/LjTYhSZ1gvPKKbNzhePY11Huq4peTDpfV1U1wBe0G6fYcr0FvOoXCGHNrVt3+pKBEOobku5jwGR0kq19lUcg==", "spreadsheet"=>{"name"=>"gangsta", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f16c25576b8 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-4538-jdvjfh.csv>, @original_filename="fall2015.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"fall2015.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "gangsta"], ["attachment", "fall2015.csv"], ["created_at", "2016-04-20 02:01:17.662678"], ["updated_at", "2016-04-20 02:01:17.662678"]]
+  [1m[36m (16.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 19.3ms)
+
+NoMethodError (undefined method `attr_accessible' for Datum(id: integer, created_at: datetime, updated_at: datetime):Class):
+  app/models/datum.rb:3:in `<class:Datum>'
+  app/models/datum.rb:1:in `<top (required)>'
+  app/controllers/spreadsheets_controller.rb:35:in `block in create'
+  app/controllers/spreadsheets_controller.rb:32:in `each'
+  app/controllers/spreadsheets_controller.rb:32:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (134.1ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.207 at 2016-04-20 02:02:15 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1/LjTYhSZ1gvPKKbNzhePY11Huq4peTDpfV1U1wBe0G6fYcr0FvOoXCGHNrVt3+pKBEOobku5jwGR0kq19lUcg==", "spreadsheet"=>{"name"=>"gangsta", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f16c39b0970 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-4538-1xrgphg.csv>, @original_filename="fall2015.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"fall2015.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "gangsta"], ["attachment", "fall2015.csv"], ["created_at", "2016-04-20 02:02:15.253873"], ["updated_at", "2016-04-20 02:02:15.253873"]]
+  [1m[35m (10.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 12.5ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'uin' for Datum.):
+  app/controllers/spreadsheets_controller.rb:35:in `block in create'
+  app/controllers/spreadsheets_controller.rb:32:in `each'
+  app/controllers/spreadsheets_controller.rb:32:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (17.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (137.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 10.240.0.157 at 2016-04-20 02:07:10 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (55.6ms)
+Completed 200 OK in 428ms (Views: 394.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.75 at 2016-04-20 02:07:36 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KcHxGlC42sfVSTBRi5BPFzAqviOBpCXebqlFn2hncctETpV8CLFzPorzjhBpH26DlU6uaIAvJyHNG3nm479e+A==", "spreadsheet"=>{"name"=>"gump", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x000000027d2538 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-5189-1nj9lfu.csv>, @original_filename="fall2015.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"fall2015.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "gump"], ["attachment", "fall2015.csv"], ["created_at", "2016-04-20 02:07:36.066201"], ["updated_at", "2016-04-20 02:07:36.066201"]]
+  [1m[36m (16.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 17.6ms)
+
+NameError (undefined local variable or method `uin=' for #<Datum id: nil, created_at: nil, updated_at: nil>):
+  app/controllers/spreadsheets_controller.rb:35:in `block in create'
+  app/controllers/spreadsheets_controller.rb:32:in `each'
+  app/controllers/spreadsheets_controller.rb:32:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (18.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (101.4ms)
+
+
+Started GET "/" for 10.240.0.179 at 2016-04-20 02:09:54 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 62ms (Views: 43.4ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.189 at 2016-04-20 02:09:59 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v3xlI40PXHi2znTnu7Jn8ZPRA01miy5OzJ0cXNlSlkbS8wFF1Qb1gel0yqZZPUZlNrUTBmcALLFvLyAlUoq5dQ==", "spreadsheet"=>{"name"=>"dvdv", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f1812094328 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-5189-9s6ys8.csv>, @original_filename="fall2015.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"fall2015.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "dvdv"], ["attachment", "fall2015.csv"], ["created_at", "2016-04-20 02:09:59.336763"], ["updated_at", "2016-04-20 02:09:59.336763"]]
+  [1m[36m (11.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 13.3ms)
+
+NameError (undefined local variable or method `uin=' for #<Datum id: nil, created_at: nil, updated_at: nil>):
+  app/controllers/spreadsheets_controller.rb:35:in `block in create'
+  app/controllers/spreadsheets_controller.rb:32:in `each'
+  app/controllers/spreadsheets_controller.rb:32:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (126.2ms)
+
+
+Started GET "/" for 10.240.0.203 at 2016-04-20 02:16:32 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.2ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (49.7ms)
+Completed 200 OK in 417ms (Views: 384.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.189 at 2016-04-20 02:16:40 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2BR8FXOEX8Ikxt89p0/3X7C1pudTuQHamLi1gnaNVvK1mxhzK432O3t8YXxFwNbLFdG2rFIyAyU7Con7/VV5wQ==", "spreadsheet"=>{"name"=>"gangsta", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x00000003d5d970 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-5358-1pkwyp5.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "gangsta"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 02:16:40.189744"], ["updated_at", "2016-04-20 02:16:40.189744"]]
+  [1m[36m (14.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 96ms (ActiveRecord: 15.5ms)
+
+
+Started GET "/site/index" for 10.240.0.179 at 2016-04-20 02:16:40 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (0.3ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.157 at 2016-04-20 02:18:20 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HFTcofzW5rz7ZaJX3nL1N/zJlh+s5sbItR6U/dcqtFFx27jHpN9PRaTfHBY8/dSjWa2GVK1txDcWrKiEXPKbYg==", "spreadsheet"=>{"name"=>"gangsta", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x00000003d5c4f8 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-5358-1rgbpiu.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "gangsta"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 02:18:20.144631"], ["updated_at", "2016-04-20 02:18:20.144631"]]
+  [1m[36m (36.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 126ms (ActiveRecord: 38.3ms)
+
+
+Started GET "/site/index" for 10.240.0.204 at 2016-04-20 02:18:20 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (1.5ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (13.1ms)
+Completed 200 OK in 78ms (Views: 75.7ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/spreadsheets" for 10.240.0.206 at 2016-04-20 02:18:40 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SpreadsheetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pd4aH2M4xNAG/2N0znRlycdSeV8AL0kcQPnrEe2Gg2bIUX55OzFtKVlF3TUs+0RdYjZpFAGkS+PjS9doZl6sVQ==", "spreadsheet"=>{"name"=>"gangsta", "attachment"=>#<ActionDispatch::Http::UploadedFile:0x007f53fa341a48 @tempfile=#<Tempfile:/home/ubuntu/workspace/HeliosProject/helios/RackMultipart20160420-5358-1q2353g.csv>, @original_filename="headers.csv", @content_type="application/vnd.ms-excel", @headers="Content-Disposition: form-data; name=\"spreadsheet[attachment]\"; filename=\"headers.csv\"\r\nContent-Type: application/vnd.ms-excel\r\n">}, "commit"=>"Save"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "spreadsheets" ("name", "attachment", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "gangsta"], ["attachment", "headers.csv"], ["created_at", "2016-04-20 02:18:40.512293"], ["updated_at", "2016-04-20 02:18:40.512293"]]
+  [1m[36m (10.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://book-littlebass09.c9users.io:8080/site/index
+Completed 302 Found in 73ms (ActiveRecord: 12.6ms)
+
+
+Started GET "/site/index" for 10.240.0.187 at 2016-04-20 02:18:40 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 10.240.0.139, 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  [1m[35mSpreadsheet Load (1.1ms)[0m  SELECT "spreadsheets".* FROM "spreadsheets"
+  Rendered site/index.html.haml within layouts/application (9.9ms)
+Completed 200 OK in 57ms (Views: 54.2ms | ActiveRecord: 1.1ms)
