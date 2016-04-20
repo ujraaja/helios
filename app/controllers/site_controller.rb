@@ -6,7 +6,7 @@ class SiteController < ApplicationController
   
   def studentFilterSelection
     
-    @cats = Cat.all
+    @students = Student.all
   end
   
   
@@ -35,9 +35,9 @@ class SiteController < ApplicationController
 
     puts filters.inspect
     if filters.length == 0
-      @cats = Cat.all
+      @students = Student.all
     else
-      @cats = Cat.where(filters["filter0"] + comparators["comparator0"] + "\'" + filterValues["filterValue0"] + "\'")
+      @students = Student.where(filters["filter0"] + comparators["comparator0"] + "\'" + filterValues["filterValue0"] + "\'")
     end
     
   end

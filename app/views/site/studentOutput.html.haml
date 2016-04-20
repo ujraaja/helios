@@ -27,19 +27,19 @@
     
     %h2 Result
     - if @count
-      %h3 Count = #{@cats.length}
-    %table#cats
+      %h3 Count = #{@students.length}
+    %table#students
       %thead
         %tr
         - @attributes.each do |attribute|
           - if attribute[1] != "count"
             %th= attribute[1]
       %tbody
-        - @cats.each do |cat|
+        - @students.each do |student|
           %tr
             - @attributes.each do |attribute|
               - if attribute[1] != "count"
-                %td= cat.send(attribute[1])
+                %td= student.send(attribute[1])
     
     -#%img{:align => "center", :height => "250", :src => "/images/table.png", :width => "600"}/
     
