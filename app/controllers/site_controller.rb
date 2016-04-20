@@ -12,6 +12,14 @@ class SiteController < ApplicationController
       @query = (Query.where("name = " + "\'" + params["queryLoad"] + "\'"))[0]
     end
     
+    if @query
+      @filterCount = @query.filters.count
+      @headerCount = @query.headers.count
+    else
+      @filterCount = 0
+      @headerCount = 0
+    end
+    
     puts "+++++++++++++++++++++"
     puts params.inspect
     puts @query.inspect
