@@ -37,7 +37,19 @@ class SiteController < ApplicationController
     if filters.length == 0
       @students = Student.all
     else
-      @students = Student.where(filters["filter0"] + comparators["comparator0"] + "\'" + filterValues["filterValue0"] + "\'")
+      queryString = ""
+      i = 0
+      filters.each do |filter|
+        if i > 0
+          queryString = queryString + " AND "
+        end
+        queryString = queryString + filters["filter" + i.to_s] + comparators["comparator" + i.to_s] + "\'" + filterValues["filterValue" + i.to_s] + "\'"
+        i = i + 1
+      end
+      
+      puts queryString
+      #@students = Student.where(filters["filter0"] + comparators["comparator0"] + "\'" + filterValues["filterValue0"] + "\'")
+      @students = Student.where(queryString)
     end
     
   end
