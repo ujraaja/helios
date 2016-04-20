@@ -16,7 +16,7 @@
       %button#confirmNoOfFilters Confirm
     
     %select#filtersListInner{:onchange => "getSelected(value)", :name => "filter", :hidden => "true"}
-      - @cats.column_names.each do |column_name|
+      - @students.column_names.each do |column_name|
         %option{:value => column_name}= column_name
       end
     %select#comparatorListInner{:onchange => "getSelected(value)", :name => "comparator", :hidden => "true"}
@@ -31,7 +31,7 @@
       %input#noOfInfo{:type => "text"}
         %button#confirmNoOfInfo Confirm
     %select#attributeListInner{:onchange => "getSelected(value)", :name => "attribute", :hidden => "true"}
-      - @cats.column_names.each do |column_name|
+      - @students.column_names.each do |column_name|
         %option{:value => column_name}= column_name
       end
       %option{:value => "count"} count
@@ -59,7 +59,7 @@
       var filterValueChosen="";
       var dropdown1="";
       
-      document.getElementById("confirmNoOfFilters").onclick=function(cat)
+      document.getElementById("confirmNoOfFilters").onclick=function(student)
       {
       	var noOfFilters=document.getElementById("noOfFilters").value;
       	
@@ -82,7 +82,7 @@
       	
       }
       
-      document.getElementById("confirmNoOfInfo").onclick=function(cat)
+      document.getElementById("confirmNoOfInfo").onclick=function(student)
       {
       	var noOfInfos=document.getElementById("noOfInfo").value;
       	
