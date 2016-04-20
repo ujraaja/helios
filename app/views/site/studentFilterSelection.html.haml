@@ -10,11 +10,25 @@
         %img{:height => "30", :src => "/images/homepageicon.jpg", :width => "30"}/
       %a{:href => site_index_path}
         %img{:height => "30", :src => "/images/previous-icon.png", :width => "30"}/
+        
+     
+    %form{:action => site_studentFilterSelection_path}
+      %br
+      %label Upload new data file
+      %select#queryList{:name => "queryLoad"}
+        - @queries.each do |query|
+          %option{:value => query.name}= query.name
+        end
+      %input{:type => "submit", :value => "Load"}/
+      
+    
+        
     %hr
     %p How many filters do you want to apply?
     %input#noOfFilters{:type => "text"}
       %button#confirmNoOfFilters Confirm
     
+      
     %select#filtersListInner{:onchange => "getSelected(value)", :name => "filter", :hidden => "true"}
       - @students.column_names.each do |column_name|
         %option{:value => column_name}= column_name
@@ -38,20 +52,47 @@
         
     %p{:id => "testing"}   
     %hr
-        
-    :plain
-      <form id="daForm" action="/site/studentOutput" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="R6tWZgNywVkSWBBcFzhGpcvVQOpv9bTWfT/s5oH2OrLgEhEqzl2EhcnfAwHu/V/ETSdEUKUjGO4BNBKRBJbA4w==" />
-          <fieldset>
-          <label for="Filters">Filters:</label>
-          <div id="filterDiv" name="filterDiv"></div>
-          <label for="Attributes">Attributes:</label>
-          <div id="attributeDiv" name="attributeDiv"></div>
-          <input type="submit" name="commit" value="Apply Filters" />
-          </fieldset>
-      </form>
-    
-                
-        
+      
+    %form#daForm{"accept-charset" => "UTF-8", :action => "/site/studentOutput", :method => "post"}
+      %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+      %input{:name => "authenticity_token", :type => "hidden", :value => "R6tWZgNywVkSWBBcFzhGpcvVQOpv9bTWfT/s5oH2OrLgEhEqzl2EhcnfAwHu/V/ETSdEUKUjGO4BNBKRBJbA4w=="}/
+      %fieldset
+        %label{:for => "Filters"} Filters:
+        #filterDiv{:name => "filterDiv"}
+          - if @query != nil
+            - filterIndex = 0
+            - @query.filters.each do |filter|
+              %select#loadedFilterList{:onchange => "getSelected(value)", :name => "filter" + filterIndex.to_s}
+                - @students.column_names.each do |column_name|
+                  %option{:value => column_name, :selected => column_name == filter.field}= column_name
+                end
+              %select#loadedComparatorList{:onchange => "getSelected(value)", :name => "comparator" + filterIndex.to_s}
+                %option{:value => "=", :selected => "=" == filter.comparator} =
+                %option{:value => ">", :selected => ">" == filter.comparator} >
+                %option{:value => "<", :selected => "<" == filter.comparator} <
+                %option{:value => ">=", :selected => ">=" == filter.comparator} >=
+                %option{:value => "<=", :selected => "<=" == filter.comparator} <=
+              %input#loadedFilterValue{:type => "text", :name => "filterValue" + filterIndex.to_s, :value => filter.value}
+              %br
+              - filterIndex = filterIndex + 1
+        %label{:for => "Attributes"} Attributes:
+        #attributeDiv{:name => "attributeDiv"}
+          - if @query != nil
+            - i = 0
+            - @query.headers.each do |header|
+              - name = "attribute" + i.to_s
+              %select#loadedHeaderList{:onchange => "getSelected(value)", :name => name}
+                - @students.column_names.each do |column_name|
+                  %option{:value => column_name, :selected => column_name == header.field}= column_name
+                end
+                %option{:value => "count", :selected => "count" == header.field} count
+              %br
+              - i = i + 1
+        %input{:name => "commit", :type => "submit", :value => "Apply"}/
+        %label{:for => "save label"} Query Name to Save:
+        %input{:name => "saveName", :type => "text"}/
+        %br/
+        %input{:name => "commit", :type => "submit", :value => "Save"}/
       
     :javascript
       var filterChosen = "";
@@ -62,11 +103,14 @@
       document.getElementById("confirmNoOfFilters").onclick=function(student)
       {
       	var noOfFilters=document.getElementById("noOfFilters").value;
-      	
-      	for(var i =0; i<noOfFilters; i++)
+      	var count = parseInt(#{@filterCount},10)
+      	for(var i = count; i< count + parseInt(noOfFilters, 10); i++)
       	{
+      	    document.getElementById("testing").innerHTML = count
+      	  
           var list = document.getElementById("filtersListInner").cloneNode(true);
           list.hidden = false
+          console.log("Hello")
           list.name = "filter" + i.toString()
           filterDiv.appendChild(list);
           var comparator = document.getElementById("comparatorListInner").cloneNode(true);
@@ -85,8 +129,8 @@
       document.getElementById("confirmNoOfInfo").onclick=function(student)
       {
       	var noOfInfos=document.getElementById("noOfInfo").value;
-      	
-      	for(var i =0; i<noOfInfos; i++)
+      	var count = parseInt(#{@headerCount},10)
+      	for(var i = count; i< count + parseInt(noOfInfos, 10); i++)
       	{
           var list = document.getElementById("attributeListInner").cloneNode(true);
           list.hidden = false

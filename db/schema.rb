@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160420022428) do
+ActiveRecord::Schema.define(version: 20160420050538) do
 
   create_table "cats", force: :cascade do |t|
     t.string   "name"
@@ -179,6 +179,30 @@ ActiveRecord::Schema.define(version: 20160420022428) do
     t.string   "registered_term"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "filters", force: :cascade do |t|
+    t.string   "field"
+    t.string   "comparator"
+    t.string   "value"
+    t.integer  "query_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "headers", force: :cascade do |t|
+    t.string   "field"
+    t.integer  "query_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "headers", ["query_id"], name: "index_headers_on_query_id"
+
+  create_table "queries", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "spreadsheets", force: :cascade do |t|
