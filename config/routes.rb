@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   get 'site/studentFilterSelection'
   get 'site/facultyOutput'
   post 'site/studentOutput'
+  post 'site/saveQuery'
   get 'site/studentOutput'
   resources :spreadsheets, only: [:index, :new, :create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
