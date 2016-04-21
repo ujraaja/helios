@@ -119,7 +119,7 @@ class SiteController < ApplicationController
         @students = Student.where(queryString)
         respond_to do |format|
           format.html
-          format.csv { send_data Student.to_csv(@students) }
+          format.csv { send_data Student.to_csv(@students, @attributes.values) }
         end
       end
     end
