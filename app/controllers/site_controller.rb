@@ -1,4 +1,5 @@
 class SiteController < ApplicationController
+  require 'csv'
   def index
     @spreadsheet = Spreadsheet.new
     @spreadsheets = Spreadsheet.all
@@ -116,6 +117,10 @@ class SiteController < ApplicationController
         puts "XXXXXXXXXXXXXXXXXXXXXXXX"
         #@students = Student.where(filters["filter0"] + comparators["comparator0"] + "\'" + filterValues["filterValue0"] + "\'")
         @students = Student.where(queryString)
+        respond_to do |format|
+          format.html
+          format.csv { send_data Student.to_csv(@students) }
+        end
       end
     end
     

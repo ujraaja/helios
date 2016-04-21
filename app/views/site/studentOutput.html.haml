@@ -51,3 +51,6 @@
       %input{:type => "submit", :value => "Download"}/
       %input{:type => "submit", :value => "Go to previous page"}/
       %input{:type => "submit", :value => "New File"}/
+%p
+  Download:
+  \#{link_to "CSV", download_path(params.merge(format: 'csv'))}
