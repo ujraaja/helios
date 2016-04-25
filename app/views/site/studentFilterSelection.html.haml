@@ -1,12 +1,14 @@
 %html
   %head
     %title Taulbee Survey Data
+	
   %body
+    
     %h1 Taulbee Survey
     %p
-      %a{:href => site_index_path, :id => "home"}
+      %a{:id => "Home", :href => site_index_path}
         %img{:height => "30", :src => "/images/homepageicon.jpg", :width => "30"}/
-      %a{:href => site_index_path, :id => "back"}
+      %a{:id => "Back", :href => site_index_path}
         %img{:height => "30", :src => "/images/previous-icon.png", :width => "30"}/
         
      
@@ -25,9 +27,12 @@
     %p How many filters do you want to apply?
     %input#noOfFilters{:type => "text"}
       %button#confirmNoOfFilters Confirm
-    %select#filtersListInner{:onchange => "getSelected(value)", :name => "filter", :hidden => "true"}
+    
+      
+    %select#filtersListInner{:onchange => "getSelected(value)", :name => "filter", :style => "visibility: hidden;"}
       - @students.column_names.each do |column_name|
         %option{:value => column_name}= column_name
+      end
     %select#comparatorListInner{:onchange => "getSelected(value)", :name => "comparator", :style => "visibility: hidden;"}
       %option{:value => "="}= "="
       %option{:value => ">"}= ">"
@@ -40,9 +45,11 @@
       %input#noOfInfo{:type => "text"}
         %button#confirmNoOfInfo Confirm
     %select#attributeListInner{:onchange => "getSelected(value)", :name => "attribute", :style => "visibility: hidden;"}
-      - @cats.column_names.each do |column_name|
+      - @students.column_names.each do |column_name|
         %option{:value => column_name}= column_name
+      end
       %option{:value => "count"} count
+        
     %p{:id => "testing"}   
     %hr
       
@@ -104,15 +111,15 @@
           var list = document.getElementById("filtersListInner").cloneNode(true);
           list.style.visibility = "visible";
           console.log("Hello")
-          list.id = "filter" + i.toString();
+          list.id = "filter" + i.toString()
           filterDiv.appendChild(list);
           var comparator = document.getElementById("comparatorListInner").cloneNode(true);
           comparator.style.visibility = "visible";
-          comparator.id = "comparator" + i.toString();
+          comparator.id = "comparator" + i.toString()
           filterDiv.appendChild(comparator);
           var filterValue = document.getElementById("filterValueInner").cloneNode(true);
           filterValue.style.visibility = "visible";
-          filterValue.id = "filterValue" + i.toString();
+          filterValue.id = "filterValue" + i.toString()
           filterDiv.appendChild(filterValue);
           filterDiv.appendChild(document.createElement("br"));
         }
@@ -127,7 +134,7 @@
       	{
           var list = document.getElementById("attributeListInner").cloneNode(true);
           list.style.visibility = "visible";
-          list.name = "attribute" + i.toString()
+          list.id = "attribute" + i.toString()
           attributeDiv.appendChild(list);
           attributeDiv.appendChild(document.createElement("br"));
         }

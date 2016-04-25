@@ -4,6 +4,6 @@ Feature: Dropdown Display for Existing Data
   So that I can have all the existing data files to choose from on one page
   I want to have a dropdown displayed for the existing data files
 
-Scenario: I expect to be able to select an existing data file
+Scenario: I should be able to select an existing data file
   Given I am on the home page
-  Then I expect to see a "select"
+  Then I should see a "select"

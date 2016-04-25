@@ -4,6 +4,6 @@ Feature: Save Button
   So that I can save the filters used to generate results
   I want to have a button which will save the filters
 
-Scenario: I expect to be able to see the save button
+Scenario: I should be able to see the save button
   Given I am on the results page
-  Then I expect to see a "submit" input labeled "Save"
+  Then I should see a "submit" input labeled "Save"

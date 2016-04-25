@@ -4,7 +4,7 @@ Feature: Query Database
   So that I can get data for reports
   I want to filter data
   
-Scenario: After submiting the filters, I expect to see the results
+Scenario: After submiting the filters, I should see the results
   Given I am on the filters page
-  And I press "Apply Filters"
-  Then I expect to be on the results page
+  And I press "Apply"
+  Then I should be on the results page
