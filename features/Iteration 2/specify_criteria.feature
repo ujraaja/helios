@@ -6,10 +6,4 @@ Feature: Specify Criteria
 
 Scenario: Look for the dropdown which has <, >, =
     Given I am on the filters page
-    And I fill in "1" for "noOfFilters"
-    And I press "confirmNoOfFilters"
-    Then I should see a select with option "="
-    And I should see a select with option ">"
-    And I should see a select with option "<"
-    And I should see a select with option ">="
-    And I should see a select with option "<="
+    # todo
