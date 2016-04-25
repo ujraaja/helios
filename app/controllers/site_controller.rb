@@ -7,7 +7,11 @@ class SiteController < ApplicationController
   
   def studentFilterSelection
     
-    @students = Student.all
+    if(params["yearSelected"])
+      session["yearSelected"] = params["yearSelected"]
+    end
+    
+    @students = Student.where("year = \'" + session["yearSelected"] + "\'")
     @queries = Query.all
     if params["queryLoad"]
       @query = (Query.where("name = " + "\'" + params["queryLoad"] + "\'"))[0]
@@ -100,7 +104,7 @@ class SiteController < ApplicationController
   
       #puts filters.inspect
       if filters.length == 0
-        @students = Student.all
+        @students = Student.where("year = \'" + session["yearSelected"] + "\'")
       else
         queryString = ""
         i = 0
@@ -111,6 +115,8 @@ class SiteController < ApplicationController
           queryString = queryString + filters["filter" + i.to_s] + comparators["comparator" + i.to_s] + "\'" + filterValues["filterValue" + i.to_s] + "\'"
           i = i + 1
         end
+        
+        queryString = queryString + " AND year = \'" + session["yearSelected"] + "\'"
         
         puts "XXXXXXXXXXXXXXXXXXXXXXXX"
         puts queryString

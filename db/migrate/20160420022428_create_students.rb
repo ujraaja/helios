@@ -1,8 +1,10 @@
 class CreateStudents < ActiveRecord::Migration
   def change
     create_table :students do |t|
+      t.string :year
       t.string :uin
       t.string :t_number
+      t.string :directory_holds
       t.string :name
       t.string :email
       t.string :classification
