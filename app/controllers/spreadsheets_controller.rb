@@ -17,23 +17,27 @@ class SpreadsheetsController < ApplicationController
       
       saved = @spreadsheet.saveAndMove
       
-      params["spreadsheet"].keys.each do |key|
-        puts key.inspect
-        puts params["spreadsheet"][key].inspect
-      end
+      Thread.new do
       
-      location = "public/uploads/spreadsheet/attachment/" + params["spreadsheet"]["attachment"].original_filename
-      command = "cat " + location
-      system(command)
-      
-      #parse_csv(location)
-      csv_data = CSV.read location
-      puts csv_data.inspect
-      csv_data.each do |data|
-        #printData(data)  
-        createStudent(data)
+        params["spreadsheet"].keys.each do |key|
+          puts key.inspect
+          puts params["spreadsheet"][key].inspect
+        end
         
+        location = "public/uploads/spreadsheet/attachment/" + params["spreadsheet"]["attachment"].original_filename
+        command = "cat " + location
+        system(command)
         
+        #parse_csv(location)
+        csv_data = CSV.read location
+        puts csv_data.inspect
+        csv_data.each do |data|
+          #printData(data)  
+          createStudent(data)
+          
+          
+        end
+        ActiveRecord::Base.connection.close
       end
       
       
