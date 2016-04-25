@@ -27,7 +27,7 @@
     %p How many filters do you want to apply?
     %input#noOfFilters{:type => "text"}
       %button#confirmNoOfFilters Confirm
-    
+    %button#removeFilterButton Remove Last Filter 
       
     %select#filtersListInner{:onchange => "getSelected(value)", :name => "filter", :hidden => "true"}
       - @students.column_names.each do |column_name|
@@ -44,6 +44,7 @@
       %p How many attributes do you want?
       %input#noOfInfo{:type => "text"}
         %button#confirmNoOfInfo Confirm
+      %button#removeAttributeButton Remove Last Attribute
     %select#attributeListInner{:onchange => "getSelected(value)", :name => "attribute", :hidden => "true"}
       - @students.column_names.each do |column_name|
         %option{:value => column_name}= column_name
@@ -140,7 +141,15 @@
         }
       	
       }
-
-
+      document.getElementById("removeFilterButton").onclick=function(student)
+      {
+      	for(var i = 0; i< 4; i++)
+          filterDiv.removeChild(filterDiv.lastChild);
+      }
+      document.getElementById("removeAttributeButton").onclick=function(student)
+      {
+      	for(var i = 0; i< 2; i++)
+          attributeDiv.removeChild(attributeDiv.lastChild);
+      }
 
 
