@@ -23,54 +23,34 @@ class SpreadsheetsController < ApplicationController
       
       saved = @spreadsheet.saveAndMove
       
-<<<<<<< HEAD
-      #params["spreadsheet"].keys.each do |key|
-        #puts key.inspect
-      #  puts params["spreadsheet"][key].inspect
-      #end
-      
-      location = "public/uploads/spreadsheet/attachment/" + params["spreadsheet"]["attachment"].original_filename
-      command = "cat " + location
-      system(command)
-      
-      #parse_csv(location)
-      csv_data = CSV.read location
-      headerFields = csv_data[0]
-      headerFields = headerFields.map { |header|
-        CreateHeaderString(header).to_sym
-      }
-      
-      iteration = 0
-      csv_data.each do |data|
-        if iteration > 0
-          #puts data.inspect
-          #printData(data)  
-          createStudent(headerFields, data, params["year"])
-        end
-        iteration = iteration + 1
-=======
       Thread.new do
       
-        params["spreadsheet"].keys.each do |key|
-          puts key.inspect
-          puts params["spreadsheet"][key].inspect
-        end
+        #params["spreadsheet"].keys.each do |key| 
+          #puts key.inspect 
+       #  puts params["spreadsheet"][key].inspect 
+       #end 
         
-        location = "public/uploads/spreadsheet/attachment/" + params["spreadsheet"]["attachment"].original_filename
-        command = "cat " + location
-        system(command)
+       location = "public/uploads/spreadsheet/attachment/" + params["spreadsheet"]["attachment"].original_filename 
+       command = "cat " + location 
+       system(command) 
         
-        #parse_csv(location)
-        csv_data = CSV.read location
-        puts csv_data.inspect
-        csv_data.each do |data|
-          #printData(data)  
-          createStudent(data)
-          
-          
+       #parse_csv(location) 
+       csv_data = CSV.read location 
+       headerFields = csv_data[0] 
+       headerFields = headerFields.map { |header| 
+         CreateHeaderString(header).to_sym 
+       } 
+        
+       iteration = 0 
+       csv_data.each do |data| 
+         if iteration > 0 
+           #puts data.inspect 
+           #printData(data)   
+           createStudent(headerFields, data, params["year"]) 
+         end 
+         iteration = iteration + 1 
         end
         ActiveRecord::Base.connection.close
->>>>>>> upstream/master
       end
       
       
@@ -82,6 +62,7 @@ class SpreadsheetsController < ApplicationController
   end
   
   def createStudent(headerFields, student, year)
+      puts "************************ MB HERE ********************"
     studentData = Hash[headerFields.zip student]
     studentData[:year] = year
     puts studentData.inspect
