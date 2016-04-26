@@ -18,7 +18,7 @@ Scenario: Check that filters remain after a query
   And I press "Apply"
   And I follow "back"
   
-  Then I expect to be on the filters page
+  Then I should be on the filters page
   And I expect to see "name" selected from "filter_0"
   And I expect to see "=" selected from "comparator_0"
   And I expect to see "Fake Name" selected from "filterValue_0"
