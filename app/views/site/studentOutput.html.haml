@@ -46,11 +46,7 @@
     
     
     %hr/
-    %form
-      %input{:type => "submit", :value => "Save"}/
-      %input{:type => "submit", :value => "Download"}/
-      %input{:type => "submit", :value => "Go to previous page"}/
-      %input{:type => "submit", :value => "New File"}/
 %p
   Download:
   \#{link_to "CSV.csv", download_path(params.merge(format: 'csv'))}
+  =link_to "Repeat Query", site_studentFilterSelection_path(:repeat => 1)
