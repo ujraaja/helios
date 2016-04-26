@@ -14,7 +14,7 @@ module NavigationHelpers
     case page_name
 
     when /home/i
-      '/'
+      '/site/index'
     when /filter/i
       '/site/studentFilterSelection'
     when /result/i

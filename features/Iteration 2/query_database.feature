@@ -6,5 +6,5 @@ Feature: Query Database
   
 Scenario: After submiting the filters, I should see the results
   Given I am on the filters page
-  And I press "Apply selected filters"
+  And I press "Apply"
   Then I should be on the results page

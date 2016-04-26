@@ -10,6 +10,14 @@ When(/^I select "([^"]*)" from "([^"]*)"$/) do |value, field|
   select value, from: field
 end
 
+When(/^I fill in "([^"]*)" for "([^"]*)"$/) do |value, field|
+  fill_in(field, :with => value)
+end
+
+When(/^I follow "([^"]*)"$/) do |link|
+  click_link(link)
+end
+
 Then(/^I should see a "([^"]*)"$/) do |field|
   expect(page).to have_xpath("//#{field}")
 end
@@ -37,4 +45,8 @@ end
 
 Then(/^I should see "([^"]*)"$/) do |text|
   page.should have_content(text)
+end
+
+Then(/^I expect to see "([^"]*)" selected from "([^"]*)"$/) do |option, field|
+  expect(page).to have_select(field, selected: option)
 end
