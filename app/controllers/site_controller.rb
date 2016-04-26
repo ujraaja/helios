@@ -7,10 +7,28 @@ class SiteController < ApplicationController
   
   def studentFilterSelection
     
-    @students = Student.all
+    if(params["yearSelected"])
+      session["yearSelected"] = params["yearSelected"]
+    end
+    
+    @students = Student.where("year = \'" + session["yearSelected"] + "\'")
     @queries = Query.all
     if params["queryLoad"]
       @query = (Query.where("name = " + "\'" + params["queryLoad"] + "\'"))[0]
+    elsif params[:repeat]
+      #@query = flash[:query]
+      puts "!!!!!!!!!!!!!!!!!!!!!!!"
+      puts flash[:filters].inspect
+      puts flash[:comparators].inspect
+      puts flash[:filterValues].inspect
+      puts flash[:headers].inspect
+      values = {}
+      values.merge!(flash[:filters])
+      values.merge!(flash[:comparators])
+      values.merge!(flash[:filterValues])
+      values.merge!(flash[:headers])
+      @query = unsavedQuery(values)
+      puts "!!!!!!!!!!!!!!!!!!!!!!!"
     end
     
     if @query
@@ -67,6 +85,39 @@ class SiteController < ApplicationController
     redirect_to site_studentFilterSelection_path
   end
   
+  def unsavedQuery(params)
+    filters = params.select { |key, value| key.to_s.match(/filter\d+/) }
+    comparators = params.select { |key, value| key.to_s.match(/comparator\d+/) }
+    filterValues = params.select { |key, value| key.to_s.match(/filterValue\d+/) }
+    attributes = params.select { |key, value| key.to_s.match(/attribute\d+/) }
+    
+    @query = Query.new({:name => "No Save"})
+    
+    i = 0
+    filters.each do |filter|
+      filterRecord = Filter.create(:field => filters["filter" + i.to_s], :comparator => comparators["comparator" + i.to_s], :value => filterValues["filterValue" + i.to_s])
+      puts filterRecord.inspect
+      #filterRecord.query = @query
+      @query.filters << filterRecord
+      i = i + 1
+    end
+    
+    i = 0
+    attributes.each do |attribute|
+      headerRecord = Header.create(:field => attributes["attribute" + i.to_s])
+      #headerRecord.query = @query
+      @query.headers << headerRecord
+      i = i + 1
+    end
+
+    puts "*********************"
+    puts @query.inspect
+    puts @query.headers.inspect
+    puts "*********************"
+    
+    return @query
+  end
+  
   
   def studentOutput
     puts "---------------------"
@@ -82,6 +133,12 @@ class SiteController < ApplicationController
       comparators = params.select { |key, value| key.to_s.match(/comparator\d+/) }
       filterValues = params.select { |key, value| key.to_s.match(/filterValue\d+/) }
       @attributes = params.select { |key, value| key.to_s.match(/attribute\d+/) }
+      
+      flash[:existingQuery] = 1
+      flash[:filters] = filters
+      flash[:comparators] = comparators
+      flash[:filterValues] = filterValues
+      flash[:headers] = @attributes
       
       #filters.each do |value|
       #  puts value.inspect
@@ -100,7 +157,7 @@ class SiteController < ApplicationController
   
       #puts filters.inspect
       if filters.length == 0
-        @students = Student.all
+        @students = Student.where("year = \'" + session["yearSelected"] + "\'")
       else
         queryString = ""
         i = 0
@@ -112,9 +169,8 @@ class SiteController < ApplicationController
           i = i + 1
         end
         
-        puts "XXXXXXXXXXXXXXXXXXXXXXXX"
-        puts queryString
-        puts "XXXXXXXXXXXXXXXXXXXXXXXX"
+        queryString = queryString + " AND year = \'" + session["yearSelected"] + "\'"
+
         #@students = Student.where(filters["filter0"] + comparators["comparator0"] + "\'" + filterValues["filterValue0"] + "\'")
         @students = Student.where(queryString)
         respond_to do |format|
@@ -149,4 +205,5 @@ class SiteController < ApplicationController
           table.create!(value)
       end
     end
+    
 end

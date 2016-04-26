@@ -26,34 +26,24 @@
     - if !flash[:notice].blank?
       .alert.alert-info
         = flash[:notice]
-        
-    %form
-      %h3 Choose among existing data files
-      %select
-        - @spreadsheets.each do |spreadsheet|
-          %option= spreadsheet.name 
-        end
        
         
     %form{:action => site_studentFilterSelection_path}
       %br/
+      %label Select Year
+      %select{:name => "yearSelected"}
+        - @spreadsheets.each do |spreadsheet|
+          %option= spreadsheet.name 
+        end
       %input{:type => "submit", :value => "Select"}/
     %hr/
-    -#%form
-      -#%h3 Upload new data file
-      -#%select
-        -#%option First data file
-        -#%option Second data file
-        -#%option Third data file
-      -#%input{:type => "file", :value => "Browse"}/
-      -#%br/
-      -#%input{:type => "submit", :value => "Upload"}/
-      -#.symbol
         
     .well
     = form_for @spreadsheet, html: { multipart: true } do |f|
-      = f.label :name
-      = f.text_field :name
+      = f.label :year
+      %select#queryList{:name => "year"}
+        - (1995..2025).each do |i|
+          %option{:value => i}= i
       = f.label :attachment
       = f.file_field :attachment
       = f.submit "Save", class: "btn btn-primary"

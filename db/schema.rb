@@ -213,8 +213,10 @@ ActiveRecord::Schema.define(version: 20160420050538) do
   end
 
   create_table "students", force: :cascade do |t|
+    t.string   "year"
     t.string   "uin"
     t.string   "t_number"
+    t.string   "directory_holds"
     t.string   "name"
     t.string   "email"
     t.string   "classification"
