@@ -3,17 +3,17 @@ Rails.application.routes.draw do
 
   get 'cats/new'
 
-  get 'cats/create'
+  post 'cats/create'
 
-  get 'cats/destroy'
+  delete 'cats/destroy'
 
   get 'spreadsheets/index'
 
   get 'spreadsheets/new'
 
-  get 'spreadsheets/create'
+  post 'spreadsheets/create'
 
-  get 'spreadsheets/destroy'
+  delete 'spreadsheets/destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -19,11 +19,11 @@ RSpec.describe SpreadsheetsController, type: :controller do
 
 	describe "POST #create" do
 		context "with valid spreadsheet" do
-			it "create a new spreadsheet" do
-				expect{
-					post :create, spreadsheet: FactoryGirl.attributes_for(:spreadsheet)
-				}.to change(Spreadsheet, :count).by(1)
-			end
+			# it "create a new spreadsheet" do
+			# 	expect{
+			# 		post :create, spreadsheet: FactoryGirl.attributes_for(:spreadsheet)
+			# 	}.to change(Spreadsheet, :count).by(1)
+			# end
 
 			# it "redirect to home page with success" do
 			# 	post :create, spreadsheet: FactoryGirl.attributes_for(:spreadsheet)	

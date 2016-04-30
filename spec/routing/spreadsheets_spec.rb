@@ -9,17 +9,15 @@ RSpec.describe "spreadsheets", type: :routing do
 		expect(:get => 'spreadsheets/new').to route_to('spreadsheets#new')
 	end
 	
-	# it "#create" do
-	# 	# get -> post
-	# 	expect(:post => 'spreadsheets/create').to route_to(
-	# 		:controller => 'spreadsheets',
-	# 		:action => 'create')
-	# end
+	it "#create" do
+		expect(:post => 'spreadsheets/create').to route_to(
+			:controller => 'spreadsheets',
+			:action => 'create')
+	end
 
-	# it "#destroy" do
-	# 	# get -> delete
-	# 	expect(:delete => 'spreadsheets/destroy').to route_to(
-	# 		:controller => 'spreadsheets',
-	# 		:action => 'destroy')
-	# end
+	it "#destroy" do
+		expect(:delete => 'spreadsheets/destroy').to route_to(
+			:controller => 'spreadsheets',
+			:action => 'destroy')
+	end
 end
