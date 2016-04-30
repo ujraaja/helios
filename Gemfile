@@ -63,6 +63,7 @@ group :test do
   gem 'capybara', '~> 2.6', '>= 2.6.2'
   gem "guard-rspec"
   gem "launchy"
+  gem 'rspec-html-matchers'
 end
 
 group :production do
