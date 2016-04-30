@@ -1,2 +1,0 @@
-public/uploads/spreadsheet/attachment/
-public/uploads/spreadsheet/attachment/1
