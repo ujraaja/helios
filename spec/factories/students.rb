@@ -1,7 +1,9 @@
 FactoryGirl.define do
   factory :student do
     uin "MyString"
+    year "MyString"
     t_number "MyString"
+    directory_holds "MyString"
     name "MyString"
     email "MyString"
     classification "MyString"
