@@ -104,11 +104,11 @@
       
       window.onload = function()
       {
-        $("#testing")[0].innerHTML = $("#testing")[0].innerHTML + nextFilter
-        $("#testing")[0].innerHTML = $("#testing")[0].innerHTML + "Go"
+        //$("#testing")[0].innerHTML = $("#testing")[0].innerHTML + nextFilter
+        //$("#testing")[0].innerHTML = $("#testing")[0].innerHTML + "Go"
         var query = #{@filterValues}
-        $("#testing")[0].innerHTML = $("#testing")[0].innerHTML + query
-        $("#testing")[0].innerHTML = $("#testing")[0].innerHTML + "Done"
+        //$("#testing")[0].innerHTML = $("#testing")[0].innerHTML + query
+        //$("#testing")[0].innerHTML = $("#testing")[0].innerHTML + "Done"
 
         for(var i = 0; i < query.length; i++)
         {
@@ -208,7 +208,7 @@
             }
           },
           failure: function(response){
-            $("#testing")[0].innerHTML = document.getElementById("testing").innerHTML + "Nope"
+            //$("#testing")[0].innerHTML = document.getElementById("testing").innerHTML + "Nope"
           }
         });
       }
@@ -247,10 +247,10 @@
                 option.selected = true
               }
             }
-            $("#testing")[0].innerHTML = $("#testing")[0].innerHTML + #{@filterValues}[number]
+            //$("#testing")[0].innerHTML = $("#testing")[0].innerHTML + #{@filterValues}[number]
            },
            failure: function(response){
-             $("#testing")[0].innerHTML = document.getElementById("testing").innerHTML + "Nope"
+             //$("#testing")[0].innerHTML = document.getElementById("testing").innerHTML + "Nope"
            }
         });
       }
