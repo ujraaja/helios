@@ -10,6 +10,11 @@ When(/^I press "([^"]*)"$/) do |button|
   click_button(button)
 end
 
+When(/^I wait to press "([^"]*)"$/) do |button|
+  page.should have_content(button, wait: 1)
+  click_button(button)
+end
+
 When(/^I press button with id "([^"]*)"$/) do |button|
   page.execute_script("$(\"##{button}\").trigger(\"click\")") 
 end
@@ -47,6 +52,10 @@ Then(/^I should see a link with href "([^"]*)"$/) do |path|
   expect(page).to have_xpath("//a[@href='#{path}']")
 end
 
+Then(/^I should see a select with id "([^"]*)"$/) do |id|
+  expect(page).to have_xpath("//select[@id='#{id}']")
+end
+
 Then(/^I should see a link labeled "([^"]*)"$/) do |label|
   expect(page).to have_css("a", text: label)
 end
@@ -70,4 +79,8 @@ end
 
 When(/^I expect to see "([^"]*)" for input "([^"]*)"$/) do |value, field|
   page.should have_xpath("//input[@value='#{value}']")
+end
+
+When(/^I wait for "([^"]*)" seconds$/) do |value|
+  sleep(Integer(value))
 end

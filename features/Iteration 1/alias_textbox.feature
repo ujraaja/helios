@@ -6,4 +6,4 @@ Feature: Alias Textbox
 
 Scenario: I should be able to see the name text box
   Given I am on the home page
-  #Then I should see a "text" input with id "spreadsheet_name"
+  Then I should see a select with id "queryList"
