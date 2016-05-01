@@ -11,54 +11,59 @@ class SpreadsheetsController < ApplicationController
 
   def create
     
-    puts "()()()()()()()()()()()()()"
-    puts params.inspect
-    puts "()()()()()()()()()()()()()"
-    
+    val = false
     params_to_pass = spreadsheet_params
     params_to_pass["name"] = params["year"]
-      @spreadsheet = Spreadsheet.new(params_to_pass)
-      
-      ###### call parse_csv with the path to csv file
-      
+    @spreadsheet = Spreadsheet.new(params_to_pass)
+    Thread.new do
+    
       saved = @spreadsheet.saveAndMove
-      
-      Thread.new do
-      
-        #params["spreadsheet"].keys.each do |key| 
-          #puts key.inspect 
-       #  puts params["spreadsheet"][key].inspect 
-       #end 
+      #params["spreadsheet"].keys.each do |key| 
+        #puts key.inspect 
+      #  puts params["spreadsheet"][key].inspect 
+      #end 
         
-       location = "public/uploads/spreadsheet/attachment/" + params["spreadsheet"]["attachment"].original_filename 
-       command = "cat " + location 
-       system(command) 
+      location = "public/uploads/spreadsheet/attachment/" + params["spreadsheet"]["attachment"].original_filename 
+      command = "cat " + location 
+      system(command) 
         
-       #parse_csv(location) 
-       csv_data = CSV.read location 
-       headerFields = csv_data[0] 
-       headerFields = headerFields.map { |header| 
-         CreateHeaderString(header).to_sym 
-       } 
+      #parse_csv(location) 
+      csv_data = CSV.read location 
+      headerFields = csv_data[0] 
+      headerFields = headerFields.map { |header| 
+        CreateHeaderString(header).to_sym 
+      } 
         
-       iteration = 0 
-       csv_data.each do |data| 
-         if iteration > 0 
-           #puts data.inspect 
-           #printData(data)   
-           createStudent(headerFields, data, params["year"]) 
-         end 
-         iteration = iteration + 1 
-        end
-        ActiveRecord::Base.connection.close
+      iteration = 0 
+      csv_data.each do |data| 
+       if iteration > 0 
+         #puts data.inspect 
+         #printData(data)   
+         createStudent(headerFields, data, params["year"]) 
+       end 
+       iteration = iteration + 1 
       end
+      ActiveRecord::Base.connection.close
       
+          
+      val = true
       
-      if saved
-         redirect_to site_index_path, notice: "The Spreadsheet #{@spreadsheet.name} has been uploaded."
-      else
-         redirect_to site_index_path, notice: "The Spreadsheet #{@spreadsheet.name} has not been uploaded."
-      end
+      redirect_to site_index_path, notice: "The Spreadsheet #{@spreadsheet.name} has been uploaded."
+        #if saved
+        #   redirect_to site_index_path, notice: "The Spreadsheet #{@spreadsheet.name} has been uploaded."
+        #else
+        #   redirect_to site_index_path, notice: "The Spreadsheet #{@spreadsheet.name} has not been uploaded."
+        #end
+    end
+    
+    redirect_to spreadsheets_create_path, notice: "The Spreadsheet #{@spreadsheet.name} has been uploaded."
+     
+    while val == false do
+      sleep 1  
+    end
+    redirect_to site_index_path, notice: "The Spreadsheet #{@spreadsheet.name} has been uploaded."
+    
+
   end
   
   def createStudent(headerFields, student, year)

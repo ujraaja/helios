@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'cats/index'
+  get 'site/receiveAjax' => 'site#receiveAjax'
 
   get 'cats/new'
 
