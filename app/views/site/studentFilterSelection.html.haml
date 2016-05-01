@@ -15,20 +15,14 @@
     %form{:action => site_studentFilterSelection_path}
       %br
       %label Upload new data file
-      %select#queryList{:name => "queryLoad"}
+      %select#queryList{:name => "queryLoad" }
         - @queries.each do |query|
           %option{:value => query.name}= query.name
         end
       %input{:type => "submit", :value => "Load"}/
       
-    
-        
-    %hr
-    %p How many filters do you want to apply?
-    %input#noOfFilters{:type => "text"}
-      %button#confirmNoOfFilters Confirm
-    %button#removeFilterButton Remove Last Filter 
-    %select#filtersListInner{:onchange => "getSelected(value)", :name => "filter", :hidden => "true"}
+       
+    %select#filtersListInner{:onchange => "DoFunc(this);", :onfocus => "this.selectedIndex = -1;", :name => "filter", :hidden => "true"}
       - @students.column_names.each do |column_name|
         %option{:value => column_name}= column_name
     %select#comparatorListInner{:onchange => "getSelected(value)", :name => "comparator", :hidden => "true"}
@@ -37,31 +31,32 @@
       %option{:value => "<"}= "<"
       %option{:value => ">="}= ">="
       %option{:value => "<="}= "<="
-    %input#filterValueInner{:type => "text", :name => "filterValue", :hidden => "true"}
-    %hr
-      %p How many attributes do you want?
-      %input#noOfInfo{:type => "text"}
-        %button#confirmNoOfInfo Confirm
-      %button#removeAttributeButton Remove Last Attribute
-    %select#attributeListInner{:onchange => "getSelected(value)", :name => "attribute", :hidden => "true"}
+    %select#filterValueInner{:name => "filterValue", :hidden => "true"}
+
+    -#%input#filterValueInner{:type => "text", :name => "filterValue", :hidden => "true"}
+
+
+    %select#attributeListInner{:name => "attribute", :hidden => "true"}
       - @students.column_names.each do |column_name|
         %option{:value => column_name}= column_name
       end
       %option{:value => "count"} count
         
-    %p{:id => "testing"}   
-    %hr
-      
+    %p{:id => "testing"} 
+    -##testingDiv{:id => "testing", :name =>"testingDiv"}
+    
     %form#daForm{"accept-charset" => "UTF-8", :action => "/site/studentOutput", :method => "post"}
       %input{:name => "utf8", :type => "hidden", :value => "✓"}/
       %input{:name => "authenticity_token", :type => "hidden", :value => "R6tWZgNywVkSWBBcFzhGpcvVQOpv9bTWfT/s5oH2OrLgEhEqzl2EhcnfAwHu/V/ETSdEUKUjGO4BNBKRBJbA4w=="}/
       %fieldset
         %label{:for => "Filters"} Filters:
+        %button#confirmNoOfFilters{:type => "button"} Add Filter
+        %button#removeFilterButton{:type => "button"} Remove Last Filter
         #filterDiv{:name => "filterDiv"}
           - if @query != nil
             - filterIndex = 0
             - @query.filters.each do |filter|
-              %select#loadedFilterList{:onchange => "getSelected(value)", :name => "filter" + filterIndex.to_s}
+              %select{:onchange => "DoFunc(this)", :onfocus => "this.selectedIndex = -1;", :name => "filter" + filterIndex.to_s, :id => "filter_" + filterIndex.to_s}
                 - @students.column_names.each do |column_name|
                   %option{:value => column_name, :selected => column_name == filter.field}= column_name
                 end
@@ -71,22 +66,25 @@
                 %option{:value => "<", :selected => "<" == filter.comparator} <
                 %option{:value => ">=", :selected => ">=" == filter.comparator} >=
                 %option{:value => "<=", :selected => "<=" == filter.comparator} <=
-              %input#loadedFilterValue{:type => "text", :name => "filterValue" + filterIndex.to_s, :value => filter.value}
+              %select{:id => "filterValue_" + filterIndex.to_s, :name => "filterValue" + filterIndex.to_s}
               %br
               - filterIndex = filterIndex + 1
         %label{:for => "Attributes"} Attributes:
+        %button#confirmNoOfInfo{:type => "button"} Add Attribute
+        %button#removeAttributeButton{:type => "button"} Remove Last Attribute
         #attributeDiv{:name => "attributeDiv"}
           - if @query != nil
             - i = 0
             - @query.headers.each do |header|
               - name = "attribute" + i.to_s
-              %select#loadedHeaderList{:onchange => "getSelected(value)", :name => name}
+              %select#loadedHeaderList{:onchange => "getSelected(value)", :name => name, :id => "attribute_" + i.to_s}
                 - @students.column_names.each do |column_name|
                   %option{:value => column_name, :selected => column_name == header.field}= column_name
                 end
                 %option{:value => "count", :selected => "count" == header.field} count
               %br
               - i = i + 1
+        %hr
         %input{:name => "commit", :type => "submit", :value => "Apply"}/
         %label{:for => "save label"} Query Name to Save:
         %input{:name => "saveName", :type => "text"}/
@@ -98,60 +96,188 @@
       var comparatorChosen= "";
       var filterValueChosen="";
       var dropdown1="";
+      var numberOfFiltersWhenLoaded = parseInt(#{@filterCount},10);
+      var nextFilter = numberOfFiltersWhenLoaded;
+      var numberOfAttributesWhenLoaded = parseInt(#{@headerCount},10);
+      var nextAttribute = numberOfAttributesWhenLoaded;
+      
+      
+      window.onload = function()
+      {
+        //$("#testing")[0].innerHTML = $("#testing")[0].innerHTML + nextFilter
+        //$("#testing")[0].innerHTML = $("#testing")[0].innerHTML + "Go"
+        var query = #{@filterValues}
+        //$("#testing")[0].innerHTML = $("#testing")[0].innerHTML + query
+        //$("#testing")[0].innerHTML = $("#testing")[0].innerHTML + "Done"
+
+        for(var i = 0; i < query.length; i++)
+        {
+          //$("#testing")[0].innerHTML = $("#testing")[0].innerHTML + "Howdy2"
+  
+          var dropDown = $("#filter_" + i.toString())[0]
+          DoFunc2(dropDown)
+          
+        }
+        
+      };
       
       document.getElementById("confirmNoOfFilters").onclick=function(student)
       {
-      	var noOfFilters=document.getElementById("noOfFilters").value;
-      	var count = parseInt(#{@filterCount},10)
-      	for(var i = count; i< count + parseInt(noOfFilters, 10); i++)
-      	{
+      	//var noOfFilters=document.getElementById("noOfFilters").value;
+      	//var count = parseInt(#{@filterCount},10)
+      	//for(var i = count; i< count + parseInt(noOfFilters, 10); i++)
+      	//{
       	    //document.getElementById("testing").innerHTML = count
-      	  
-          var list = document.getElementById("filtersListInner").cloneNode(true);
-          list.removeAttribute("hidden");
-          list.name = "filter" + i.toString();
-          list.id = "filter_" + i.toString();
-          console.log("Hello")
-          filterDiv.appendChild(list);
-          var comparator = document.getElementById("comparatorListInner").cloneNode(true);
-          comparator.removeAttribute("hidden");
-          comparator.name = "comparator" + i.toString();
-          comparator.id = "comparator_" + i.toString();
-          filterDiv.appendChild(comparator);
-          var filterValue = document.getElementById("filterValueInner").cloneNode(true);
-          filterValue.removeAttribute("hidden");
-          filterValue.name = "filterValue" + i.toString();
-          filterValue.id = "filterValue_" + i.toString();
-          filterDiv.appendChild(filterValue);
-          filterDiv.appendChild(document.createElement("br"));
-        }
+      	  AddFilter(nextFilter);
+      	  nextFilter = nextFilter + 1;
+        //}
       	
+      }
+      
+      function AddFilter(number)
+      {
+        var list = document.getElementById("filtersListInner").cloneNode(true);
+        list.removeAttribute("hidden");
+        list.name = "filter" + number.toString();
+        list.id = "filter_" + number.toString();
+        console.log("Hello")
+        filterDiv.appendChild(list);
+        filterDiv.appendChild (document.createTextNode (" "));
+        var comparator = document.getElementById("comparatorListInner").cloneNode(true);
+        comparator.removeAttribute("hidden");
+        comparator.name = "comparator" + number.toString();
+        comparator.id = "comparator_" + number.toString();
+        filterDiv.appendChild(comparator);
+        filterDiv.appendChild (document.createTextNode (" "));
+        var filterValue = document.getElementById("filterValueInner").cloneNode(true);
+        filterValue.removeAttribute("hidden");
+        filterValue.name = "filterValue" + number.toString();
+        filterValue.id = "filterValue_" + number.toString();
+        filterDiv.appendChild(filterValue);
+        filterDiv.appendChild (document.createTextNode (" "));
+        filterDiv.appendChild(document.createElement("br"));
+        filterDiv.appendChild (document.createTextNode (" "));
       }
       
       document.getElementById("confirmNoOfInfo").onclick=function(student)
       {
-      	var noOfInfos=document.getElementById("noOfInfo").value;
-      	var count = parseInt(#{@headerCount},10)
-      	for(var i = count; i< count + parseInt(noOfInfos, 10); i++)
-      	{
-          var list = document.getElementById("attributeListInner").cloneNode(true);
-          list.removeAttribute("hidden");
-          list.name = "attribute" + i.toString()
-          list.id = "attribute_" + i.toString()
-          attributeDiv.appendChild(list);
-          attributeDiv.appendChild(document.createElement("br"));
-        }
+      	//var noOfInfos=document.getElementById("noOfInfo").value;
+      	//var count = parseInt(#{@headerCount},10)
+      	//for(var i = count; i< count + parseInt(noOfInfos, 10); i++)
+      	//{
+        //}
+        
+        AddAttribute(nextAttribute);
+      	nextAttribute = nextAttribute + 1;
       	
       }
+      
+      function AddAttribute(number)
+      {
+          var list = document.getElementById("attributeListInner").cloneNode(true);
+          list.removeAttribute("hidden");
+          list.name = "attribute" + number.toString()
+          list.id = "attribute_" + number.toString()
+          attributeDiv.appendChild(list);
+          attributeDiv.appendChild (document.createTextNode (" "));
+          attributeDiv.appendChild(document.createElement("br"));
+          attributeDiv.appendChild (document.createTextNode (" "));
+      }
+      
+      
+      function DoFunc(s)
+      {
+        $.ajax({
+          url: "/site/receiveAjax",
+          data: {
+              id: s.id,
+              c_name: $("#".concat(s.id," option:selected")).text()
+          },
+          dataType: "json",
+          success: function(data){
+            var number = s.id.match(/\d+/)[0]; 
+            var dropDown = document.getElementById("filterValue_".concat(number.toString()));
+            dropDown.options.length = 0;
+            var vec = JSON.parse(data["value"])
+
+            for(var i = 0; i < vec.length; i++)
+            {
+              var option = document.createElement("option");
+              option.text = vec[i];
+              dropDown.add(option);
+            }
+          },
+          failure: function(response){
+            //$("#testing")[0].innerHTML = document.getElementById("testing").innerHTML + "Nope"
+          }
+        });
+      }
+      
+      function DoFunc2(s)
+      {
+        $.ajax({
+           url: "/site/receiveAjax",
+           data: {
+               id: s.id,
+               yolo: "YOLO",
+               c_name: $("#".concat(s.id," option:selected")).text()
+           },
+           dataType: "json",
+           success: function(data){
+           
+           // $("#testing")[0].innerHTML = $("#testing")[0].innerHTML + data["value"]
+             
+            var number = s.id.match(/\d+/)[0]; 
+            //$("#testing")[0].innerHTML = $("#testing")[0].innerHTML + "$" + number.toString() + "$"
+            var x = document.getElementById("filterValue_".concat(number.toString()));
+            
+            
+            x.options.length = 0;
+            var vec = JSON.parse(data["value"])
+
+            
+            for(var i = 0; i < vec.length; i++)
+            {
+              //$("#testing")[0].innerHTML = $("#testing")[0].innerHTML + "-" + vec[i] + "-"
+              var option = document.createElement("option");
+              option.text = vec[i];
+              x.add(option);
+              if(option.text == #{@filterValues}[number])
+              {
+                option.selected = true
+              }
+            }
+            //$("#testing")[0].innerHTML = $("#testing")[0].innerHTML + #{@filterValues}[number]
+           },
+           failure: function(response){
+             //$("#testing")[0].innerHTML = document.getElementById("testing").innerHTML + "Nope"
+           }
+        });
+      }
+      
+      
+      
       document.getElementById("removeFilterButton").onclick=function(student)
       {
-      	for(var i = 0; i< 4; i++)
+      	for(var i = 0; i< 8; i++)
+      	{
+      	  //document.getElementById("testing").innerHTML = document.getElementById("testing").innerHTML + filterDiv.lastChild
           filterDiv.removeChild(filterDiv.lastChild);
+        }
+      	nextFilter = nextFilter - 1;
       }
       document.getElementById("removeAttributeButton").onclick=function(student)
       {
-      	for(var i = 0; i< 2; i++)
+      	for(var i = 0; i< 4; i++)
+      	{
+      	  //document.getElementById("testing").innerHTML = document.getElementById("testing").innerHTML + attributeDiv.lastChild
+      	  //$("#testing")[0].innerHTML = document.getElementById("testing").innerHTML + attributeDiv.lastChild
+          
+          
+          
           attributeDiv.removeChild(attributeDiv.lastChild);
+        }
+      	nextAttribute = nextAttribute - 1;
       }
 
 

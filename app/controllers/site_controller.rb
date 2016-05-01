@@ -1,5 +1,23 @@
 class SiteController < ApplicationController
   require 'csv'
+  
+  
+  def receiveAjax
+    puts "XXXXXXXXXXXXXXXXXXX"
+    puts params[:c_name].inspect
+    dataToSend = Student.select(params[:c_name].to_sym).map(&params[:c_name].to_sym).uniq.inspect
+    puts "XXXXXXXXXXXXXXXXXXX"
+    
+    data = {:value => dataToSend}
+    
+    respond_to do |format|
+      format.json { render :json => data }
+    end
+    
+    #render :nothing => true
+  end
+  
+  
   def index
     @spreadsheet = Spreadsheet.new
     @spreadsheets = Spreadsheet.all
@@ -15,6 +33,8 @@ class SiteController < ApplicationController
     @queries = Query.all
     if params["queryLoad"]
       @query = (Query.where("name = " + "\'" + params["queryLoad"] + "\'"))[0]
+      @filterCount = @query.filters.count
+      @headerCount = @query.headers.count
     elsif params[:repeat]
       #@query = flash[:query]
       puts "!!!!!!!!!!!!!!!!!!!!!!!"
@@ -28,13 +48,21 @@ class SiteController < ApplicationController
       values.merge!(flash[:filterValues])
       values.merge!(flash[:headers])
       @query = unsavedQuery(values)
+      @filterCount = flash[:filters].count
+      @headerCount = flash[:headers].count
       puts "!!!!!!!!!!!!!!!!!!!!!!!"
     end
     
+      @filterValues = []
     if @query
-      @filterCount = @query.filters.count
-      @headerCount = @query.headers.count
+      @query.filters.each do |filter|
+        @filterValues << filter.value
+      end
+      puts "---------------------"
+      puts @filterValues.inspect
+      puts "---------------------"
     else
+      @query = nil
       @filterCount = 0
       @headerCount = 0
     end
@@ -120,9 +148,9 @@ class SiteController < ApplicationController
   
   
   def studentOutput
-    puts "---------------------"
-    puts params.inspect
-    puts "---------------------"
+    #puts "---------------------"
+    #puts params.inspect
+    #puts "---------------------"
     
     
     if params["commit"] == "Save"
@@ -139,19 +167,22 @@ class SiteController < ApplicationController
       flash[:comparators] = comparators
       flash[:filterValues] = filterValues
       flash[:headers] = @attributes
-      
-      #filters.each do |value|
-      #  puts value.inspect
-      #end
-      #comparators.each do |comparator|
-      #  puts comparator.inspect
-      #end
-      #filterValues.each do |filterValue|
-      #  puts filterValue.inspect
-      #end
-      #@attributes.each do |attribute|
-      #  puts attribute.inspect
-      #end
+    
+      puts "---------------------"
+      filters.each do |value|
+        puts value.inspect
+      end
+      comparators.each do |comparator|
+        puts comparator.inspect
+      end
+      filterValues.each do |filterValue|
+        puts filterValue.inspect
+      end
+      @attributes.each do |attribute|
+        puts attribute.inspect
+      end
+      puts "---------------------"
+    
       
       @count = @attributes.any? { |hash| hash[1].include?("count") }
   

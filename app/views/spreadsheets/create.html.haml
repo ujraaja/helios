@@ -1,0 +1,49 @@
+%h1{:id=> "loading"}Loading
+
+  
+%p{:id => "testing"} 
+
+%a{:href => site_index_path}
+  %button{:type => "button", :hidden => "true", :id => "returnButton"} Return To Home Page
+
+:javascript
+  var dots = 0;
+  window.onload = function()
+  {
+    DoFunc()
+  };
+  
+
+  function DoFunc()
+  {
+    $.ajax({
+      url: "/spreadsheets/receiveAjaxSpreadsheet",
+      data: {
+          c_name: "Howdy"
+      },
+      dataType: "json",
+      success: function(data){
+        //$("#testing")[0].innerHTML = data["value"]
+        var finished = data["value"]
+        if(finished == false)
+        {
+          var loadingString = "Loading"
+          dots = (dots + 1)%15;
+          for(var i = 0; i < dots/5; i++)
+          {
+            loadingString = loadingString + "."
+          }
+          $("#loading")[0].innerHTML = loadingString
+          DoFunc()
+        }
+        else
+        {
+          $("#loading")[0].innerHTML = "Finished!"
+          $("#returnButton")[0].hidden = false
+        }
+      },
+      failure: function(response){
+        $("#testing")[0].innerHTML = document.getElementById("testing").innerHTML + "Nope"
+      }
+    });
+  }
