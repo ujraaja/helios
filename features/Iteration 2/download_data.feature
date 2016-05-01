@@ -6,5 +6,5 @@ Feature: Download Filtered Data
 
 Scenario: I should be able to see the download button
   Given I am on the results page
-  When  I press "Download"
+  Then I should see a link labeled "CSV.csv"
   Then A download should commence

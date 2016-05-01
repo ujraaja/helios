@@ -29,7 +29,9 @@ class SiteController < ApplicationController
       session["yearSelected"] = params["yearSelected"]
     end
     
-    @students = Student.where("year = \'" + session["yearSelected"] + "\'")
+    if (session["yearSelected"] != nil)
+      @students = Student.where("year = \'" + session["yearSelected"] + "\'")
+    end
     @queries = Query.all
     if params["queryLoad"]
       @query = (Query.where("name = " + "\'" + params["queryLoad"] + "\'"))[0]
@@ -188,7 +190,9 @@ class SiteController < ApplicationController
   
       #puts filters.inspect
       if filters.length == 0
-        @students = Student.where("year = \'" + session["yearSelected"] + "\'")
+        if session["yearSelected"] != nil
+          @students = Student.where("year = \'" + session["yearSelected"] + "\'")
+        end
       else
         queryString = ""
         i = 0
@@ -200,7 +204,9 @@ class SiteController < ApplicationController
           i = i + 1
         end
         
-        queryString = queryString + " AND year = \'" + session["yearSelected"] + "\'"
+        if session["yearSelected"] != nil
+          queryString = queryString + " AND year = \'" + session["yearSelected"] + "\'"
+        end
 
         #@students = Student.where(filters["filter0"] + comparators["comparator0"] + "\'" + filterValues["filterValue0"] + "\'")
         @students = Student.where(queryString)
