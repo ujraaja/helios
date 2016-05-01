@@ -1,6 +1,8 @@
 require 'csv'
 
 class SpreadsheetsController < ApplicationController
+  @@val = false
+  
   def index
     redirect_to site_studentOutput_path
   end
@@ -8,10 +10,23 @@ class SpreadsheetsController < ApplicationController
   def new
     redirect_to site_studentOutput_path
   end
+  
+  def receiveAjaxSpreadsheet
+    puts"-------------------------------------------"
+    puts "Howdy"
+    puts"-------------------------------------------"
+    
+    
+    data = {:value => @@val}
+    
+    respond_to do |format|
+      format.json { render :json => data }
+    end
+  end
 
   def create
     
-    val = false
+    @@val = false
     params_to_pass = spreadsheet_params
     params_to_pass["name"] = params["year"]
     @spreadsheet = Spreadsheet.new(params_to_pass)
@@ -46,23 +61,24 @@ class SpreadsheetsController < ApplicationController
       ActiveRecord::Base.connection.close
       
           
-      val = true
+      @@val = true
 
     end
 
     data = {:value => "Howdy"}
-    
+
     respond_to do |format|
-      format.json { render :json => data }
+      format.html
+      format.js
     end
 
   end
   
   def createStudent(headerFields, student, year)
-      puts "************************ MB HERE ********************"
+     # puts "************************ MB HERE ********************"
     studentData = Hash[headerFields.zip student]
     studentData[:year] = year
-    puts studentData.inspect
+    #puts studentData.inspect
     Student.create(studentData)
   end
   
@@ -75,7 +91,7 @@ class SpreadsheetsController < ApplicationController
       tableString = "t.string :" + lowercase
       #tableString = ":" + lowercase + " => student[" + i.to_s + "],"
       i = i + 1
-      puts tableString
+      #puts tableString
       #modelString = modelString + " " + lowercase + ":string"
     end
     #puts modelString
@@ -98,8 +114,8 @@ class SpreadsheetsController < ApplicationController
         header.gsub!('-', '_')
       end
       headerString = header.to_s.downcase
-      puts headerString
-      puts "/"
+      #puts headerString
+      #puts "/"
       if headerString == "class"
         headerString = "classification"
       end

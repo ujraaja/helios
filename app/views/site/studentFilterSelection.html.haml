@@ -21,14 +21,6 @@
         end
       %input{:type => "submit", :value => "Load"}/
       
-      
-      %select#testList{:name => "testLoad" }
-        - @queries.each do |query|
-          %option{:value => query.name}= query.name
-        end
-    
-      
-    
        
     %select#filtersListInner{:onchange => "DoFunc(this);", :onfocus => "this.selectedIndex = -1;", :name => "filter", :hidden => "true"}
       - @students.column_names.each do |column_name|
@@ -85,7 +77,7 @@
             - i = 0
             - @query.headers.each do |header|
               - name = "attribute" + i.to_s
-              %select#loadedHeaderList{:onchange => "getSelected(value)", :name => name}
+              %select#loadedHeaderList{:onchange => "getSelected(value)", :name => name, :id => "attribute_" + i.to_s}
                 - @students.column_names.each do |column_name|
                   %option{:value => column_name, :selected => column_name == header.field}= column_name
                 end
@@ -107,7 +99,7 @@
       var numberOfFiltersWhenLoaded = parseInt(#{@filterCount},10);
       var nextFilter = numberOfFiltersWhenLoaded;
       var numberOfAttributesWhenLoaded = parseInt(#{@headerCount},10);
-      var nextAttribute = numberOfFiltersWhenLoaded;
+      var nextAttribute = numberOfAttributesWhenLoaded;
       
       
       window.onload = function()
@@ -180,6 +172,19 @@
       	
       }
       
+      function AddAttribute(number)
+      {
+          var list = document.getElementById("attributeListInner").cloneNode(true);
+          list.removeAttribute("hidden");
+          list.name = "attribute" + number.toString()
+          list.id = "attribute_" + number.toString()
+          attributeDiv.appendChild(list);
+          attributeDiv.appendChild (document.createTextNode (" "));
+          attributeDiv.appendChild(document.createElement("br"));
+          attributeDiv.appendChild (document.createTextNode (" "));
+      }
+      
+      
       function DoFunc(s)
       {
         $.ajax({
@@ -251,17 +256,6 @@
       }
       
       
-      function AddAttribute(number)
-      {
-          var list = document.getElementById("attributeListInner").cloneNode(true);
-          list.removeAttribute("hidden");
-          list.name = "attribute" + number.toString()
-          list.id = "attribute_" + number.toString()
-          attributeDiv.appendChild(list);
-          attributeDiv.appendChild (document.createTextNode (" "));
-          attributeDiv.appendChild(document.createElement("br"));
-          attributeDiv.appendChild (document.createTextNode (" "));
-      }
       
       document.getElementById("removeFilterButton").onclick=function(student)
       {

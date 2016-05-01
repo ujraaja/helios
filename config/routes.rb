@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   get 'site/receiveAjax' => 'site#receiveAjax'
+  
+  get 'spreadsheets/receiveAjaxSpreadsheet' => 'spreadsheets#receiveAjaxSpreadsheet'
 
   get 'cats/new'
 

@@ -38,8 +38,7 @@
       %input{:type => "submit", :value => "Select"}/
     %hr/
         
-    .well
-    = form_for @spreadsheet, :id => "submitForm", html: { multipart: true } do |f|
+    = form_for @spreadsheet, :remote => true, authenticity_token:true, :id => "submitForm", html: { multipart: true } do |f|
       = f.label :year
       %select#queryList{:name => "year"}
         - (1995..2025).each do |i|
