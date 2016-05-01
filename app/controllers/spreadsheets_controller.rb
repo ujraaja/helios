@@ -47,22 +47,14 @@ class SpreadsheetsController < ApplicationController
       
           
       val = true
-      
-      redirect_to site_index_path, notice: "The Spreadsheet #{@spreadsheet.name} has been uploaded."
-        #if saved
-        #   redirect_to site_index_path, notice: "The Spreadsheet #{@spreadsheet.name} has been uploaded."
-        #else
-        #   redirect_to site_index_path, notice: "The Spreadsheet #{@spreadsheet.name} has not been uploaded."
-        #end
+
     end
+
+    data = {:value => "Howdy"}
     
-    redirect_to spreadsheets_create_path, notice: "The Spreadsheet #{@spreadsheet.name} has been uploaded."
-     
-    while val == false do
-      sleep 1  
+    respond_to do |format|
+      format.json { render :json => data }
     end
-    redirect_to site_index_path, notice: "The Spreadsheet #{@spreadsheet.name} has been uploaded."
-    
 
   end
   
