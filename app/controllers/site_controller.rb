@@ -3,18 +3,13 @@ class SiteController < ApplicationController
   
   
   def receiveAjax
-    puts "XXXXXXXXXXXXXXXXXXX"
-    puts params[:c_name].inspect
     dataToSend = Student.select(params[:c_name].to_sym).map(&params[:c_name].to_sym).uniq.inspect
-    puts "XXXXXXXXXXXXXXXXXXX"
     
     data = {:value => dataToSend}
     
     respond_to do |format|
       format.json { render :json => data }
     end
-    
-    #render :nothing => true
   end
   
   
@@ -38,12 +33,6 @@ class SiteController < ApplicationController
       @filterCount = @query.filters.count
       @headerCount = @query.headers.count
     elsif params[:repeat]
-      #@query = flash[:query]
-      puts "!!!!!!!!!!!!!!!!!!!!!!!"
-      puts flash[:filters].inspect
-      puts flash[:comparators].inspect
-      puts flash[:filterValues].inspect
-      puts flash[:headers].inspect
       values = {}
       values.merge!(flash[:filters])
       values.merge!(flash[:comparators])
@@ -52,7 +41,6 @@ class SiteController < ApplicationController
       @query = unsavedQuery(values)
       @filterCount = flash[:filters].count
       @headerCount = flash[:headers].count
-      puts "!!!!!!!!!!!!!!!!!!!!!!!"
     end
     
       @filterValues = []
@@ -60,24 +48,11 @@ class SiteController < ApplicationController
       @query.filters.each do |filter|
         @filterValues << filter.value
       end
-      puts "---------------------"
-      puts @filterValues.inspect
-      puts "---------------------"
     else
       @query = nil
       @filterCount = 0
       @headerCount = 0
     end
-    
-    puts "+++++++++++++++++++++"
-    puts params.inspect
-    puts @query.inspect
-    if params["queryLoad"]
-      puts @query.filters.inspect
-      puts @query.headers.first.inspect
-    end
-    
-    puts "+++++++++++++++++++++"
   end
   
   
@@ -93,7 +68,6 @@ class SiteController < ApplicationController
     filters.each do |filter|
       filterRecord = Filter.create(:field => filters["filter" + i.to_s], :comparator => comparators["comparator" + i.to_s], :value => filterValues["filterValue" + i.to_s])
       puts filterRecord.inspect
-      #filterRecord.query = @query
       @query.filters << filterRecord
       i = i + 1
     end
@@ -101,14 +75,9 @@ class SiteController < ApplicationController
     i = 0
     attributes.each do |attribute|
       headerRecord = Header.create(:field => attributes["attribute" + i.to_s])
-      #headerRecord.query = @query
       @query.headers << headerRecord
       i = i + 1
     end
-
-    puts "*********************"
-    puts @query.inspect
-    puts "*********************"
     
     @query.save
     flash[:query] = @query
@@ -139,11 +108,6 @@ class SiteController < ApplicationController
       @query.headers << headerRecord
       i = i + 1
     end
-
-    puts "*********************"
-    puts @query.inspect
-    puts @query.headers.inspect
-    puts "*********************"
     
     return @query
   end
@@ -188,7 +152,6 @@ class SiteController < ApplicationController
       
       @count = @attributes.any? { |hash| hash[1].include?("count") }
   
-      #puts filters.inspect
       if filters.length == 0
         if session["yearSelected"] != nil
           @students = Student.where("year = \'" + session["yearSelected"] + "\'")
@@ -208,7 +171,6 @@ class SiteController < ApplicationController
           queryString = queryString + " AND year = \'" + session["yearSelected"] + "\'"
         end
 
-        #@students = Student.where(filters["filter0"] + comparators["comparator0"] + "\'" + filterValues["filterValue0"] + "\'")
         @students = Student.where(queryString)
         respond_to do |format|
           format.html

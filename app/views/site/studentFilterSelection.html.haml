@@ -41,10 +41,10 @@
           %option{:value => column_name}= column_name
     %select#comparatorListInner{:onchange => "getSelected(value)", :name => "comparator", :hidden => "true"}
       %option{:value => "="}= "="
-      %option{:value => ">"}= ">"
-      %option{:value => "<"}= "<"
-      %option{:value => ">="}= ">="
-      %option{:value => "<="}= "<="
+      -#%option{:value => ">"}= ">"
+      -#%option{:value => "<"}= "<"
+      -#%option{:value => ">="}= ">="
+      -#%option{:value => "<="}= "<="
     %select#filterValueInner{:name => "filterValue", :hidden => "true"}
 
     -#%input#filterValueInner{:type => "text", :name => "filterValue", :hidden => "true"}
@@ -56,8 +56,7 @@
       end
       %option{:value => "count"} count
         
-    %p{:id => "testing"} 
-    -##testingDiv{:id => "testing", :name =>"testingDiv"}
+    -#%p{:id => "testing"} 
     
     %form#daForm{"accept-charset" => "UTF-8", :action => "/site/studentOutput", :method => "post"}
       %input{:name => "utf8", :type => "hidden", :value => "✓"}/
@@ -76,10 +75,10 @@
                     %option{:value => column_name, :selected => column_name == filter.field}= column_name
               %select#loadedComparatorList{:onchange => "getSelected(value)", :name => "comparator" + filterIndex.to_s}
                 %option{:value => "=", :selected => "=" == filter.comparator} =
-                %option{:value => ">", :selected => ">" == filter.comparator} >
-                %option{:value => "<", :selected => "<" == filter.comparator} <
-                %option{:value => ">=", :selected => ">=" == filter.comparator} >=
-                %option{:value => "<=", :selected => "<=" == filter.comparator} <=
+                -#%option{:value => ">", :selected => ">" == filter.comparator} >
+                -#%option{:value => "<", :selected => "<" == filter.comparator} <
+                -#%option{:value => ">=", :selected => ">=" == filter.comparator} >=
+                -#%option{:value => "<=", :selected => "<=" == filter.comparator} <=
               %select{:id => "filterValue_" + filterIndex.to_s, :name => "filterValue" + filterIndex.to_s}
               %br
               - filterIndex = filterIndex + 1
@@ -122,34 +121,20 @@
       
       window.onload = function()
       {
-        //$("#testing")[0].innerHTML = $("#testing")[0].innerHTML + nextFilter
-        //$("#testing")[0].innerHTML = $("#testing")[0].innerHTML + "Go"
         var query = #{@filterValues}
-        //$("#testing")[0].innerHTML = $("#testing")[0].innerHTML + query
-        //$("#testing")[0].innerHTML = $("#testing")[0].innerHTML + "Done"
 
         for(var i = 0; i < query.length; i++)
         {
-          //$("#testing")[0].innerHTML = $("#testing")[0].innerHTML + "Howdy2"
-  
           var dropDown = $("#filter_" + i.toString())[0]
           DoFunc2(dropDown)
-          
         }
         
       };
       
       document.getElementById("confirmNoOfFilters").onclick=function(student)
       {
-      	//var noOfFilters=document.getElementById("noOfFilters").value;
-      	//var count = parseInt(#{@filterCount},10)
-      	//for(var i = count; i< count + parseInt(noOfFilters, 10); i++)
-      	//{
-      	    //document.getElementById("testing").innerHTML = count
       	  AddFilter(nextFilter);
       	  nextFilter = nextFilter + 1;
-        //}
-      	
       }
       
       function AddFilter(number)
@@ -175,16 +160,11 @@
         filterDiv.appendChild (document.createTextNode (" "));
         filterDiv.appendChild(document.createElement("br"));
         filterDiv.appendChild (document.createTextNode (" "));
+        DoFunc(list)
       }
       
       document.getElementById("confirmNoOfInfo").onclick=function(student)
       {
-      	//var noOfInfos=document.getElementById("noOfInfo").value;
-      	//var count = parseInt(#{@headerCount},10)
-      	//for(var i = count; i< count + parseInt(noOfInfos, 10); i++)
-      	//{
-        //}
-        
         AddAttribute(nextAttribute);
       	nextAttribute = nextAttribute + 1;
       	
@@ -226,7 +206,6 @@
             }
           },
           failure: function(response){
-            //$("#testing")[0].innerHTML = document.getElementById("testing").innerHTML + "Nope"
           }
         });
       }
@@ -243,10 +222,7 @@
            dataType: "json",
            success: function(data){
            
-           // $("#testing")[0].innerHTML = $("#testing")[0].innerHTML + data["value"]
-             
             var number = s.id.match(/\d+/)[0]; 
-            //$("#testing")[0].innerHTML = $("#testing")[0].innerHTML + "$" + number.toString() + "$"
             var x = document.getElementById("filterValue_".concat(number.toString()));
             
             
@@ -256,7 +232,6 @@
             
             for(var i = 0; i < vec.length; i++)
             {
-              //$("#testing")[0].innerHTML = $("#testing")[0].innerHTML + "-" + vec[i] + "-"
               var option = document.createElement("option");
               option.text = vec[i];
               x.add(option);
@@ -265,10 +240,8 @@
                 option.selected = true
               }
             }
-            //$("#testing")[0].innerHTML = $("#testing")[0].innerHTML + #{@filterValues}[number]
            },
            failure: function(response){
-             //$("#testing")[0].innerHTML = document.getElementById("testing").innerHTML + "Nope"
            }
         });
       }
@@ -279,7 +252,6 @@
       {
       	for(var i = 0; i< 8; i++)
       	{
-      	  //document.getElementById("testing").innerHTML = document.getElementById("testing").innerHTML + filterDiv.lastChild
           filterDiv.removeChild(filterDiv.lastChild);
         }
       	nextFilter = nextFilter - 1;
@@ -288,11 +260,6 @@
       {
       	for(var i = 0; i< 4; i++)
       	{
-      	  //document.getElementById("testing").innerHTML = document.getElementById("testing").innerHTML + attributeDiv.lastChild
-      	  //$("#testing")[0].innerHTML = document.getElementById("testing").innerHTML + attributeDiv.lastChild
-          
-          
-          
           attributeDiv.removeChild(attributeDiv.lastChild);
         }
       	nextAttribute = nextAttribute - 1;
