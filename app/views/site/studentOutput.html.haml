@@ -35,11 +35,12 @@
           - if attribute[1] != "count"
             %th= attribute[1]
       %tbody
-        - @students.each do |student|
-          %tr
-            - @attributes.each do |attribute|
-              - if attribute[1] != "count"
-                %td= student.send(attribute[1])
+        - if @students != nil
+          - @students.each do |student|
+            %tr
+              - @attributes.each do |attribute|
+                - if attribute[1] != "count"
+                  %td= student.send(attribute[1])
     
     -#%img{:align => "center", :height => "250", :src => "/images/table.png", :width => "600"}/
     

@@ -54,6 +54,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    capybara-webkit (1.11.0)
+      capybara (>= 2.3.0, < 2.8.0)
+      json
     carrierwave (0.11.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -120,6 +123,7 @@ GEM
       rspec (>= 2.99.0, < 4.0)
     haml (4.0.7)
       tilt
+    headless (2.2.3)
     i18n (0.7.0)
     jbuilder (2.4.1)
       activesupport (>= 3.0.0, < 5.1)
@@ -205,6 +209,9 @@ GEM
     rspec-expectations (3.4.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.4.0)
+    rspec-html-matchers (0.7.2)
+      nokogiri (~> 1)
+      rspec (>= 3.0.0.a, < 4)
     rspec-mocks (3.4.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.4.0)
@@ -263,6 +270,7 @@ DEPENDENCIES
   bootstrap-sass (~> 2.3.2)
   byebug
   capybara (~> 2.6, >= 2.6.2)
+  capybara-webkit
   carrierwave (~> 0.9)
   coffee-rails (~> 4.1.0)
   cucumber-rails
@@ -272,12 +280,14 @@ DEPENDENCIES
   faker
   guard-rspec
   haml
+  headless
   jbuilder (~> 2.0)
   jquery-rails
   launchy
   pg
   rails (= 4.2.1)
   rails_12factor
+  rspec-html-matchers
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
