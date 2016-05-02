@@ -1,20 +1,16 @@
 class SiteController < ApplicationController
   require 'csv'
   
-  
+  #receives the ajax call to dynamically populate filter value drop downs
   def receiveAjax
-    puts "XXXXXXXXXXXXXXXXXXX"
-    puts params[:c_name].inspect
+    #grabs all uniq values for the given column
     dataToSend = Student.select(params[:c_name].to_sym).map(&params[:c_name].to_sym).uniq.inspect
-    puts "XXXXXXXXXXXXXXXXXXX"
     
     data = {:value => dataToSend}
     
     respond_to do |format|
       format.json { render :json => data }
     end
-    
-    #render :nothing => true
   end
   
   
@@ -23,27 +19,28 @@ class SiteController < ApplicationController
     @spreadsheets = Spreadsheet.all
   end
   
+  #page that displays the fitler selection
   def studentFilterSelection
-    
+
+    #stores the selected year
     if(params["yearSelected"])
       session["yearSelected"] = params["yearSelected"]
     end
     
+    #if year wasn't stored, it should be a new selected year, store it
     if (session["yearSelected"] != nil)
       @students = Student.where("year = \'" + session["yearSelected"] + "\'")
     end
-    @queries = Query.all
+    
+    @queries = Query.all #gets all the stored queries
+    
+    #if a query was loaded
     if params["queryLoad"]
       @query = (Query.where("name = " + "\'" + params["queryLoad"] + "\'"))[0]
       @filterCount = @query.filters.count
       @headerCount = @query.headers.count
     elsif params[:repeat]
-      #@query = flash[:query]
-      puts "!!!!!!!!!!!!!!!!!!!!!!!"
-      puts flash[:filters].inspect
-      puts flash[:comparators].inspect
-      puts flash[:filterValues].inspect
-      puts flash[:headers].inspect
+      #if the user said to repeat the query
       values = {}
       values.merge!(flash[:filters])
       values.merge!(flash[:comparators])
@@ -52,35 +49,23 @@ class SiteController < ApplicationController
       @query = unsavedQuery(values)
       @filterCount = flash[:filters].count
       @headerCount = flash[:headers].count
-      puts "!!!!!!!!!!!!!!!!!!!!!!!"
     end
     
-      @filterValues = []
+    #grab the existing filter values
+    @filterValues = []
     if @query
       @query.filters.each do |filter|
         @filterValues << filter.value
       end
-      puts "---------------------"
-      puts @filterValues.inspect
-      puts "---------------------"
     else
       @query = nil
       @filterCount = 0
       @headerCount = 0
     end
-    
-    puts "+++++++++++++++++++++"
-    puts params.inspect
-    puts @query.inspect
-    if params["queryLoad"]
-      puts @query.filters.inspect
-      puts @query.headers.first.inspect
-    end
-    
-    puts "+++++++++++++++++++++"
   end
   
-  
+  #when the user clicks to save a query, must save all the filter columns, filter values, and attributes selected
+  #then send the user back to the filter selection page
   def saveQuery(params)
     filters = params.select { |key, value| key.to_s.match(/filter\d+/) }
     comparators = params.select { |key, value| key.to_s.match(/comparator\d+/) }
@@ -92,8 +77,6 @@ class SiteController < ApplicationController
     i = 0
     filters.each do |filter|
       filterRecord = Filter.create(:field => filters["filter" + i.to_s], :comparator => comparators["comparator" + i.to_s], :value => filterValues["filterValue" + i.to_s])
-      puts filterRecord.inspect
-      #filterRecord.query = @query
       @query.filters << filterRecord
       i = i + 1
     end
@@ -101,20 +84,17 @@ class SiteController < ApplicationController
     i = 0
     attributes.each do |attribute|
       headerRecord = Header.create(:field => attributes["attribute" + i.to_s])
-      #headerRecord.query = @query
       @query.headers << headerRecord
       i = i + 1
     end
-
-    puts "*********************"
-    puts @query.inspect
-    puts "*********************"
     
     @query.save
     flash[:query] = @query
     redirect_to site_studentFilterSelection_path
   end
   
+  #make a query object, but don't actually save it to the database
+  #used for the repeat query functionality
   def unsavedQuery(params)
     filters = params.select { |key, value| key.to_s.match(/filter\d+/) }
     comparators = params.select { |key, value| key.to_s.match(/comparator\d+/) }
@@ -127,7 +107,6 @@ class SiteController < ApplicationController
     filters.each do |filter|
       filterRecord = Filter.create(:field => filters["filter" + i.to_s], :comparator => comparators["comparator" + i.to_s], :value => filterValues["filterValue" + i.to_s])
       puts filterRecord.inspect
-      #filterRecord.query = @query
       @query.filters << filterRecord
       i = i + 1
     end
@@ -135,90 +114,72 @@ class SiteController < ApplicationController
     i = 0
     attributes.each do |attribute|
       headerRecord = Header.create(:field => attributes["attribute" + i.to_s])
-      #headerRecord.query = @query
       @query.headers << headerRecord
       i = i + 1
     end
-
-    puts "*********************"
-    puts @query.inspect
-    puts @query.headers.inspect
-    puts "*********************"
     
     return @query
   end
   
-  
+  #page that shows the results
   def studentOutput
-    #puts "---------------------"
-    #puts params.inspect
-    #puts "---------------------"
-    
-    
     if params["commit"] == "Save"
       saveQuery(params)
     else
-    
+      #if the query is not being saved
+      #select all the filters and filter values chosen
       filters = params.select { |key, value| key.to_s.match(/filter\d+/) }
       comparators = params.select { |key, value| key.to_s.match(/comparator\d+/) }
       filterValues = params.select { |key, value| key.to_s.match(/filterValue\d+/) }
       @attributes = params.select { |key, value| key.to_s.match(/attribute\d+/) }
       
+      #store all these values if the user chooses to repeat the query
       flash[:existingQuery] = 1
       flash[:filters] = filters
       flash[:comparators] = comparators
       flash[:filterValues] = filterValues
       flash[:headers] = @attributes
-    
-      puts "---------------------"
-      filters.each do |value|
-        puts value.inspect
-      end
-      comparators.each do |comparator|
-        puts comparator.inspect
-      end
-      filterValues.each do |filterValue|
-        puts filterValue.inspect
-      end
-      @attributes.each do |attribute|
-        puts attribute.inspect
-      end
-      puts "---------------------"
-    
       
+      #determine if the user wants the count
       @count = @attributes.any? { |hash| hash[1].include?("count") }
   
-      #puts filters.inspect
+      #if no filters selected, display all data for that year
       if filters.length == 0
         if session["yearSelected"] != nil
-          @students = Student.where("year = \'" + session["yearSelected"] + "\'")
+          queryString = "year = \'" + session["yearSelected"] + "\'"
         end
       else
+        #create query string from selected values
         queryString = ""
         i = 0
         filters.each do |filter|
-          if i > 0
-            queryString = queryString + " AND "
+          filterValue = filterValues["filterValue" + i.to_s]
+          if filterValue != nil
+            if i > 0
+              queryString = queryString + " AND "
+            end
+            queryString = queryString + filters["filter" + i.to_s] + comparators["comparator" + i.to_s] + "\'" + filterValue + "\'"
           end
-          queryString = queryString + filters["filter" + i.to_s] + comparators["comparator" + i.to_s] + "\'" + filterValues["filterValue" + i.to_s] + "\'"
           i = i + 1
         end
         
         if session["yearSelected"] != nil
           queryString = queryString + " AND year = \'" + session["yearSelected"] + "\'"
         end
+      end
+      
+      
 
-        #@students = Student.where(filters["filter0"] + comparators["comparator0"] + "\'" + filterValues["filterValue0"] + "\'")
-        @students = Student.where(queryString)
-        respond_to do |format|
-          format.html
-          format.csv { send_data Student.to_csv(@students, @attributes.values) }
-        end
+      @students = Student.where(queryString)
+      respond_to do |format|
+        format.html
+        format.csv { send_data Student.to_csv(@students, @attributes.values) }
       end
     end
     
   end
   
+  #unused
   private
     def populate_db(csvFile)
       csv_data = CSV.read csvFile
