@@ -146,7 +146,7 @@ class SiteController < ApplicationController
       #if no filters selected, display all data for that year
       if filters.length == 0
         if session["yearSelected"] != nil
-          @students = Student.where("year = \'" + session["yearSelected"] + "\'")
+          queryString = "year = \'" + session["yearSelected"] + "\'"
         end
       else
         #create query string from selected values
@@ -166,12 +166,14 @@ class SiteController < ApplicationController
         if session["yearSelected"] != nil
           queryString = queryString + " AND year = \'" + session["yearSelected"] + "\'"
         end
+      end
+      
+      
 
-        @students = Student.where(queryString)
-        respond_to do |format|
-          format.html
-          format.csv { send_data Student.to_csv(@students, @attributes.values) }
-        end
+      @students = Student.where(queryString)
+      respond_to do |format|
+        format.html
+        format.csv { send_data Student.to_csv(@students, @attributes.values) }
       end
     end
     
