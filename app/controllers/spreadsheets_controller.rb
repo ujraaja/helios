@@ -23,7 +23,7 @@ class SpreadsheetsController < ApplicationController
       
       saved = @spreadsheet.saveAndMove
       
-<<<<<<< HEAD
+# <<<<<<< HEAD
       #params["spreadsheet"].keys.each do |key|
         #puts key.inspect
       #  puts params["spreadsheet"][key].inspect
@@ -48,7 +48,8 @@ class SpreadsheetsController < ApplicationController
           createStudent(headerFields, data, params["year"])
         end
         iteration = iteration + 1
-=======
+      end
+# =======
       Thread.new do
       
         params["spreadsheet"].keys.each do |key|
@@ -70,7 +71,7 @@ class SpreadsheetsController < ApplicationController
           
         end
         ActiveRecord::Base.connection.close
->>>>>>> upstream/master
+# >>>>>>> upstream/master
       end
       
       

@@ -9,7 +9,7 @@ RSpec.describe "site/index.html.haml", type: :view do
 
 	it "can render" do
 		expect(rendered).to include("Taulbee Survey")
-		expect(rendered).to include("Choose among existing data files")
+		expect(rendered).to include("Select Year")
 	end
 
 	it "include button" do

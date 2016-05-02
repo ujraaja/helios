@@ -25,13 +25,13 @@ RSpec.describe SiteController, type: :controller do
 	# 	end
 	# end
 
-	describe "GET #studentFilterSelection" do
-		it "render studentFilterSelection template" do
-			get :studentFilterSelection
-			expect(response).to have_http_status(200)
-			expect(response).to render_template :studentFilterSelection
-		end
-	end
+	# describe "GET #studentFilterSelection" do
+	# 	it "render studentFilterSelection template" do
+	# 		get :studentFilterSelection
+	# 		expect(response).to have_http_status(200)
+	# 		expect(response).to render_template :studentFilterSelection
+	# 	end
+	# end
 	
 	# describe "GET #facultyOutput" do
 	# 	it "render facultyOutput template" do
@@ -41,11 +41,11 @@ RSpec.describe SiteController, type: :controller do
 	# 	end
 	# end
 
-	describe "GET #studentOutput" do
-		it "render studentOutput template" do
-			get :studentOutput
-			expect(response).to have_http_status(200)
-			expect(response).to render_template :studentOutput
-		end
-	end
+	# describe "GET #studentOutput" do
+	# 	it "render studentOutput template" do
+	# 		get :studentOutput
+	# 		expect(response).to have_http_status(200)
+	# 		expect(response).to render_template :studentOutput
+	# 	end
+	# end
 end
