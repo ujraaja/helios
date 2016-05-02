@@ -15,6 +15,14 @@
       .centered{
       	text-align:center;
       }
+      
+      table, th, td {
+        border: 1px solid black;
+      }
+      
+      th, td {
+        padding: 1px 5px 1px 5px;
+      }
   %body
     %h1.centered.heading Taulbee Survey
     %p
@@ -33,7 +41,7 @@
         %tr
         - @attributes.each do |attribute|
           - if attribute[1] != "count"
-            %th= attribute[1]
+            %th{:align => "left"}= attribute[1]
       %tbody
         - if @students != nil
           - @students.each do |student|
