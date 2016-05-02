@@ -17,8 +17,9 @@
       }
 	
       .symbol{
-      	position:absolute;
-      	left:550px;
+      	display: block;
+      	margin-left: auto;
+      	margin-right: auto;
       	opacity:0.5;
       }
   %body
@@ -47,5 +48,5 @@
       = f.file_field :attachment
       = f.submit "Save", class: "btn btn-primary"
       
-    
-    %img.symbol{:src => "/images/anm_symbol.png"}
+    %div
+      %img.symbol{:src => "/images/anm_symbol.png"}
