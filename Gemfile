@@ -56,6 +56,8 @@ group :development, :test do
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
   gem 'database_cleaner'
+  gem 'capybara-webkit'
+  gem 'headless'
 end
 
 group :test do
