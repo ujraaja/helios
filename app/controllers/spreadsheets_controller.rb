@@ -3,20 +3,20 @@ require 'csv'
 class SpreadsheetsController < ApplicationController
   @@val = false
   
+  #unused
   def index
     redirect_to site_studentOutput_path
   end
 
+  #unused
   def new
     redirect_to site_studentOutput_path
   end
   
+  #returns whether or not the upload has finished
+  #ajax call
   def receiveAjaxSpreadsheet
-    puts"-------------------------------------------"
-    puts "Howdy"
-    puts"-------------------------------------------"
-    
-    
+    #@@val is the value of whether or not the upload has finished
     data = {:value => @@val}
     
     respond_to do |format|
@@ -24,25 +24,23 @@ class SpreadsheetsController < ApplicationController
     end
   end
 
+  #used to upload a csv file
   def create
     
-    @@val = false
+    @@val = false #set false for file not finished parsing 
     params_to_pass = spreadsheet_params
     params_to_pass["name"] = params["year"]
     @spreadsheet = Spreadsheet.new(params_to_pass)
+    
+    #do the database population in separate thread
     Thread.new do
     
       saved = @spreadsheet.saveAndMove
-      #params["spreadsheet"].keys.each do |key| 
-        #puts key.inspect 
-      #  puts params["spreadsheet"][key].inspect 
-      #end 
         
       location = "public/uploads/spreadsheet/attachment/" + params["spreadsheet"]["attachment"].original_filename 
       command = "cat " + location 
       system(command) 
         
-      #parse_csv(location) 
       csv_data = CSV.read location 
       headerFields = csv_data[0] 
       headerFields = headerFields.map { |header| 
@@ -51,9 +49,7 @@ class SpreadsheetsController < ApplicationController
         
       iteration = 0 
       csv_data.each do |data| 
-       if iteration > 0 
-         #puts data.inspect 
-         #printData(data)   
+       if iteration > 0   
          createStudent(headerFields, data, params["year"]) 
        end 
        iteration = iteration + 1 
@@ -64,8 +60,8 @@ class SpreadsheetsController < ApplicationController
       @@val = true
 
     end
-
-    data = {:value => "Howdy"}
+  
+    data = {:value => "Howdy"} #likely was just used for testing
 
     respond_to do |format|
       format.html
@@ -74,14 +70,14 @@ class SpreadsheetsController < ApplicationController
 
   end
   
+  #called to create the entry per student
   def createStudent(headerFields, student, year)
-     # puts "************************ MB HERE ********************"
     studentData = Hash[headerFields.zip student]
     studentData[:year] = year
-    #puts studentData.inspect
     Student.create(studentData)
   end
   
+  #unused
   def printData(data)
     i = 0
     modelString = "rails g model student"
@@ -89,14 +85,11 @@ class SpreadsheetsController < ApplicationController
       
       lowercase = CreateHeaderString(header)
       tableString = "t.string :" + lowercase
-      #tableString = ":" + lowercase + " => student[" + i.to_s + "],"
       i = i + 1
-      #puts tableString
-      #modelString = modelString + " " + lowercase + ":string"
     end
-    #puts modelString
   end
   
+  #translates given headers from file into database friendly headers
   def CreateHeaderString(header)
     if header.gsub(' ', '_')
         header.gsub!(' ', '_')
@@ -114,18 +107,18 @@ class SpreadsheetsController < ApplicationController
         header.gsub!('-', '_')
       end
       headerString = header.to_s.downcase
-      #puts headerString
-      #puts "/"
       if headerString == "class"
         headerString = "classification"
       end
       return headerString
   end
 
+  #unused
   def destroy
     redirect_to site_studentOutput_path
   end
   
+  #likely all of this is unused
   private
       def spreadsheet_params
         params.require(:spreadsheet).permit(:name, :attachment)

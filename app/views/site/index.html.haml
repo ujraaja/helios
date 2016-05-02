@@ -28,7 +28,7 @@
       .alert.alert-info
         = flash[:notice]
        
-        
+    -# used to select the year for a previously uploaded file
     %form{:action => site_studentFilterSelection_path}
       %br/
       %label Select which year's data you want to work on
@@ -39,10 +39,11 @@
       %input{:type => "submit", :value => "Select"}/
     %hr/
         
+    -# used to upload a new file
     = form_for @spreadsheet, :remote => true, authenticity_token:true, :id => "submitForm", html: { multipart: true } do |f|
       = f.label :year
       %select#queryList{:name => "year"}
-        - (1995..2025).each do |i|
+        - (1995..2055).each do |i|
           %option{:value => i}= i
       = f.label :attachment
       = f.file_field :attachment
