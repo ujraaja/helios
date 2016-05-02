@@ -1,10 +1,23 @@
 %html
   %head
     %title Taulbee Survey Data
+    :css
+      .heading{
+      	color:white;
+      	background-color:#500000;
+      	height:50px;
+      	margin:0;
+      	padding:0;
+      	font-size:40px;
+      }
+      
+      .centered{
+      	text-align:center;
+      }
 	
   %body
     
-    %h1 Taulbee Survey
+    %h1.centered.heading Taulbee Survey
     %p
       %a{:id => "Home", :href => site_index_path}
         %img{:height => "30", :src => "/images/homepageicon.jpg", :width => "30"}/
@@ -14,7 +27,7 @@
      
     %form{:action => site_studentFilterSelection_path}
       %br
-      %label Upload new data file
+      %label Choose among saved queries
       %select#queryList{:name => "queryLoad" }
         - @queries.each do |query|
           %option{:value => query.name}= query.name
@@ -49,7 +62,7 @@
       %input{:name => "utf8", :type => "hidden", :value => "✓"}/
       %input{:name => "authenticity_token", :type => "hidden", :value => "R6tWZgNywVkSWBBcFzhGpcvVQOpv9bTWfT/s5oH2OrLgEhEqzl2EhcnfAwHu/V/ETSdEUKUjGO4BNBKRBJbA4w=="}/
       %fieldset
-        %label{:for => "Filters"} Filters:
+        %label{:for => "Filters"} What filters do you want to apply?
         %button#confirmNoOfFilters{:type => "button"} Add Filter
         %button#removeFilterButton{:type => "button"} Remove Last Filter
         #filterDiv{:name => "filterDiv"}
@@ -69,7 +82,7 @@
               %select{:id => "filterValue_" + filterIndex.to_s, :name => "filterValue" + filterIndex.to_s}
               %br
               - filterIndex = filterIndex + 1
-        %label{:for => "Attributes"} Attributes:
+        %label{:for => "Attributes"} Which attributes do you want to see?
         %button#confirmNoOfInfo{:type => "button"} Add Attribute
         %button#removeAttributeButton{:type => "button"} Remove Last Attribute
         #attributeDiv{:name => "attributeDiv"}
@@ -84,8 +97,11 @@
                 %option{:value => "count", :selected => "count" == header.field} count
               %br
               - i = i + 1
-        %hr
+        
+        %br
         %input{:name => "commit", :type => "submit", :value => "Apply"}/
+        
+        %hr
         %label{:for => "save label"} Query Name to Save:
         %input{:name => "saveName", :type => "text"}/
         %br/

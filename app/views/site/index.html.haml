@@ -9,6 +9,7 @@
       	height:200%;
       	margin:0;
       	padding:0;
+      	font-size:40px;
       }
       
       .centered{
@@ -21,8 +22,7 @@
       	opacity:0.5;
       }
   %body
-    .heading
-      %h1.centered Taulbee Survey
+    %h1.centered.heading Taulbee Survey
     - if !flash[:notice].blank?
       .alert.alert-info
         = flash[:notice]
@@ -30,7 +30,7 @@
         
     %form{:action => site_studentFilterSelection_path}
       %br/
-      %label Select Year
+      %label Select which year's data you want to work on
       %select{:name => "yearSelected"}
         - @spreadsheets.each do |spreadsheet|
           %option= spreadsheet.name 
@@ -48,4 +48,4 @@
       = f.submit "Save", class: "btn btn-primary"
       
     
-    %img{:src => "/images/anm_symbol.png"}
+    %img.symbol{:src => "/images/anm_symbol.png"}
