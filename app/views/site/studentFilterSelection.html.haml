@@ -24,7 +24,7 @@
       %a{:id => "Back", :href => site_index_path}
         %img{:height => "30", :src => "/images/previous-icon.png", :width => "30"}/
         
-     
+    -#form that allows the user to select which saved Query they want to load
     %form{:action => site_studentFilterSelection_path}
       %br
       %label Choose among saved queries
@@ -34,7 +34,8 @@
         end
       %input{:type => "submit", :value => "Load"}/
       
-       
+    -#filter objects that get duplicated when creating a filter
+    -#this object should be hidden, and is made visible after cloning and adding
     %select#filtersListInner{:onchange => "DoFunc(this);", :onfocus => "this.selectedIndex = -1;", :name => "filter", :hidden => "true"}
       - if (@students != nil)
         - @students.column_names.each do |column_name|
@@ -47,8 +48,8 @@
       -#%option{:value => "<="}= "<="
     %select#filterValueInner{:name => "filterValue", :hidden => "true"}
 
-    -#%input#filterValueInner{:type => "text", :name => "filterValue", :hidden => "true"}
-
+    -#attribute object that get duplicated when creating a filter
+    -#this object should be hidden, and is made visible after cloning and adding
     %select#attributeListInner{:name => "attribute", :hidden => "true"}
       - if (@students != nil)
         - @students.column_names.each do |column_name|
@@ -56,8 +57,11 @@
       end
       %option{:value => "count"} count
         
+    -#used for test printing to screen 
     -#%p{:id => "testing"} 
     
+    -#the form that actually contains the filters and attributes
+    -#if a query is being loaded or repeated, it will automatically add them to the form
     %form#daForm{"accept-charset" => "UTF-8", :action => "/site/studentOutput", :method => "post"}
       %input{:name => "utf8", :type => "hidden", :value => "✓"}/
       %input{:name => "authenticity_token", :type => "hidden", :value => "R6tWZgNywVkSWBBcFzhGpcvVQOpv9bTWfT/s5oH2OrLgEhEqzl2EhcnfAwHu/V/ETSdEUKUjGO4BNBKRBJbA4w=="}/
@@ -109,6 +113,7 @@
         %input{:name => "commit", :type => "submit", :value => "Save"}/
       
     :javascript
+      //variables to be set on the page loading
       var filterChosen = "";
       var comparatorChosen= "";
       var filterValueChosen="";
@@ -118,7 +123,8 @@
       var numberOfAttributesWhenLoaded = parseInt(#{@headerCount},10);
       var nextAttribute = numberOfAttributesWhenLoaded;
       
-      
+      //when the page loads, if it is loading a saved filter or repeating a query
+      //then it will populate the filter values for those filters on load
       window.onload = function()
       {
         var query = #{@filterValues}
@@ -131,12 +137,14 @@
         
       };
       
+      //when clicked adds a filter
       document.getElementById("confirmNoOfFilters").onclick=function(student)
       {
       	  AddFilter(nextFilter);
       	  nextFilter = nextFilter + 1;
       }
       
+      //is called when adding a filter, copies all the necessary elements
       function AddFilter(number)
       {
         var list = document.getElementById("filtersListInner").cloneNode(true);
@@ -163,6 +171,7 @@
         DoFunc(list)
       }
       
+      //when clicked adds an attribute
       document.getElementById("confirmNoOfInfo").onclick=function(student)
       {
         AddAttribute(nextAttribute);
@@ -170,6 +179,7 @@
       	
       }
       
+      //is called when adding an attribute, copies all the necessary elements
       function AddAttribute(number)
       {
           var list = document.getElementById("attributeListInner").cloneNode(true);
@@ -182,7 +192,7 @@
           attributeDiv.appendChild (document.createTextNode (" "));
       }
       
-      
+      //performs the ajax function to set the value of the filter value drop down dynamically
       function DoFunc(s)
       {
         $.ajax({
@@ -198,6 +208,7 @@
             dropDown.options.length = 0;
             var vec = JSON.parse(data["value"])
 
+            //creates an option for the select element for each value returned for a column
             for(var i = 0; i < vec.length; i++)
             {
               var option = document.createElement("option");
@@ -210,6 +221,8 @@
         });
       }
       
+      //performs the ajax function to set the value of the filter value drop down dynamically
+      //only used for filters that are loaded or repeat filters
       function DoFunc2(s)
       {
         $.ajax({
@@ -229,12 +242,14 @@
             x.options.length = 0;
             var vec = JSON.parse(data["value"])
 
-            
+            //creates an option for the select element for each value returned for a column
             for(var i = 0; i < vec.length; i++)
             {
               var option = document.createElement("option");
               option.text = vec[i];
               x.add(option);
+              
+              //detects which option was selected, and sets that to the current selected value
               if(option.text == #{@filterValues}[number])
               {
                 option.selected = true
@@ -246,19 +261,20 @@
         });
       }
       
-      
-      
+      //function used to remove the last filter when the button is clicked
       document.getElementById("removeFilterButton").onclick=function(student)
       {
-      	for(var i = 0; i< 8; i++)
+      	for(var i = 0; i< 8; i++)//8 because there are 8 elements per filter added
       	{
           filterDiv.removeChild(filterDiv.lastChild);
         }
       	nextFilter = nextFilter - 1;
       }
+      
+      //function used to remove the last attribute when the button is clicked
       document.getElementById("removeAttributeButton").onclick=function(student)
       {
-      	for(var i = 0; i< 4; i++)
+      	for(var i = 0; i< 4; i++)//4 because there are 4 elements per attribute added
       	{
           attributeDiv.removeChild(attributeDiv.lastChild);
         }
