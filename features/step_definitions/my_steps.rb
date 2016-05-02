@@ -10,8 +10,8 @@ When(/^I press "([^"]*)"$/) do |button|
   click_button(button)
 end
 
-When(/^I wait to press "([^"]*)"$/) do |button|
-  page.should have_content(button, wait: 1)
+When(/^I wait "([^"]*)" seconds to press "([^"]*)"$/) do |sec, button|
+  sleep(Integer(sec))
   click_button(button)
 end
 
@@ -56,12 +56,18 @@ Then(/^I should see a select with id "([^"]*)"$/) do |id|
   expect(page).to have_xpath("//select[@id='#{id}']")
 end
 
+Then(/^I should not see a select with id "([^"]*)"$/) do |id|
+  expect(page).to have_no_xpath("//select[@id='#{id}']")
+end
+
 Then(/^I should see a link labeled "([^"]*)"$/) do |label|
   expect(page).to have_css("a", text: label)
 end
 
 Then(/^A download should commence$/) do
-  pending
+  #page.response_headers['Content-Disposition'].should include("filename=\"CSV.csv\"")
+  header = page.response_headers['Content-Disposition']
+  header.should (match (/^attachment/))
 end
 
 Then(/^I should be on the (.+) page$/) do |page_name|
@@ -71,6 +77,10 @@ end
 
 Then(/^I should see "([^"]*)"$/) do |text|
   page.should have_content(text)
+end
+
+Then(/^I should not see "([^"]*)"$/) do |text|
+  page.should have_no_content(text)
 end
 
 Then(/^I expect to see "([^"]*)" selected from "([^"]*)"$/) do |option, field|

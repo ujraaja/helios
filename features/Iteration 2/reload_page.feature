@@ -11,8 +11,7 @@ Scenario: Check that the file has been added to the dropdown after uploading
   And I select "features/cucumber_data.csv" to be uploaded to "spreadsheet_attachment"
   When I press "Save"
   Then I should be on the spreadsheet page
-  #When I wait for "5" seconds
-  When I wait to press "returnButton"
+  When I wait "2" seconds to press "returnButton"
   Then I should be on the home page
   When I select "2016" from "yearSelected"
   Then I expect to see "2016" selected from "yearSelected"
