@@ -10,5 +10,5 @@ Scenario: I should be able to see the apply filters button
   
 Scenario: I expect to be taken to the results page upon Apply Filters
   Given I am on the filters page
-  And I press "Apply"
+  When I press "Apply"
   Then I should be on the results page

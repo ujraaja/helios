@@ -6,4 +6,4 @@ Feature: Dropdown Display for Existing Data
 
 Scenario: I should be able to select an existing data file
   Given I am on the home page
-  Then I should see a "select"
+  Then I should see a select with id "queryList"
