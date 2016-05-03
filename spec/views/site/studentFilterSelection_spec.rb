@@ -6,7 +6,6 @@ RSpec.describe "site/studentFilterSelection.html.haml", type: :view do
 		@queries = FactoryGirl.create_list(:query, 3)
 		@student = FactoryGirl.create(:student)
 		@students = FactoryGirl.create(:student)
-		# @students.column_names = FactoryGirl.attributes_for_list(:student, 2)
 		render
 	end
 

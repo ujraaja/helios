@@ -6,7 +6,7 @@ describe 'Site' do
 	describe "home page" do
 		it "visit home page" do
 			visit root_path
-			expect(page).to have_content("Taulbee Survey")
+			expect(page).to have_content("Select which year's data you want to work on")
 		end
 	end	
 
@@ -37,16 +37,14 @@ describe 'Site' do
 			expect(page).to have_content("Result")  
 		end
 
-		it "can set multiple filters" do
-			fill_in('noOfFilters', :with => 2)
-			click_button('confirmNoOfFilters')
+		it "can add filters" do
 			# https://github.com/kucaahbe/rspec-html-matchers#install
+			click_button('Add Filter')
 			expect(page).to have_tag('select',:with => {:id => 'filtersListInner' })
 		end
 
 		it "can retrive multiple attributes" do
-			fill_in('noOfInfo', :with => 2)
-			click_button('confirmNoOfInfo')
+			click_button('Add Attribute')
 			expect(page).to have_tag('select',:with => {:id => 'attributeListInner' })
 		end
 	end
@@ -54,26 +52,34 @@ describe 'Site' do
 	describe "apply filters" do
 		before(:each) do
 			visit site_studentFilterSelection_path
-			fill_in('noOfFilters', :with => 1)
-			click_button('confirmNoOfFilters')
-			fill_in('noOfInfo', :with => 1)
-			click_button('confirmNoOfInfo')
+			click_button('Add Filter')
+			click_button('Add Attribute')
 		end
 
 		it "filter successfully" do
-			select('name', :from => 'filtersListInner', visible: false)
-			select('email', :from => 'attributeListInner', visible: false)
 			click_button('Apply')
 			expect(current_path).to eq(site_studentOutput_path)
-			expect(page).to have_button("Save","Download")
 			expect(page).to have_link("CSV")
+			expect(page).to have_link("Repeat Query")
 		end
 	end
 
 	describe "output" do
+		before(:each) do
+			visit site_studentOutput_path			
+		end
+
 		it "#studentOutput" do
-			visit site_studentOutput_path
 			expect(current_path).to eq(site_studentOutput_path)
+			expect(page).to have_content("Result")			
+			expect(page).to have_link("CSV")
+			expect(page).to have_link("Repeat Query")
+		end
+
+		it "#redirect correctly" do
+			click_link('Repeat Query')
+			expect(page).to have_content("filters")
+			expect(page).to have_content("attributes")
 		end
 	end
 end
